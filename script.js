@@ -37,7 +37,7 @@
       .then(function (res) { return res.json(); })
       .then(function () {
         form.reset();
-        status.textContent = "Message sent. We'll get back to you soon.";
+        status.textContent = "Thanks! Your message is on its way — we'll get back to you soon.";
         status.classList.add("is-ok");
       })
       .catch(function () {

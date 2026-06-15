@@ -3,20 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RiceCookey — Indie games &amp; everyday apps</title>
-  <meta name="description" content="RiceCookey is an independent studio in Korea. We make indie games and lifestyle apps — carefully, in small teams, for real people." />
+  <title>RiceCookey — Games &amp; apps, made with care</title>
+  <meta name="description" content="RiceCookey is a small independent studio in Korea. We make indie games and everyday apps — slowly, together, with care." />
 
-  <meta property="og:title" content="RiceCookey — Indie games &amp; everyday apps" />
-  <meta property="og:description" content="An independent studio in Korea making indie games and lifestyle apps with care." />
+  <meta property="og:title" content="RiceCookey — Games &amp; apps, made with care" />
+  <meta property="og:description" content="A small studio in Korea making indie games and everyday apps with care." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231c1c1c'/><text x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='16' font-weight='600' fill='%23f5f3ef'>R</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FFF6EC'/><path d='M50 78C28 78 22 52 22 42Q22 18 50 18Q78 18 78 42C78 52 72 78 50 78Z' fill='%23FF6A1A' stroke='%232B1E12' stroke-width='5'/><path d='M50 68C32 68 28 48 28 40Q28 24 50 24Q72 24 72 40C72 48 68 68 50 68Z' fill='white' stroke='%232B1E12' stroke-width='4'/></svg>" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -24,11 +21,19 @@
 
   <header class="site-header" id="top">
     <nav class="nav container" aria-label="Primary">
-      <a class="brand" href="#top">RiceCookey</a>
+      <a class="brand" href="#top" aria-label="RiceCookey home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="32" height="32">
+            <path d="M24 38C12 38 9 24 9 19Q9 8 24 8Q39 8 39 19C39 24 36 38 24 38Z" fill="#FF6A1A" stroke="#2B1E12" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M24 33C14.5 33 12 22 12 18Q12 12 24 12Q36 12 36 18C36 22 33.5 33 24 33Z" fill="#fff" stroke="#2B1E12" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand__name">RiceCookey</span>
+      </a>
       <div class="nav__links">
         <a href="#work">Work</a>
         <a href="#studio">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav__cta">Say hello</a>
       </div>
     </nav>
   </header>
@@ -36,20 +41,39 @@
   <main id="main">
 
     <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero__inner">
-        <p class="hero__label">Independent studio · Seoul</p>
-        <h1 class="hero__title" id="hero-title">
-          We make games and apps<br />
-          <em>people actually use.</em>
-        </h1>
-        <p class="hero__lede">
-          RiceCookey is a small team of designers and engineers. We build indie
-          games with personality and everyday apps that earn a place on your
-          home screen — not by chasing trends, but by caring about the details.
-        </p>
-        <div class="hero__actions">
-          <a href="#work" class="btn btn--primary">Our work</a>
-          <a href="#contact" class="btn btn--secondary">Get in touch</a>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="pill">Independent studio · Korea</p>
+          <h1 class="hero__title" id="hero-title">
+            Games and apps,<br />
+            <span class="hero__accent">made with care.</span>
+          </h1>
+          <p class="hero__lede">
+            RiceCookey is a small team of designers and developers who like
+            taking their time. We make indie games you'll finish smiling, and
+            everyday apps that quietly stay on your phone.
+          </p>
+          <div class="hero__actions">
+            <a href="#work" class="btn btn--primary">See what we make</a>
+            <a href="#contact" class="btn btn--soft">Say hello</a>
+          </div>
+        </div>
+
+        <div class="hero__art" aria-hidden="true">
+          <div class="cup">
+            <div class="cup__steam">
+              <span></span><span></span><span></span>
+            </div>
+            <svg class="cup__svg" viewBox="0 0 300 300" width="280" height="280">
+              <path d="M -150 40 Q -150 200 0 200 Q 150 200 150 40 Z" fill="#FF6A1A" stroke="#2B1E12" stroke-width="14" stroke-linejoin="round" transform="translate(150 150)"/>
+              <path d="M -132 40 Q -132 -110 0 -110 Q 132 -110 132 40 Z" fill="#ffffff" stroke="#2B1E12" stroke-width="14" stroke-linejoin="round" transform="translate(150 150)"/>
+              <g stroke="#FF6A1A" stroke-width="14" stroke-linecap="round" opacity="0.55" transform="translate(150 90)">
+                <line x1="-40" y1="-10" x2="-40" y2="-60"/>
+                <line x1="0" y1="-18" x2="0" y2="-72"/>
+                <line x1="40" y1="-10" x2="40" y2="-60"/>
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
@@ -57,91 +81,104 @@
     <section class="section work" id="work" aria-labelledby="work-title">
       <div class="container">
         <header class="section__head">
-          <h2 class="section__title" id="work-title">What we build</h2>
+          <h2 class="section__title" id="work-title">What we make</h2>
           <p class="section__intro">
-            Two kinds of products, one standard of care. Every release is shaped
-            by the same people from first sketch to final polish.
+            Two kinds of things — same gentle attention to each one.
           </p>
         </header>
 
         <div class="work__grid">
-          <article class="work-card work-card--games">
-            <p class="work-card__type">Games</p>
-            <h3 class="work-card__title">Indie games with a point of view</h3>
-            <p class="work-card__body">
-              Short, considered experiences — not bloated, not disposable. We
-              focus on feel, pacing, and the kind of moment you remember after
-              you put the phone down.
+          <article class="soft-card soft-card--games">
+            <span class="soft-card__badge" aria-hidden="true"></span>
+            <p class="soft-card__type">Games</p>
+            <h3 class="soft-card__title">Games that feel good to play</h3>
+            <p class="soft-card__body">
+              Short, warm, a little surprising. We care about how it moves, how
+              it sounds, and that one moment that makes you pause before
+              closing the app.
             </p>
-            <ul class="work-card__list">
-              <li>Original art and sound</li>
-              <li>Designed for mobile</li>
-              <li>Scope we can stand behind</li>
+            <ul class="soft-card__list">
+              <li>Original art &amp; sound</li>
+              <li>Made for mobile</li>
+              <li>Finished with love</li>
             </ul>
           </article>
 
-          <article class="work-card work-card--apps">
-            <p class="work-card__type">Apps</p>
-            <h3 class="work-card__title">Tools that respect your time</h3>
-            <p class="work-card__body">
-              Lifestyle apps for real routines. Clear interfaces, no dark
-              patterns, no feature sprawl — just something that works quietly
-              well, day after day.
+          <article class="soft-card soft-card--apps">
+            <span class="soft-card__badge" aria-hidden="true"></span>
+            <p class="soft-card__type">Apps</p>
+            <h3 class="soft-card__title">Apps for real days</h3>
+            <p class="soft-card__body">
+              Habits, notes, little tools — the ordinary stuff that should just
+              work. Simple screens, gentle on your attention, built to last past
+              the first week.
             </p>
-            <ul class="work-card__list">
-              <li>Honest, focused design</li>
-              <li>Privacy by default</li>
-              <li>Built to be kept</li>
+            <ul class="soft-card__list">
+              <li>Clear &amp; calm design</li>
+              <li>Your data stays yours</li>
+              <li>Updated after launch</li>
             </ul>
           </article>
         </div>
 
-        <p class="work__status">New projects in development.</p>
+        <p class="work__note">
+          <span class="work__dot" aria-hidden="true"></span>
+          Our first titles are on the way — we'll share them here soon.
+        </p>
       </div>
     </section>
 
     <section class="section studio" id="studio" aria-labelledby="studio-title">
       <div class="container studio__layout">
         <div class="studio__main">
-          <h2 class="section__title" id="studio-title">A small team,<br />full ownership.</h2>
+          <h2 class="section__title" id="studio-title">A small team,<br />close together.</h2>
           <div class="studio__copy">
             <p>
-              We are an independent studio based in Korea. Design, engineering,
-              art, and sound live on the same table here — so what ships carries
-              one coherent vision, not a committee compromise.
+              We work side by side in Korea — design, code, art, and sound in
+              one room. That's how our products stay warm and consistent, from
+              the first sketch to the hundredth small fix.
             </p>
             <p>
-              We prefer shipping something honest and well-made over something
-              loud and half-finished. When a product is out in the world, we keep
-              listening and improving it.
+              We'd rather ship something we're proud of than something loud and
+              rushed. And when it's out in the world, we stick around to make it
+              better.
             </p>
           </div>
         </div>
 
-        <dl class="principles" aria-label="How we work">
-          <div class="principle">
-            <dt>Care over speed</dt>
-            <dd>Polish is not a phase at the end. It is how we work throughout.</dd>
-          </div>
-          <div class="principle">
-            <dt>Small by choice</dt>
-            <dd>Fewer projects means more attention on each one.</dd>
-          </div>
-          <div class="principle">
-            <dt>Long-term thinking</dt>
-            <dd>We build things we want to maintain, not launch and leave.</dd>
-          </div>
-        </dl>
+        <ul class="values" aria-label="How we work">
+          <li class="value">
+            <span class="value__num">01</span>
+            <div>
+              <h3 class="value__title">Take our time</h3>
+              <p>Good work needs room to breathe. We don't rush the parts that matter.</p>
+            </div>
+          </li>
+          <li class="value">
+            <span class="value__num">02</span>
+            <div>
+              <h3 class="value__title">Keep it small</h3>
+              <p>Fewer projects means more heart in each one.</p>
+            </div>
+          </li>
+          <li class="value">
+            <span class="value__num">03</span>
+            <div>
+              <h3 class="value__title">Stay after launch</h3>
+              <p>Version 1.0 is where we start caring even more.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact__layout">
         <div class="contact__info">
-          <h2 class="section__title" id="contact-title">Say hello</h2>
+          <h2 class="section__title" id="contact-title">Want to say hi?</h2>
           <p class="contact__body">
-            Questions, ideas, press, or collaboration — we read everything that
-            comes through. No auto-replies, no ticket queue.
+            Questions, ideas, press, or just because — send us a note.
+            We read every message ourselves.
           </p>
           <a class="contact__email" href="mailto:ricecookey.official@gmail.com">
             ricecookey.official@gmail.com
@@ -160,16 +197,16 @@
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honey" />
 
           <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="What should we call you?" required />
           </div>
           <div class="field">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
           </div>
           <div class="field">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what's on your mind…" required></textarea>
           </div>
           <button type="submit" class="btn btn--primary btn--full">Send message</button>
           <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
@@ -180,12 +217,20 @@
 
   <footer class="site-footer">
     <div class="container footer__inner">
-      <p class="footer__brand">RiceCookey</p>
+      <a class="brand brand--footer" href="#top">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="28" height="28">
+            <path d="M24 38C12 38 9 24 9 19Q9 8 24 8Q39 8 39 19C39 24 36 38 24 38Z" fill="#FF6A1A" stroke="#2B1E12" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M24 33C14.5 33 12 22 12 18Q12 12 24 12Q36 12 36 18C36 22 33.5 33 24 33Z" fill="#fff" stroke="#2B1E12" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand__name">RiceCookey</span>
+      </a>
       <div class="footer__links">
         <a href="mailto:ricecookey.official@gmail.com">Email</a>
         <a href="https://github.com/taeyongvv" target="_blank" rel="noopener">GitHub</a>
       </div>
-      <p class="footer__copy">© <span id="year">2026</span> RiceCookey</p>
+      <p class="footer__copy">© <span id="year">2026</span> RiceCookey · Made with care in Korea</p>
     </div>
   </footer>
 
