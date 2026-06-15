@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RiceCookey — Small-batch games & everyday apps</title>
+  <meta name="description" content="RiceCookey is a tiny independent studio crafting playful indie games and quietly useful lifestyle apps — handmade, one batch at a time." />
+
+  <!-- Open Graph / social -->
+  <meta property="og:title" content="RiceCookey — Small-batch games & everyday apps" />
+  <meta property="og:description" content="An independent studio crafting playful indie games and quietly useful lifestyle apps. Made in Korea, built for the world." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23D98E2B'/><circle cx='38' cy='42' r='4' fill='%23B5701A'/><circle cx='60' cy='38' r='3.5' fill='%23B5701A'/><circle cx='55' cy='62' r='4' fill='%23B5701A'/><circle cx='40' cy='62' r='3' fill='%23B5701A'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="RiceCookey home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="30" height="30">
+            <circle cx="50" cy="50" r="42" fill="var(--cookie)" />
+            <circle cx="50" cy="50" r="42" fill="none" stroke="var(--cookie-deep)" stroke-width="3" />
+            <circle cx="38" cy="42" r="4" fill="var(--cookie-deep)" />
+            <circle cx="61" cy="39" r="3.5" fill="var(--cookie-deep)" />
+            <circle cx="56" cy="62" r="4" fill="var(--cookie-deep)" />
+            <circle cx="39" cy="61" r="3" fill="var(--cookie-deep)" />
+          </svg>
+        </span>
+        <span class="brand__name">RiceCookey</span>
+      </a>
+      <div class="nav__links">
+        <a href="#make">What we make</a>
+        <a href="#studio">Studio</a>
+        <a href="#contact" class="nav__cta">Say hello</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow reveal">Independent studio — made in Korea</p>
+          <h1 class="hero__title reveal" id="hero-title">
+            Small-batch games<br />and apps for<br /><span class="accent">everyday life.</span>
+          </h1>
+          <p class="hero__lede reveal">
+            RiceCookey is a tiny independent studio. We craft games worth playing
+            and lifestyle apps worth keeping — each one made by hand, with care,
+            like a fresh batch out of the oven.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="#make" class="btn btn--primary">See what we make</a>
+            <a href="#contact" class="btn btn--ghost">Say hello</a>
+          </div>
+        </div>
+
+        <div class="hero__art reveal" aria-hidden="true">
+          <div class="cookie">
+            <div class="cookie__steam">
+              <span></span><span></span><span></span>
+            </div>
+            <svg class="cookie__disc" viewBox="0 0 220 220" width="260" height="260">
+              <defs>
+                <radialGradient id="bake" cx="42%" cy="38%" r="68%">
+                  <stop offset="0%" stop-color="#F3C173" />
+                  <stop offset="55%" stop-color="#D98E2B" />
+                  <stop offset="100%" stop-color="#B5701A" />
+                </radialGradient>
+              </defs>
+              <circle cx="110" cy="110" r="96" fill="url(#bake)" />
+              <circle cx="110" cy="110" r="96" fill="none" stroke="#9A5C12" stroke-width="5" opacity="0.55" />
+              <g fill="#9A5C12" opacity="0.75">
+                <circle cx="80" cy="86" r="7" />
+                <circle cx="132" cy="74" r="6" />
+                <circle cx="146" cy="118" r="7.5" />
+                <circle cx="96" cy="140" r="6" />
+                <circle cx="70" cy="120" r="5" />
+                <circle cx="120" cy="132" r="5" />
+                <circle cx="112" cy="100" r="4.5" />
+              </g>
+              <ellipse cx="86" cy="80" rx="26" ry="16" fill="#FBE3B4" opacity="0.45" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE MAKE -->
+    <section class="section make" id="make" aria-labelledby="make-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">What's in the batch</p>
+          <h2 class="section__title" id="make-title">Two things, made well.</h2>
+          <p class="section__intro">
+            We keep our menu short on purpose. Everything we ship falls into one
+            of two batches — and both get the same handmade attention.
+          </p>
+        </header>
+
+        <div class="make__grid">
+          <!-- To add a real product later, drop it inside the matching card. -->
+          <article class="card card--games reveal">
+            <p class="card__tag">Indie games</p>
+            <h3 class="card__title">Games worth playing</h3>
+            <p class="card__body">
+              Short, surprising, and full of character. We build games that are
+              small in scope and big on heart — the kind you finish with a smile
+              and tell a friend about.
+            </p>
+            <ul class="card__list">
+              <li>Handcrafted art &amp; sound</li>
+              <li>Tight, replayable design</li>
+              <li>Built for mobile first</li>
+            </ul>
+          </article>
+
+          <article class="card card--apps reveal">
+            <p class="card__tag">Lifestyle apps</p>
+            <h3 class="card__title">Tools worth keeping</h3>
+            <p class="card__body">
+              Quietly useful apps that slot into your daily routine. We design for
+              everyday life — respecting your time, your attention, and your
+              screen, doing one thing genuinely well.
+            </p>
+            <ul class="card__list">
+              <li>Calm, focused interfaces</li>
+              <li>Privacy-minded by default</li>
+              <li>Made to fit real habits</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="make__note reveal">
+          <span class="dot" aria-hidden="true"></span>
+          Currently cooking — new games and apps on the way.
+        </p>
+      </div>
+    </section>
+
+    <!-- STUDIO -->
+    <section class="section studio" id="studio" aria-labelledby="studio-title">
+      <div class="container studio__grid">
+        <div class="studio__intro reveal">
+          <p class="eyebrow">The studio</p>
+          <h2 class="section__title" id="studio-title">A small kitchen.</h2>
+          <p class="studio__body">
+            RiceCookey is an independent team that likes to keep things small.
+            We wear a lot of hats — design, code, art, and sound — so every release
+            carries one consistent point of view from start to finish.
+          </p>
+          <p class="studio__body">
+            We're based in Korea and build for players and people everywhere. We'd
+            rather ship something small and well-made than something big and
+            forgettable, then keep improving it batch after batch.
+          </p>
+        </div>
+
+        <ul class="values reveal" aria-label="How we work">
+          <li class="value">
+            <span class="value__label">By hand</span>
+            <p>Crafted, not assembled. Details get the time they deserve.</p>
+          </li>
+          <li class="value">
+            <span class="value__label">Small on purpose</span>
+            <p>Tight scope, clear ideas, no filler. Less, but better.</p>
+          </li>
+          <li class="value">
+            <span class="value__label">Built to last</span>
+            <p>We ship, listen, and refine — long after release day.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__copy reveal">
+          <p class="eyebrow">Say hello</p>
+          <h2 class="section__title" id="contact-title">Let's talk shop.</h2>
+          <p class="contact__body">
+            Got an idea, a question, a collaboration, or just want to say hi?
+            Drop us a line — we read every message.
+          </p>
+          <a class="contact__email" href="mailto:ricecookey.official@gmail.com">
+            ricecookey.official@gmail.com
+          </a>
+        </div>
+
+        <form
+          class="contact__form reveal"
+          id="contact-form"
+          action="https://formsubmit.co/ricecookey.official@gmail.com"
+          method="POST"
+        >
+          <!-- FormSubmit settings -->
+          <input type="hidden" name="_subject" value="New message from ricecookey.io" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <!-- Honeypot to catch bots -->
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honey" />
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what's on your mind…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send message</button>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <a class="brand brand--footer" href="#top" aria-label="RiceCookey home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="26" height="26">
+            <circle cx="50" cy="50" r="42" fill="var(--cookie)" />
+            <circle cx="38" cy="42" r="4" fill="var(--cookie-deep)" />
+            <circle cx="61" cy="39" r="3.5" fill="var(--cookie-deep)" />
+            <circle cx="56" cy="62" r="4" fill="var(--cookie-deep)" />
+            <circle cx="39" cy="61" r="3" fill="var(--cookie-deep)" />
+          </svg>
+        </span>
+        <span class="brand__name">RiceCookey</span>
+      </a>
+
+      <div class="footer__links">
+        <a href="mailto:ricecookey.official@gmail.com">ricecookey.official@gmail.com</a>
+        <a href="https://github.com/taeyongvv" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
+      <p class="footer__copy">© <span id="year">2026</span> RiceCookey · An independent studio</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
