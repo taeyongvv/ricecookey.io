@@ -15,13 +15,20 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="./styles.css" />
+  <script>
+    (function () {
+      var s = localStorage.getItem("ricecookey-lang");
+      var l = s === "ko" || s === "en" ? s : ((navigator.language || "").toLowerCase().startsWith("ko") ? "ko" : "en");
+      document.documentElement.lang = l;
+    })();
+  </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <header class="site-header" id="top">
-    <nav class="nav container" aria-label="Primary">
-      <a class="brand" href="#top" aria-label="RiceCookey home">
+    <nav class="nav container" data-i18n-aria="nav.aria" aria-label="Primary">
+      <a class="brand" href="#top" data-i18n-aria="nav.brand" aria-label="RiceCookey home">
         <span class="brand__mark" aria-hidden="true">
           <svg viewBox="0 0 48 48" width="32" height="32">
             <path d="M24 38C12 38 9 24 9 19Q9 8 24 8Q39 8 39 19C39 24 36 38 24 38Z" fill="#FF6A1A" stroke="#2B1E12" stroke-width="2.5" stroke-linejoin="round"/>
@@ -30,11 +37,17 @@
         </span>
         <span class="brand__name">RiceCookey</span>
       </a>
-      <div class="nav__links">
-        <a href="#work">Work</a>
-        <a href="#team">Team</a>
-        <a href="#studio">About</a>
-        <a href="#contact" class="nav__cta">Say hello</a>
+      <div class="nav__right">
+        <div class="nav__links">
+          <a href="#work" data-i18n="nav.work">Work</a>
+          <a href="#team" data-i18n="nav.team">Team</a>
+          <a href="#studio" data-i18n="nav.about">About</a>
+          <a href="#contact" class="nav__cta" data-i18n="nav.contact">Say hello</a>
+        </div>
+        <div class="lang-switch" role="group" data-i18n-aria="lang.aria" aria-label="Language">
+          <button type="button" class="lang-switch__btn" data-lang="ko" aria-pressed="false">한국어</button>
+          <button type="button" class="lang-switch__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+        </div>
       </div>
     </nav>
   </header>
@@ -44,19 +57,19 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero__grid">
         <div class="hero__copy">
-          <p class="pill">Independent studio · Korea</p>
+          <p class="pill" data-i18n="hero.pill">Independent studio · Korea</p>
           <h1 class="hero__title" id="hero-title">
-            Games and apps,<br />
-            <span class="hero__accent">made with care.</span>
+            <span data-i18n="hero.title1">Games and apps,</span><br />
+            <span class="hero__accent" data-i18n="hero.title2">made with care.</span>
           </h1>
-          <p class="hero__lede">
+          <p class="hero__lede" data-i18n="hero.lede">
             RiceCookey is a small team of designers and developers who like
             taking their time. We make indie games you'll finish smiling, and
             everyday apps that quietly stay on your phone.
           </p>
           <div class="hero__actions">
-            <a href="#work" class="btn btn--primary">See what we make</a>
-            <a href="#contact" class="btn btn--soft">Say hello</a>
+            <a href="#work" class="btn btn--primary" data-i18n="hero.cta1">See what we make</a>
+            <a href="#contact" class="btn btn--soft" data-i18n="hero.cta2">Say hello</a>
           </div>
         </div>
 
@@ -82,8 +95,8 @@
     <section class="section work" id="work" aria-labelledby="work-title">
       <div class="container">
         <header class="section__head">
-          <h2 class="section__title" id="work-title">What we make</h2>
-          <p class="section__intro">
+          <h2 class="section__title" id="work-title" data-i18n="work.title">What we make</h2>
+          <p class="section__intro" data-i18n="work.intro">
             Two kinds of things — same gentle attention to each one.
           </p>
         </header>
@@ -91,40 +104,40 @@
         <div class="work__grid">
           <article class="soft-card soft-card--games">
             <span class="soft-card__badge" aria-hidden="true"></span>
-            <p class="soft-card__type">Games</p>
-            <h3 class="soft-card__title">Games that feel good to play</h3>
-            <p class="soft-card__body">
+            <p class="soft-card__type" data-i18n="work.games.type">Games</p>
+            <h3 class="soft-card__title" data-i18n="work.games.title">Games that feel good to play</h3>
+            <p class="soft-card__body" data-i18n="work.games.body">
               Short, warm, a little surprising. We care about how it moves, how
               it sounds, and that one moment that makes you pause before
               closing the app.
             </p>
             <ul class="soft-card__list">
-              <li>Original art &amp; sound</li>
-              <li>Made for mobile</li>
-              <li>Finished with love</li>
+              <li data-i18n="work.games.li1">Original art &amp; sound</li>
+              <li data-i18n="work.games.li2">Made for mobile</li>
+              <li data-i18n="work.games.li3">Finished with love</li>
             </ul>
           </article>
 
           <article class="soft-card soft-card--apps">
             <span class="soft-card__badge" aria-hidden="true"></span>
-            <p class="soft-card__type">Apps</p>
-            <h3 class="soft-card__title">Apps for real days</h3>
-            <p class="soft-card__body">
+            <p class="soft-card__type" data-i18n="work.apps.type">Apps</p>
+            <h3 class="soft-card__title" data-i18n="work.apps.title">Apps for real days</h3>
+            <p class="soft-card__body" data-i18n="work.apps.body">
               Habits, notes, little tools — the ordinary stuff that should just
               work. Simple screens, gentle on your attention, built to last past
               the first week.
             </p>
             <ul class="soft-card__list">
-              <li>Clear &amp; calm design</li>
-              <li>Your data stays yours</li>
-              <li>Updated after launch</li>
+              <li data-i18n="work.apps.li1">Clear &amp; calm design</li>
+              <li data-i18n="work.apps.li2">Your data stays yours</li>
+              <li data-i18n="work.apps.li3">Updated after launch</li>
             </ul>
           </article>
         </div>
 
         <p class="work__note">
           <span class="work__dot" aria-hidden="true"></span>
-          Our first titles are on the way — we'll share them here soon.
+          <span data-i18n="work.note">Our first titles are on the way — we'll share them here soon.</span>
         </p>
       </div>
     </section>
@@ -132,9 +145,9 @@
     <section class="section team" id="team" aria-labelledby="team-title">
       <div class="container">
         <header class="section__head section__head--center">
-          <p class="pill">The team</p>
-          <h2 class="section__title" id="team-title">밥 짓는 사람들</h2>
-          <p class="section__intro">
+          <p class="pill" data-i18n="team.pill">The team</p>
+          <h2 class="section__title" id="team-title" data-i18n="team.title">밥 짓는 사람들</h2>
+          <p class="section__intro" data-i18n="team.intro">
             The small crew behind RiceCookey — each with a role, each with
             opinions, all at the same table.
           </p>
@@ -144,21 +157,21 @@
           <article class="team-card">
             <div class="team-card__avatar team-card__avatar--t">T</div>
             <h3 class="team-card__name">TedPark</h3>
-            <p class="team-card__role">CEO</p>
+            <p class="team-card__role" data-i18n="team.ted.role">CEO</p>
             <span class="team-card__tag">확신의 ENTJ</span>
           </article>
 
           <article class="team-card">
             <div class="team-card__avatar team-card__avatar--c">C</div>
             <h3 class="team-card__name">Chacha</h3>
-            <p class="team-card__role">Planning</p>
+            <p class="team-card__role" data-i18n="team.chacha.role">Planning</p>
             <span class="team-card__tag">어쩔 수 없는 INFP</span>
           </article>
 
           <article class="team-card">
             <div class="team-card__avatar team-card__avatar--r">T</div>
             <h3 class="team-card__name">Tory</h3>
-            <p class="team-card__role">Strategy</p>
+            <p class="team-card__role" data-i18n="team.tory.role">Strategy</p>
             <span class="team-card__tag">최선을 다하는 ISFP</span>
           </article>
         </div>
@@ -167,12 +180,12 @@
 
     <section class="section lab" id="lab" aria-labelledby="lab-title">
       <div class="container lab__inner">
-        <p class="pill pill--light">Sub studio</p>
+        <p class="pill pill--light" data-i18n="lab.pill">Sub studio</p>
         <h2 class="lab__title" id="lab-title">
-          와장창 <span>스튜디오</span>
+          <span data-i18n="lab.title1">와장창</span> <span class="lab__title-accent" data-i18n="lab.title2">스튜디오</span>
         </h2>
-        <p class="lab__quote">"놀면서 돈 벌고 싶다"</p>
-        <p class="lab__body">
+        <p class="lab__quote" data-i18n="lab.quote">"놀면서 돈 벌고 싶다"</p>
+        <p class="lab__body" data-i18n="lab.body">
           RiceCookey's sub-studio — a lab that scouts contests across the
           country and clears through all kinds of projects with a squad of AI
           agents.
@@ -180,15 +193,15 @@
 
         <div class="lab__grid">
           <article class="lab-card">
-            <h3 class="lab-card__title">🏆 공모전 사냥꾼</h3>
-            <p class="lab-card__body">
+            <h3 class="lab-card__title" data-i18n="lab.card1.title">🏆 공모전 사냥꾼</h3>
+            <p class="lab-card__body" data-i18n="lab.card1.body">
               If a contest catches our eye, we're in. Hunters who enjoy the
               chase as much as the win.
             </p>
           </article>
           <article class="lab-card">
-            <h3 class="lab-card__title">🤖 에이전트 부대</h3>
-            <p class="lab-card__body">
+            <h3 class="lab-card__title" data-i18n="lab.card2.title">🤖 에이전트 부대</h3>
+            <p class="lab-card__body" data-i18n="lab.card2.body">
               A crew of AI agents on call — more projects shipped, fewer late
               nights.
             </p>
@@ -196,8 +209,8 @@
         </div>
 
         <p class="lab__cta">
-          같이 밥 한 끼, 아니 프로젝트 한 판?<br />
-          <span>Fun project, serious collaboration — everyone's welcome.</span>
+          <span data-i18n="lab.cta1">같이 밥 한 끼, 아니 프로젝트 한 판?</span><br />
+          <span data-i18n="lab.cta2">Fun project, serious collaboration — everyone's welcome.</span>
         </p>
       </div>
     </section>
@@ -205,14 +218,14 @@
     <section class="section studio" id="studio" aria-labelledby="studio-title">
       <div class="container studio__layout">
         <div class="studio__main">
-          <h2 class="section__title" id="studio-title">A small team,<br />close together.</h2>
+          <h2 class="section__title" id="studio-title" data-i18n-html="studio.title">A small team,<br />close together.</h2>
           <div class="studio__copy">
-            <p>
+            <p data-i18n="studio.p1">
               We work side by side in Korea — design, code, art, and sound in
               one room. That's how our products stay warm and consistent, from
               the first sketch to the hundredth small fix.
             </p>
-            <p>
+            <p data-i18n="studio.p2">
               We'd rather ship something we're proud of than something loud and
               rushed. And when it's out in the world, we stick around to make it
               better.
@@ -220,26 +233,26 @@
           </div>
         </div>
 
-        <ul class="values" aria-label="How we work">
+        <ul class="values" data-i18n-aria="studio.values.aria" aria-label="How we work">
           <li class="value">
             <span class="value__num">01</span>
             <div>
-              <h3 class="value__title">Take our time</h3>
-              <p>Good work needs room to breathe. We don't rush the parts that matter.</p>
+              <h3 class="value__title" data-i18n="studio.v1.title">Take our time</h3>
+              <p data-i18n="studio.v1.body">Good work needs room to breathe. We don't rush the parts that matter.</p>
             </div>
           </li>
           <li class="value">
             <span class="value__num">02</span>
             <div>
-              <h3 class="value__title">Keep it small</h3>
-              <p>Fewer projects means more heart in each one.</p>
+              <h3 class="value__title" data-i18n="studio.v2.title">Keep it small</h3>
+              <p data-i18n="studio.v2.body">Fewer projects means more heart in each one.</p>
             </div>
           </li>
           <li class="value">
             <span class="value__num">03</span>
             <div>
-              <h3 class="value__title">Stay after launch</h3>
-              <p>Version 1.0 is where we start caring even more.</p>
+              <h3 class="value__title" data-i18n="studio.v3.title">Stay after launch</h3>
+              <p data-i18n="studio.v3.body">Version 1.0 is where we start caring even more.</p>
             </div>
           </li>
         </ul>
@@ -249,8 +262,8 @@
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact__layout">
         <div class="contact__info">
-          <h2 class="section__title" id="contact-title">Want to say hi?</h2>
-          <p class="contact__body">
+          <h2 class="section__title" id="contact-title" data-i18n="contact.title">Want to say hi?</h2>
+          <p class="contact__body" data-i18n="contact.body">
             Questions, ideas, press, or just because — send us a note.
             We read every message ourselves.
           </p>
@@ -271,18 +284,18 @@
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honey" />
 
           <div class="field">
-            <label for="name">Your name</label>
-            <input type="text" id="name" name="name" placeholder="What should we call you?" required />
+            <label for="name" data-i18n="contact.name">Your name</label>
+            <input type="text" id="name" name="name" data-i18n-placeholder="contact.name.ph" placeholder="What should we call you?" required />
           </div>
           <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            <label for="email" data-i18n="contact.email">Email</label>
+            <input type="email" id="email" name="email" data-i18n-placeholder="contact.email.ph" placeholder="you@example.com" required />
           </div>
           <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us what's on your mind…" required></textarea>
+            <label for="message" data-i18n="contact.message">Message</label>
+            <textarea id="message" name="message" rows="5" data-i18n-placeholder="contact.message.ph" placeholder="Tell us what's on your mind…" required></textarea>
           </div>
-          <button type="submit" class="btn btn--primary btn--full">Send message</button>
+          <button type="submit" class="btn btn--primary btn--full" data-i18n="contact.submit">Send message</button>
           <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -301,12 +314,13 @@
         <span class="brand__name">RiceCookey</span>
       </a>
       <div class="footer__links">
-        <a href="mailto:ricecookey.official@gmail.com">Email</a>
+        <a href="mailto:ricecookey.official@gmail.com" data-i18n="footer.email">Email</a>
       </div>
-      <p class="footer__copy">© <span id="year">2026</span> RiceCookey · 오늘도 무언가를 짓는 중 🍚</p>
+      <p class="footer__copy" data-i18n-footer>© <span id="year">2026</span> RiceCookey · 오늘도 무언가를 짓는 중 🍚</p>
     </div>
   </footer>
 
+  <script src="./i18n.js"></script>
   <script src="./script.js"></script>
 </body>
 </html>
