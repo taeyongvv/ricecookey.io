@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RiceCookey — Games &amp; apps, made with care</title>
-  <meta name="description" content="RiceCookey is a small independent studio in Korea. We make indie games and everyday apps — slowly, together, with care." />
+  <title>RiceCookey — 정성껏 만드는 게임과 앱</title>
+  <meta name="description" content="한국에 있는 소규모 인디 스튜디오 RiceCookey. 천천히, 함께, 정성껏 게임과 일상 앱을 만듭니다." />
 
   <meta property="og:title" content="RiceCookey — Games &amp; apps, made with care" />
   <meta property="og:description" content="A small studio in Korea making indie games and everyday apps with care." />
@@ -18,7 +18,7 @@
   <script>
     (function () {
       var s = localStorage.getItem("ricecookey-lang");
-      var l = s === "ko" || s === "en" ? s : ((navigator.language || "").toLowerCase().startsWith("ko") ? "ko" : "en");
+      var l = s === "ko" || s === "en" ? s : "ko";
       document.documentElement.lang = l;
     })();
   </script>
@@ -45,8 +45,8 @@
           <a href="#contact" class="nav__cta" data-i18n="nav.contact">Say hello</a>
         </div>
         <div class="lang-switch" role="group" data-i18n-aria="lang.aria" aria-label="Language">
-          <button type="button" class="lang-switch__btn" data-lang="ko" aria-pressed="false">한국어</button>
-          <button type="button" class="lang-switch__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-switch__btn is-active" data-lang="ko" aria-pressed="true">한국어</button>
+          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
         </div>
       </div>
     </nav>
@@ -158,21 +158,21 @@
             <div class="team-card__avatar team-card__avatar--t">T</div>
             <h3 class="team-card__name">TedPark</h3>
             <p class="team-card__role" data-i18n="team.ted.role">CEO</p>
-            <span class="team-card__tag">확신의 ENTJ</span>
+            <span class="team-card__tag" data-i18n="team.ted.tag">확신의 ENTJ</span>
           </article>
 
           <article class="team-card">
             <div class="team-card__avatar team-card__avatar--c">C</div>
             <h3 class="team-card__name">Chacha</h3>
             <p class="team-card__role" data-i18n="team.chacha.role">Planning</p>
-            <span class="team-card__tag">어쩔 수 없는 INFP</span>
+            <span class="team-card__tag" data-i18n="team.chacha.tag">어쩔 수 없는 INFP</span>
           </article>
 
           <article class="team-card">
             <div class="team-card__avatar team-card__avatar--r">T</div>
             <h3 class="team-card__name">Tory</h3>
             <p class="team-card__role" data-i18n="team.tory.role">Strategy</p>
-            <span class="team-card__tag">최선을 다하는 ISFP</span>
+            <span class="team-card__tag" data-i18n="team.tory.tag">최선을 다하는 ISFP</span>
           </article>
         </div>
       </div>

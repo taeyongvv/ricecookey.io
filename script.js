@@ -3,12 +3,12 @@
   "use strict";
 
   var STORAGE_KEY = "ricecookey-lang";
-  var currentLang = "en";
+  var currentLang = "ko";
 
   function detectLang() {
     var saved = localStorage.getItem(STORAGE_KEY);
     if (saved === "ko" || saved === "en") return saved;
-    return (navigator.language || "").toLowerCase().startsWith("ko") ? "ko" : "en";
+    return "ko";
   }
 
   function t(key) {
