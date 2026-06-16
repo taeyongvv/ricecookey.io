@@ -1,4 +1,4 @@
-/* RiceCookey — site interactions & i18n */
+/* RiceCookey — i18n, scroll reveal */
 (function () {
   "use strict";
 
@@ -13,7 +13,7 @@
 
   function t(key) {
     var dict = window.RC_I18N[currentLang];
-    return (dict && dict[key]) || (window.RC_I18N.en[key]) || key;
+    return (dict && dict[key]) || (window.RC_I18N.ko[key]) || key;
   }
 
   function applyLang(lang) {
@@ -30,24 +30,17 @@
       el.innerHTML = t(el.getAttribute("data-i18n-html"));
     });
 
-    document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
-      el.placeholder = t(el.getAttribute("data-i18n-placeholder"));
-    });
-
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
       el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria")));
     });
 
-    var title = t("meta.title");
-    var desc = t("meta.description");
-    document.title = title;
+    document.title = t("meta.title");
     var metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute("content", desc);
+    if (metaDesc) metaDesc.setAttribute("content", t("meta.description"));
 
     var footerCopy = document.querySelector("[data-i18n-footer]");
     if (footerCopy) {
-      var year = new Date().getFullYear();
-      footerCopy.innerHTML = t("footer.copy").replace("{year}", '<span id="year">' + year + "</span>");
+      footerCopy.innerHTML = t("footer.copy").replace("{year}", '<span id="year">' + new Date().getFullYear() + "</span>");
     }
 
     document.querySelectorAll(".lang-switch__btn").forEach(function (btn) {
@@ -67,54 +60,28 @@
     });
   }
 
-  applyLang(detectLang());
-  initLangSwitch();
+  function initReveal() {
+    var els = document.querySelectorAll(".reveal");
+    if (!els.length) return;
 
-  var form = document.getElementById("contact-form");
-  var status = document.getElementById("form-status");
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+      els.forEach(function (el) { el.classList.add("is-in"); });
+      return;
+    }
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      if (!window.fetch) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
 
-      e.preventDefault();
-
-      if (form.querySelector('[name="_honey"]').value) return;
-
-      var btn = form.querySelector('button[type="submit"]');
-      btn.disabled = true;
-      btn.textContent = t("contact.sending");
-      status.textContent = "";
-      status.className = "form__status";
-
-      fetch("https://formsubmit.co/ajax/ricecookey.official@gmail.com", {
-        method: "POST",
-        headers: { "Accept": "application/json", "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: form.name.value,
-          email: form.email.value,
-          message: form.message.value,
-          _subject: "New message from ricecookey.io",
-          _template: "table"
-        })
-      })
-        .then(function (res) { return res.json(); })
-        .then(function () {
-          form.reset();
-          status.textContent = t("contact.success");
-          status.classList.add("is-ok");
-        })
-        .catch(function () {
-          status.textContent = t("contact.error");
-          status.classList.add("is-err");
-        })
-        .finally(function () {
-          btn.disabled = false;
-          btn.textContent = t("contact.submit");
-        });
-    });
+    els.forEach(function (el) { io.observe(el); });
   }
 
-  window.RC_setLang = applyLang;
-  window.RC_t = t;
+  applyLang(detectLang());
+  initLangSwitch();
+  initReveal();
 })();

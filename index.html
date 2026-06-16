@@ -3,46 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RiceCookey — 정성껏 만드는 게임과 앱</title>
-  <meta name="description" content="한국에 있는 소규모 인디 스튜디오 RiceCookey. 천천히, 함께, 정성껏 게임과 일상 앱을 만듭니다." />
-
-  <meta property="og:title" content="RiceCookey — Games &amp; apps, made with care" />
-  <meta property="og:description" content="A small studio in Korea making indie games and everyday apps with care." />
+  <title>RICECookey — 오늘도 새로운 걸 짓고 있습니다</title>
+  <meta name="description" content="게임부터 생활형 앱까지. RICECookey는 정답보다 재미를, 완벽보다 시도를 더 좋아하는 팀입니다." />
+  <meta property="og:title" content="RICECookey" />
   <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_US" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FFF6EC'/><path d='M50 78C28 78 22 52 22 42Q22 18 50 18Q78 18 78 42C78 52 72 78 50 78Z' fill='%23FF6A1A' stroke='%232B1E12' stroke-width='5'/><path d='M50 68C32 68 28 48 28 40Q28 24 50 24Q72 24 72 40C72 48 68 68 50 68Z' fill='white' stroke='%232B1E12' stroke-width='4'/></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23FFF6EC'/><path d='M50 78C28 78 22 52 22 42Q22 18 50 18Q78 18 78 42C78 52 72 78 50 78Z' fill='%23FF6A1A' stroke='%232B1E12' stroke-width='5'/></svg>" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="stylesheet" href="./styles.css" />
   <script>
     (function () {
       var s = localStorage.getItem("ricecookey-lang");
-      var l = s === "ko" || s === "en" ? s : "ko";
-      document.documentElement.lang = l;
+      document.documentElement.lang = s === "ko" || s === "en" ? s : "ko";
     })();
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
 
   <header class="site-header" id="top">
     <nav class="nav container" data-i18n-aria="nav.aria" aria-label="Primary">
-      <a class="brand" href="#top" data-i18n-aria="nav.brand" aria-label="RiceCookey home">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="32" height="32">
-            <path d="M24 38C12 38 9 24 9 19Q9 8 24 8Q39 8 39 19C39 24 36 38 24 38Z" fill="#FF6A1A" stroke="#2B1E12" stroke-width="2.5" stroke-linejoin="round"/>
-            <path d="M24 33C14.5 33 12 22 12 18Q12 12 24 12Q36 12 36 18C36 22 33.5 33 24 33Z" fill="#fff" stroke="#2B1E12" stroke-width="2" stroke-linejoin="round"/>
-          </svg>
-        </span>
-        <span class="brand__name">RiceCookey</span>
+      <a class="brand" href="#top" data-i18n-aria="nav.brand" aria-label="RICECookey home">
+        <span class="brand__rice">RICE</span><span class="brand__cookey">Cookey</span>
       </a>
       <div class="nav__right">
         <div class="nav__links">
-          <a href="#work" data-i18n="nav.work">Work</a>
-          <a href="#team" data-i18n="nav.team">Team</a>
-          <a href="#studio" data-i18n="nav.about">About</a>
-          <a href="#contact" class="nav__cta" data-i18n="nav.contact">Say hello</a>
+          <a href="#about" data-i18n="nav.about">소개</a>
+          <a href="#team" data-i18n="nav.team">멤버</a>
+          <a href="#lab" data-i18n="nav.lab">와장창</a>
+          <a href="#contact" class="nav__cta" data-i18n="nav.contact">연락하기</a>
         </div>
         <div class="lang-switch" role="group" data-i18n-aria="lang.aria" aria-label="Language">
           <button type="button" class="lang-switch__btn is-active" data-lang="ko" aria-pressed="true">한국어</button>
@@ -50,37 +40,34 @@
         </div>
       </div>
     </nav>
-  </header>
 
-  <main id="main">
-
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero__grid">
+    <div class="container hero" id="main">
+      <div class="hero__grid">
         <div class="hero__copy">
-          <p class="pill" data-i18n="hero.pill">Independent studio · Korea</p>
-          <h1 class="hero__title" id="hero-title">
-            <span data-i18n="hero.title1">Games and apps,</span><br />
-            <span class="hero__accent" data-i18n="hero.title2">made with care.</span>
+          <div class="hero__badge reveal">
+            <span class="hero__dot" aria-hidden="true"></span>
+            <span data-i18n="hero.badge">새로운 도전을 밥 먹듯 하는 팀</span>
+          </div>
+          <h1 class="hero__title display reveal">
+            <span data-i18n="hero.title1">오늘도 새로운 걸</span><br />
+            <span class="accent" data-i18n="hero.title2">짓고</span>
+            <span data-i18n="hero.title3"> 있습니다</span>
           </h1>
-          <p class="hero__lede" data-i18n="hero.lede">
-            RiceCookey is a small team of designers and developers who like
-            taking their time. We make indie games you'll finish smiling, and
-            everyday apps that quietly stay on your phone.
+          <p class="hero__lede reveal">
+            <span data-i18n="hero.lede">게임부터 생활형 앱까지. RICECookey는 정답보다 재미를, 완벽보다 시도를 더 좋아하는 사람들이에요.</span>
+            <span class="hero__note" data-i18n="hero.note">(밥도 짓고 앱도 짓고 🍚)</span>
           </p>
-          <div class="hero__actions">
-            <a href="#work" class="btn btn--primary" data-i18n="hero.cta1">See what we make</a>
-            <a href="#contact" class="btn btn--soft" data-i18n="hero.cta2">Say hello</a>
+          <div class="hero__actions reveal">
+            <a href="#about" class="btn btn--primary" data-i18n="hero.cta1">우리 소개 보기</a>
+            <a href="#lab" class="btn btn--ghost" data-i18n="hero.cta2">와장창 스튜디오 →</a>
           </div>
         </div>
-
-        <div class="hero__art" aria-hidden="true">
-          <div class="cup">
-            <div class="cup__steam">
-              <span></span><span></span><span></span>
-            </div>
-            <svg class="cup__svg" viewBox="0 0 300 300" width="280" height="280">
+        <div class="hero__art reveal" aria-hidden="true">
+          <div class="bowl">
+            <div class="bowl__steam"><span></span><span></span><span></span></div>
+            <svg class="bowl__svg" viewBox="0 0 300 300" width="300" height="300">
               <path d="M -150 40 Q -150 200 0 200 Q 150 200 150 40 Z" fill="#FF6A1A" stroke="#2B1E12" stroke-width="14" stroke-linejoin="round" transform="translate(150 150)"/>
-              <path d="M -132 40 Q -132 -110 0 -110 Q 132 -110 132 40 Z" fill="#ffffff" stroke="#2B1E12" stroke-width="14" stroke-linejoin="round" transform="translate(150 150)"/>
+              <path d="M -132 40 Q -132 -110 0 -110 Q 132 -110 132 40 Z" fill="#fff" stroke="#2B1E12" stroke-width="14" stroke-linejoin="round" transform="translate(150 150)"/>
               <g stroke="#FF6A1A" stroke-width="14" stroke-linecap="round" opacity="0.55" transform="translate(150 90)">
                 <line x1="-40" y1="-10" x2="-40" y2="-60"/>
                 <line x1="0" y1="-18" x2="0" y2="-72"/>
@@ -90,233 +77,118 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <section class="section work" id="work" aria-labelledby="work-title">
-      <div class="container">
-        <header class="section__head">
-          <h2 class="section__title" id="work-title" data-i18n="work.title">What we make</h2>
-          <p class="section__intro" data-i18n="work.intro">
-            Two kinds of things — same gentle attention to each one.
-          </p>
-        </header>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__text display" data-i18n="marquee">게임 🎮 · 생활형 앱 📱 · 공모전 사냥 🏆 · AI 에이전트 🤖 · 놀면서 돈 벌기 💸 · </span>
+      <span class="marquee__text display" data-i18n="marquee" aria-hidden="true">게임 🎮 · 생활형 앱 📱 · 공모전 사냥 🏆 · AI 에이전트 🤖 · 놀면서 돈 벌기 💸 · </span>
+    </div>
+  </div>
 
-        <div class="work__grid">
-          <article class="soft-card soft-card--games">
-            <span class="soft-card__badge" aria-hidden="true"></span>
-            <p class="soft-card__type" data-i18n="work.games.type">Games</p>
-            <h3 class="soft-card__title" data-i18n="work.games.title">Games that feel good to play</h3>
-            <p class="soft-card__body" data-i18n="work.games.body">
-              Short, warm, a little surprising. We care about how it moves, how
-              it sounds, and that one moment that makes you pause before
-              closing the app.
-            </p>
-            <ul class="soft-card__list">
-              <li data-i18n="work.games.li1">Original art &amp; sound</li>
-              <li data-i18n="work.games.li2">Made for mobile</li>
-              <li data-i18n="work.games.li3">Finished with love</li>
-            </ul>
-          </article>
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <header class="section__head reveal">
+        <p class="eyebrow" data-i18n="about.label">WHO WE ARE</p>
+        <h2 class="section__title display" id="about-title" data-i18n="about.title">우리는 누구냐면요</h2>
+      </header>
+      <p class="about__lede reveal" data-i18n-html="about.body">
+        거창한 비전 같은 건 아직 없어요. 그냥 <span class="accent">만들고 싶은 걸 만드는</span> 작은 팀이에요. 게임도 만들고, 일상을 조금 편하게 해줄 앱도 만들고, 재밌어 보이면 일단 해봅니다.
+      </p>
+      <div class="about__grid">
+        <article class="about-card reveal">
+          <div class="about-card__icon">🎮</div>
+          <h3 class="about-card__title" data-i18n="about.c1.title">만들고 싶은 걸 만듭니다</h3>
+          <p class="about-card__body" data-i18n="about.c1.body">게임과 생활형 앱. 장르도 분야도 가리지 않아요. 재밌어 보이는 게 곧 우리 로드맵.</p>
+        </article>
+        <article class="about-card reveal">
+          <div class="about-card__icon">🚀</div>
+          <h3 class="about-card__title" data-i18n="about.c2.title">완벽보다 시도</h3>
+          <p class="about-card__body" data-i18n="about.c2.body">오래 고민하느니 일단 던져봅니다. 망하면 빠르게 배우고, 되면 신나게 키워요.</p>
+        </article>
+        <article class="about-card reveal">
+          <div class="about-card__icon">😆</div>
+          <h3 class="about-card__title" data-i18n="about.c3.title">재미가 제일 중요</h3>
+          <p class="about-card__body" data-i18n="about.c3.body">우리가 재밌어야 사용자도 재밌다고 믿어요. 일도 놀이처럼 하려고 합니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-          <article class="soft-card soft-card--apps">
-            <span class="soft-card__badge" aria-hidden="true"></span>
-            <p class="soft-card__type" data-i18n="work.apps.type">Apps</p>
-            <h3 class="soft-card__title" data-i18n="work.apps.title">Apps for real days</h3>
-            <p class="soft-card__body" data-i18n="work.apps.body">
-              Habits, notes, little tools — the ordinary stuff that should just
-              work. Simple screens, gentle on your attention, built to last past
-              the first week.
-            </p>
-            <ul class="soft-card__list">
-              <li data-i18n="work.apps.li1">Clear &amp; calm design</li>
-              <li data-i18n="work.apps.li2">Your data stays yours</li>
-              <li data-i18n="work.apps.li3">Updated after launch</li>
-            </ul>
-          </article>
-        </div>
+  <section class="section team" id="team" aria-labelledby="team-title">
+    <div class="container">
+      <header class="section__head section__head--center reveal">
+        <p class="eyebrow" data-i18n="team.label">THE TEAM</p>
+        <h2 class="section__title display" id="team-title" data-i18n="team.title">밥 짓는 사람들</h2>
+      </header>
+      <div class="team__grid">
+        <article class="team-card reveal">
+          <div class="team-card__avatar team-card__avatar--t">T</div>
+          <h3 class="team-card__name">TedPark</h3>
+          <p class="team-card__role" data-i18n="team.ted.role">대표</p>
+          <span class="team-card__tag" data-i18n="team.ted.tag">확신의 ENTJ</span>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-card__avatar team-card__avatar--c">C</div>
+          <h3 class="team-card__name">Chacha</h3>
+          <p class="team-card__role" data-i18n="team.chacha.role">기획</p>
+          <span class="team-card__tag" data-i18n="team.chacha.tag">어쩔 수 없는 INFP</span>
+        </article>
+        <article class="team-card reveal">
+          <div class="team-card__avatar team-card__avatar--r">T</div>
+          <h3 class="team-card__name">Tory</h3>
+          <p class="team-card__role" data-i18n="team.tory.role">전략</p>
+          <span class="team-card__tag" data-i18n="team.tory.tag">최선을 다하는 ISFP</span>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        <p class="work__note">
-          <span class="work__dot" aria-hidden="true"></span>
-          <span data-i18n="work.note">Our first titles are on the way — we'll share them here soon.</span>
+  <section class="section lab" id="lab" aria-labelledby="lab-title">
+    <div class="lab__grain lab__grain--1" aria-hidden="true"></div>
+    <div class="lab__grain lab__grain--2" aria-hidden="true"></div>
+    <div class="container lab__inner">
+      <p class="eyebrow eyebrow--light reveal" data-i18n="lab.label">SUB STUDIO</p>
+      <h2 class="lab__title display reveal" id="lab-title">
+        <span data-i18n="lab.title1">와장창</span><br />
+        <span class="accent" data-i18n="lab.title2">스튜디오</span>
+      </h2>
+      <p class="lab__quote display reveal" data-i18n="lab.quote">"놀면서 돈 벌고 싶다"</p>
+      <p class="lab__body reveal" data-i18n="lab.body">
+        RICECookey의 서브 스튜디오. 전국의 공모전을 사냥하고, 여러 AI 에이전트를 부려 다양한 과제를 와장창 해치우는 실험실이에요.
+      </p>
+      <div class="lab__grid">
+        <article class="lab-card reveal">
+          <div class="lab-card__icon">🏆</div>
+          <h3 class="lab-card__title" data-i18n="lab.c1.title">공모전 사냥꾼</h3>
+          <p class="lab-card__body" data-i18n="lab.c1.body">눈에 띄는 공모전은 일단 출격. 도전 그 자체를 즐기는 헌터들.</p>
+        </article>
+        <article class="lab-card reveal">
+          <div class="lab-card__icon">🤖</div>
+          <h3 class="lab-card__title" data-i18n="lab.c2.title">에이전트 부대</h3>
+          <p class="lab-card__body" data-i18n="lab.c2.body">여러 AI 에이전트를 척척 부려서 더 많은 과제를, 더 적은 야근으로.</p>
+        </article>
+      </div>
+      <div class="lab__cta reveal">
+        <p class="lab__cta-main display">
+          <span data-i18n="lab.cta1">같이 밥 한 끼,</span><br />
+          <span data-i18n="lab.cta2">아니 프로젝트 한 판?</span>
         </p>
+        <p class="lab__cta-sub" data-i18n="lab.cta3">재밌는 거 같이 만들 사람, 일 맡기고 싶은 분 모두 환영이에요.</p>
       </div>
-    </section>
-
-    <section class="section team" id="team" aria-labelledby="team-title">
-      <div class="container">
-        <header class="section__head section__head--center">
-          <p class="pill" data-i18n="team.pill">The team</p>
-          <h2 class="section__title" id="team-title" data-i18n="team.title">밥 짓는 사람들</h2>
-          <p class="section__intro" data-i18n="team.intro">
-            The small crew behind RiceCookey — each with a role, each with
-            opinions, all at the same table.
-          </p>
-        </header>
-
-        <div class="team__grid">
-          <article class="team-card">
-            <div class="team-card__avatar team-card__avatar--t">T</div>
-            <h3 class="team-card__name">TedPark</h3>
-            <p class="team-card__role" data-i18n="team.ted.role">CEO</p>
-            <span class="team-card__tag" data-i18n="team.ted.tag">확신의 ENTJ</span>
-          </article>
-
-          <article class="team-card">
-            <div class="team-card__avatar team-card__avatar--c">C</div>
-            <h3 class="team-card__name">Chacha</h3>
-            <p class="team-card__role" data-i18n="team.chacha.role">Planning</p>
-            <span class="team-card__tag" data-i18n="team.chacha.tag">어쩔 수 없는 INFP</span>
-          </article>
-
-          <article class="team-card">
-            <div class="team-card__avatar team-card__avatar--r">T</div>
-            <h3 class="team-card__name">Tory</h3>
-            <p class="team-card__role" data-i18n="team.tory.role">Strategy</p>
-            <span class="team-card__tag" data-i18n="team.tory.tag">최선을 다하는 ISFP</span>
-          </article>
-        </div>
+      <div class="contact reveal" id="contact">
+        <a class="contact__email" href="mailto:ricecookey.official@gmail.com" data-i18n="contact.email">ricecookey.official@gmail.com</a>
       </div>
-    </section>
-
-    <section class="section lab" id="lab" aria-labelledby="lab-title">
-      <div class="container lab__inner">
-        <p class="pill pill--light" data-i18n="lab.pill">Sub studio</p>
-        <h2 class="lab__title" id="lab-title">
-          <span data-i18n="lab.title1">와장창</span> <span class="lab__title-accent" data-i18n="lab.title2">스튜디오</span>
-        </h2>
-        <p class="lab__quote" data-i18n="lab.quote">"놀면서 돈 벌고 싶다"</p>
-        <p class="lab__body" data-i18n="lab.body">
-          RiceCookey's sub-studio — a lab that scouts contests across the
-          country and clears through all kinds of projects with a squad of AI
-          agents.
-        </p>
-
-        <div class="lab__grid">
-          <article class="lab-card">
-            <h3 class="lab-card__title" data-i18n="lab.card1.title">🏆 공모전 사냥꾼</h3>
-            <p class="lab-card__body" data-i18n="lab.card1.body">
-              If a contest catches our eye, we're in. Hunters who enjoy the
-              chase as much as the win.
-            </p>
-          </article>
-          <article class="lab-card">
-            <h3 class="lab-card__title" data-i18n="lab.card2.title">🤖 에이전트 부대</h3>
-            <p class="lab-card__body" data-i18n="lab.card2.body">
-              A crew of AI agents on call — more projects shipped, fewer late
-              nights.
-            </p>
-          </article>
-        </div>
-
-        <p class="lab__cta">
-          <span data-i18n="lab.cta1">같이 밥 한 끼, 아니 프로젝트 한 판?</span><br />
-          <span data-i18n="lab.cta2">Fun project, serious collaboration — everyone's welcome.</span>
-        </p>
-      </div>
-    </section>
-
-    <section class="section studio" id="studio" aria-labelledby="studio-title">
-      <div class="container studio__layout">
-        <div class="studio__main">
-          <h2 class="section__title" id="studio-title" data-i18n-html="studio.title">A small team,<br />close together.</h2>
-          <div class="studio__copy">
-            <p data-i18n="studio.p1">
-              We work side by side in Korea — design, code, art, and sound in
-              one room. That's how our products stay warm and consistent, from
-              the first sketch to the hundredth small fix.
-            </p>
-            <p data-i18n="studio.p2">
-              We'd rather ship something we're proud of than something loud and
-              rushed. And when it's out in the world, we stick around to make it
-              better.
-            </p>
-          </div>
-        </div>
-
-        <ul class="values" data-i18n-aria="studio.values.aria" aria-label="How we work">
-          <li class="value">
-            <span class="value__num">01</span>
-            <div>
-              <h3 class="value__title" data-i18n="studio.v1.title">Take our time</h3>
-              <p data-i18n="studio.v1.body">Good work needs room to breathe. We don't rush the parts that matter.</p>
-            </div>
-          </li>
-          <li class="value">
-            <span class="value__num">02</span>
-            <div>
-              <h3 class="value__title" data-i18n="studio.v2.title">Keep it small</h3>
-              <p data-i18n="studio.v2.body">Fewer projects means more heart in each one.</p>
-            </div>
-          </li>
-          <li class="value">
-            <span class="value__num">03</span>
-            <div>
-              <h3 class="value__title" data-i18n="studio.v3.title">Stay after launch</h3>
-              <p data-i18n="studio.v3.body">Version 1.0 is where we start caring even more.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <div class="container contact__layout">
-        <div class="contact__info">
-          <h2 class="section__title" id="contact-title" data-i18n="contact.title">Want to say hi?</h2>
-          <p class="contact__body" data-i18n="contact.body">
-            Questions, ideas, press, or just because — send us a note.
-            We read every message ourselves.
-          </p>
-          <a class="contact__email" href="mailto:ricecookey.official@gmail.com">
-            ricecookey.official@gmail.com
-          </a>
-        </div>
-
-        <form
-          class="contact__form"
-          id="contact-form"
-          action="https://formsubmit.co/ricecookey.official@gmail.com"
-          method="POST"
-        >
-          <input type="hidden" name="_subject" value="New message from ricecookey.io" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honey" />
-
-          <div class="field">
-            <label for="name" data-i18n="contact.name">Your name</label>
-            <input type="text" id="name" name="name" data-i18n-placeholder="contact.name.ph" placeholder="What should we call you?" required />
-          </div>
-          <div class="field">
-            <label for="email" data-i18n="contact.email">Email</label>
-            <input type="email" id="email" name="email" data-i18n-placeholder="contact.email.ph" placeholder="you@example.com" required />
-          </div>
-          <div class="field">
-            <label for="message" data-i18n="contact.message">Message</label>
-            <textarea id="message" name="message" rows="5" data-i18n-placeholder="contact.message.ph" placeholder="Tell us what's on your mind…" required></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full" data-i18n="contact.submit">Send message</button>
-          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer class="site-footer">
     <div class="container footer__inner">
       <a class="brand brand--footer" href="#top">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="28" height="28">
-            <path d="M24 38C12 38 9 24 9 19Q9 8 24 8Q39 8 39 19C39 24 36 38 24 38Z" fill="#FF6A1A" stroke="#2B1E12" stroke-width="2.5" stroke-linejoin="round"/>
-            <path d="M24 33C14.5 33 12 22 12 18Q12 12 24 12Q36 12 36 18C36 22 33.5 33 24 33Z" fill="#fff" stroke="#2B1E12" stroke-width="2" stroke-linejoin="round"/>
-          </svg>
-        </span>
-        <span class="brand__name">RiceCookey</span>
+        <span class="brand__rice">RICE</span><span class="brand__cookey">Cookey</span>
       </a>
-      <div class="footer__links">
-        <a href="mailto:ricecookey.official@gmail.com" data-i18n="footer.email">Email</a>
-      </div>
-      <p class="footer__copy" data-i18n-footer>© <span id="year">2026</span> RiceCookey · 오늘도 무언가를 짓는 중 🍚</p>
+      <p class="footer__copy" data-i18n-footer>© <span id="year">2026</span> RICECookey. 오늘도 무언가를 짓는 중. 🍚</p>
     </div>
   </footer>
 
