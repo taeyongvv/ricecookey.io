@@ -267,6 +267,15 @@ img, svg { display: block; max-width: 100%; }
   line-height: 1.02;
   letter-spacing: -0.02em;
   margin-bottom: 1.35rem;
+  word-break: keep-all;
+}
+
+.hero__title-line {
+  display: block;
+}
+
+.hero__title-line + .hero__title-line {
+  white-space: nowrap;
 }
 
 .hero__lede {
