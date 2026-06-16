@@ -184,8 +184,6 @@ img, svg { display: block; max-width: 100%; }
 /* ---------- hero ---------- */
 .hero-wrap {
   position: relative;
-  max-width: var(--maxw);
-  margin-inline: auto;
 }
 
 .hero__grain {
@@ -325,31 +323,80 @@ img, svg { display: block; max-width: 100%; }
   justify-content: center;
 }
 
-.bowl__svg {
-  filter: drop-shadow(0 16px 32px rgba(43, 30, 18, 0.15));
+.bowl {
+  position: relative;
+  width: clamp(220px, 30vw, 320px);
+  height: clamp(220px, 30vw, 320px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   animation: float 6s ease-in-out infinite;
 }
 
-.bowl { position: relative; }
+.bowl__glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 45%, #ffe6c2 0%, #fbead3 55%, transparent 72%);
+  border-radius: 50%;
+}
 
 .bowl__steam {
   position: absolute;
-  top: 14%;
+  top: 8%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 1rem;
+  gap: 1.125rem;
+  z-index: 3;
 }
 
 .bowl__steam span {
-  width: 5px;
+  width: 7px;
   height: 2.25rem;
   border-radius: 999px;
-  background: linear-gradient(to top, rgba(255, 106, 26, 0.5), transparent);
-  animation: steam 3s ease-in-out infinite;
+  background: rgba(255, 106, 26, 0.25);
+  animation: steam 2.8s ease-in-out infinite;
 }
-.bowl__steam span:nth-child(2) { animation-delay: 0.5s; height: 2.75rem; }
-.bowl__steam span:nth-child(3) { animation-delay: 1s; }
+.bowl__steam span:nth-child(2) { animation-delay: 0.9s; }
+.bowl__steam span:nth-child(3) { animation-delay: 1.6s; }
+
+.bowl__inner {
+  position: relative;
+  width: 78%;
+  z-index: 2;
+}
+
+.bowl__rice {
+  position: relative;
+  height: 86px;
+  margin: 0 auto -14px;
+  width: 88%;
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 60% 60% 30% 30% / 90% 90% 30% 30%;
+  z-index: 2;
+  box-shadow: inset 0 -6px 0 var(--shadow-card);
+}
+
+.bowl__pot {
+  position: relative;
+  height: 120px;
+  background: var(--orange);
+  border: 3px solid var(--ink);
+  border-radius: 14% 14% 50% 50% / 12% 12% 100% 100%;
+  z-index: 1;
+  box-shadow: inset 0 -10px 0 var(--orange-deep);
+}
+
+.bowl__shine {
+  position: absolute;
+  top: 34px;
+  left: 16px;
+  right: 16px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.33);
+  border-radius: 999px;
+}
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
