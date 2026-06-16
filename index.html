@@ -25,13 +25,14 @@
   <header class="site-header" id="top">
     <nav class="nav container" data-i18n-aria="nav.aria" aria-label="Primary">
       <a class="brand" href="#top" data-i18n-aria="nav.brand" aria-label="RICECookey home">
-        <span class="brand__rice">RICE</span><span class="brand__cookey">Cookey</span>
+        <span class="brand__icon" aria-hidden="true"><span class="brand__grain"></span></span>
+        <span class="brand__text display">RICE<span class="accent">Cookey</span></span>
       </a>
       <div class="nav__right">
         <div class="nav__links">
           <a href="#about" data-i18n="nav.about">소개</a>
-          <a href="#team" data-i18n="nav.team">멤버</a>
-          <a href="#lab" data-i18n="nav.lab">와장창</a>
+          <a href="#members" data-i18n="nav.team">멤버</a>
+          <a href="#wajangchang" data-i18n="nav.lab">와장창</a>
           <a href="#contact" class="nav__cta" data-i18n="nav.contact">연락하기</a>
         </div>
         <div class="lang-switch" role="group" data-i18n-aria="lang.aria" aria-label="Language">
@@ -41,7 +42,11 @@
       </div>
     </nav>
 
-    <div class="container hero" id="main">
+    <div class="hero-wrap" id="main">
+      <span class="hero__grain hero__grain--1" aria-hidden="true"></span>
+      <span class="hero__grain hero__grain--2" aria-hidden="true"></span>
+      <span class="hero__grain hero__grain--3" aria-hidden="true"></span>
+      <div class="container hero">
       <div class="hero__grid">
         <div class="hero__copy">
           <div class="hero__badge reveal">
@@ -59,7 +64,7 @@
           </p>
           <div class="hero__actions reveal">
             <a href="#about" class="btn btn--primary" data-i18n="hero.cta1">우리 소개 보기</a>
-            <a href="#lab" class="btn btn--ghost" data-i18n="hero.cta2">와장창 스튜디오 →</a>
+            <a href="#wajangchang" class="btn btn--ghost" data-i18n="hero.cta2">와장창 스튜디오 →</a>
           </div>
         </div>
         <div class="hero__art reveal" aria-hidden="true">
@@ -77,6 +82,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </header>
 
@@ -116,7 +122,7 @@
     </div>
   </section>
 
-  <section class="section team" id="team" aria-labelledby="team-title">
+  <section class="section team" id="members" aria-labelledby="team-title">
     <div class="container">
       <header class="section__head section__head--center reveal">
         <p class="eyebrow" data-i18n="team.label">THE TEAM</p>
@@ -145,7 +151,7 @@
     </div>
   </section>
 
-  <section class="section lab" id="lab" aria-labelledby="lab-title">
+  <section class="section lab" id="wajangchang" aria-labelledby="lab-title">
     <div class="lab__grain lab__grain--1" aria-hidden="true"></div>
     <div class="lab__grain lab__grain--2" aria-hidden="true"></div>
     <div class="container lab__inner">
@@ -186,7 +192,8 @@
   <footer class="site-footer">
     <div class="container footer__inner">
       <a class="brand brand--footer" href="#top">
-        <span class="brand__rice">RICE</span><span class="brand__cookey">Cookey</span>
+        <span class="brand__icon" aria-hidden="true"><span class="brand__grain"></span></span>
+        <span class="brand__text display">RICE<span class="accent">Cookey</span></span>
       </a>
       <p class="footer__copy" data-i18n-footer>© <span id="year">2026</span> RICECookey. 오늘도 무언가를 짓는 중. 🍚</p>
     </div>
