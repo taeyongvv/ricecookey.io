@@ -34,6 +34,10 @@
       el.setAttribute("aria-label", t(el.getAttribute("data-i18n-aria")));
     });
 
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      el.setAttribute("alt", t(el.getAttribute("data-i18n-alt")));
+    });
+
     document.title = t("meta.title");
     var metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute("content", t("meta.description"));

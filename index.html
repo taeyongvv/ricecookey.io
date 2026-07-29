@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>RICECookey — 오늘도 새로운 걸 짓고 있습니다</title>
-  <meta name="description" content="게임부터 생활형 앱까지. RICECookey는 정답보다 재미를, 완벽보다 시도를 더 좋아하는 팀입니다." />
+  <title>RICECookey — 게임과 앱을 짓는 작은 스튜디오</title>
+  <meta name="description" content="라스트캐슬, 왁뿌볼, 팅글 팅글까지. RICECookey는 작지만 손이 자꾸 가는 게임과 생활형 앱을 만드는 팀입니다." />
   <meta property="og:title" content="RICECookey" />
   <meta property="og:type" content="website" />
 
@@ -16,6 +16,7 @@
     (function () {
       var s = localStorage.getItem("ricecookey-lang");
       document.documentElement.lang = s === "ko" || s === "en" ? s : "ko";
+      document.documentElement.className += " js";
     })();
   </script>
 </head>
@@ -23,168 +24,392 @@
   <a class="skip-link" href="#main" data-i18n="skip">본문으로 건너뛰기</a>
 
   <header class="site-header" id="top">
-    <nav class="nav container" data-i18n-aria="nav.aria" aria-label="Primary">
-      <a class="brand" href="#top" data-i18n-aria="nav.brand" aria-label="RICECookey home">
+    <nav class="nav container" data-i18n-aria="nav.aria" aria-label="주요 메뉴">
+      <a class="brand" href="#top" data-i18n-aria="nav.brand" aria-label="RICECookey 홈">
         <span class="brand__icon" aria-hidden="true"><span class="brand__grain"></span></span>
         <span class="brand__text display">RICE<span class="accent">Cookey</span></span>
       </a>
-      <div class="nav__right">
-        <div class="nav__links">
-          <a href="#about" data-i18n="nav.about">소개</a>
-          <a href="#members" data-i18n="nav.team">멤버</a>
-          <a href="#wajangchang" data-i18n="nav.lab">와장창</a>
-          <a href="#contact" class="nav__cta" data-i18n="nav.contact">연락하기</a>
-        </div>
-        <div class="lang-switch" role="group" data-i18n-aria="lang.aria" aria-label="Language">
-          <button type="button" class="lang-switch__btn is-active" data-lang="ko" aria-pressed="true">한국어</button>
-          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
-        </div>
+      <div class="nav__links">
+        <a href="#games" data-i18n="nav.games">게임</a>
+        <a href="#services" data-i18n="nav.services">서비스</a>
+        <a href="#about" data-i18n="nav.about">소개</a>
+        <a href="#members" data-i18n="nav.team">멤버</a>
+        <a href="#contact" class="nav__cta" data-i18n="nav.contact">연락하기</a>
+      </div>
+      <div class="lang-switch" role="group" data-i18n-aria="lang.aria" aria-label="언어 선택">
+        <button type="button" class="lang-switch__btn is-active" data-lang="ko" aria-pressed="true">한국어</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
       </div>
     </nav>
   </header>
 
-  <div class="hero-wrap" id="main">
+  <main id="main">
+    <div class="hero-wrap">
       <span class="hero__grain hero__grain--1" aria-hidden="true"></span>
       <span class="hero__grain hero__grain--2" aria-hidden="true"></span>
       <span class="hero__grain hero__grain--3" aria-hidden="true"></span>
       <div class="container hero">
-      <div class="hero__grid">
-        <div class="hero__copy">
-          <div class="hero__badge reveal">
-            <span class="hero__dot" aria-hidden="true"></span>
-            <span data-i18n="hero.badge">새로운 도전을 밥 먹듯 하는 팀</span>
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <div class="hero__badge reveal">
+              <span class="hero__dot" aria-hidden="true"></span>
+              <span data-i18n="hero.badge">새로운 도전을 밥 먹듯 하는 팀</span>
+            </div>
+            <h1 class="hero__title display reveal">
+              <span class="hero__title-line" data-i18n="hero.title1">오늘도 새로운 걸</span>
+              <span class="hero__title-line">
+                <span class="accent" data-i18n="hero.title2">짓고</span><span data-i18n="hero.title3"> 있습니다</span>
+              </span>
+            </h1>
+            <p class="hero__lede reveal">
+              <span data-i18n="hero.lede">게임부터 생활형 앱까지. RICECookey는 정답보다 재미를, 완벽보다 시도를 더 좋아하는 사람들이에요.</span>
+              <span class="hero__note" data-i18n="hero.note">(밥도 짓고 앱도 짓고 🍚)</span>
+            </p>
+            <div class="hero__actions reveal">
+              <a href="#games" class="btn btn--primary" data-i18n="hero.cta1">게임 보러가기</a>
+              <a href="#services" class="btn btn--ghost" data-i18n="hero.cta2">서비스 알아보기 →</a>
+            </div>
           </div>
-          <h1 class="hero__title display reveal">
-            <span class="hero__title-line" data-i18n="hero.title1">오늘도 새로운 걸</span>
-            <span class="hero__title-line">
-              <span class="accent" data-i18n="hero.title2">짓고</span><span data-i18n="hero.title3"> 있습니다</span>
-            </span>
-          </h1>
-          <p class="hero__lede reveal">
-            <span data-i18n="hero.lede">게임부터 생활형 앱까지. RICECookey는 정답보다 재미를, 완벽보다 시도를 더 좋아하는 사람들이에요.</span>
-            <span class="hero__note" data-i18n="hero.note">(밥도 짓고 앱도 짓고 🍚)</span>
-          </p>
-          <div class="hero__actions reveal">
-            <a href="#about" class="btn btn--primary" data-i18n="hero.cta1">우리 소개 보기</a>
-            <a href="#wajangchang" class="btn btn--ghost" data-i18n="hero.cta2">와장창 스튜디오 →</a>
-          </div>
-        </div>
-        <div class="hero__art reveal" aria-hidden="true">
-          <div class="bowl">
-            <div class="bowl__glow"></div>
-            <div class="bowl__steam"><span></span><span></span><span></span></div>
-            <div class="bowl__inner">
-              <div class="bowl__rice"></div>
-              <div class="bowl__pot"><span class="bowl__shine"></span></div>
+          <div class="hero__art reveal" aria-hidden="true">
+            <div class="bowl">
+              <div class="bowl__glow"></div>
+              <div class="bowl__steam"><span></span><span></span><span></span></div>
+              <div class="bowl__inner">
+                <div class="bowl__rice"></div>
+                <div class="bowl__pot"><span class="bowl__shine"></span></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span class="marquee__text display" data-i18n="marquee">게임 🎮 · 생활형 앱 📱 · 공모전 도전 🏆 · AI 에이전트 🤖 · 즐기며 만들기 ✨ · </span>
-      <span class="marquee__text display" data-i18n="marquee" aria-hidden="true">게임 🎮 · 생활형 앱 📱 · 공모전 도전 🏆 · AI 에이전트 🤖 · 즐기며 만들기 ✨ · </span>
-    </div>
-  </div>
-
-  <section class="section about" id="about" aria-labelledby="about-title">
-    <div class="container">
-      <header class="section__head reveal">
-        <p class="eyebrow" data-i18n="about.label">WHO WE ARE</p>
-        <h2 class="section__title display" id="about-title" data-i18n="about.title">우리는 누구냐면요</h2>
-      </header>
-      <p class="about__lede reveal" data-i18n-html="about.body">
-        거창한 비전 같은 건 아직 없어요. 그냥 <span class="accent">만들고 싶은 걸 만드는</span> 작은 팀이에요. 게임도 만들고, 일상을 조금 편하게 해줄 앱도 만들고, 재밌어 보이면 일단 해봅니다.
-      </p>
-      <div class="about__grid">
-        <article class="about-card reveal">
-          <div class="about-card__icon">🎮</div>
-          <h3 class="about-card__title" data-i18n="about.c1.title">만들고 싶은 걸 만듭니다</h3>
-          <p class="about-card__body" data-i18n="about.c1.body">게임과 생활형 앱. 장르도 분야도 가리지 않아요. 재밌어 보이는 게 곧 우리 로드맵.</p>
-        </article>
-        <article class="about-card reveal">
-          <div class="about-card__icon">🚀</div>
-          <h3 class="about-card__title" data-i18n="about.c2.title">완벽보다 시도</h3>
-          <p class="about-card__body" data-i18n="about.c2.body">오래 고민하느니 일단 만들어봅니다. 잘 안 되면 빠르게 배우고, 되면 신나게 키워요.</p>
-        </article>
-        <article class="about-card reveal">
-          <div class="about-card__icon">😆</div>
-          <h3 class="about-card__title" data-i18n="about.c3.title">재미가 제일 중요</h3>
-          <p class="about-card__body" data-i18n="about.c3.body">우리가 재밌어야 사용자도 재밌다고 믿어요. 일도 놀이처럼 하려고 합니다.</p>
-        </article>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__text display" data-i18n="marquee">게임 🎮 · 생활형 앱 📱 · 공모전 도전 🏆 · AI 에이전트 🤖 · 즐기며 만들기 ✨ · </span>
+        <span class="marquee__text display" data-i18n="marquee" aria-hidden="true">게임 🎮 · 생활형 앱 📱 · 공모전 도전 🏆 · AI 에이전트 🤖 · 즐기며 만들기 ✨ · </span>
       </div>
     </div>
-  </section>
 
-  <section class="section team" id="members" aria-labelledby="team-title">
-    <div class="container">
-      <header class="section__head section__head--center reveal">
-        <p class="eyebrow" data-i18n="team.label">THE TEAM</p>
-        <h2 class="section__title display" id="team-title" data-i18n="team.title">밥 짓는 사람들</h2>
-      </header>
-      <div class="team__grid">
-        <article class="team-card reveal">
-          <div class="team-card__avatar team-card__avatar--t">T</div>
-          <h3 class="team-card__name">TedPark</h3>
-          <p class="team-card__role" data-i18n="team.ted.role">대표</p>
-          <span class="team-card__tag" data-i18n="team.ted.tag">확신의 ENTJ</span>
-        </article>
-        <article class="team-card reveal">
-          <div class="team-card__avatar team-card__avatar--c">C</div>
-          <h3 class="team-card__name">Chacha</h3>
-          <p class="team-card__role" data-i18n="team.chacha.role">기획</p>
-          <span class="team-card__tag" data-i18n="team.chacha.tag">어쩔 수 없는 INFP</span>
-        </article>
-        <article class="team-card reveal">
-          <div class="team-card__avatar team-card__avatar--r">T</div>
-          <h3 class="team-card__name">Tory</h3>
-          <p class="team-card__role" data-i18n="team.tory.role">전략</p>
-          <span class="team-card__tag" data-i18n="team.tory.tag">최선을 다하는 ISFP</span>
-        </article>
-      </div>
-    </div>
-  </section>
+    <section class="section games" id="games" aria-labelledby="games-title">
+      <div class="container">
+        <header class="section__head section__head--start reveal">
+          <p class="eyebrow" data-i18n="games.label">OUR GAMES</p>
+          <h2 class="section__title display" id="games-title" data-i18n="games.title">지금 플레이할 수 있는 게임</h2>
+          <p class="games__lede" data-i18n="games.lede">작지만 손이 자꾸 가는 게임을 만듭니다. 스토어 버튼을 누르면 바로 받아볼 수 있어요.</p>
+        </header>
 
-  <section class="section lab" id="wajangchang" aria-labelledby="lab-title">
-    <div class="lab__grain lab__grain--1" aria-hidden="true"></div>
-    <div class="lab__grain lab__grain--2" aria-hidden="true"></div>
-    <div class="container lab__inner">
-      <p class="eyebrow eyebrow--light reveal" data-i18n="lab.label">SUB STUDIO</p>
-      <h2 class="lab__title display reveal" id="lab-title">
-        <span data-i18n="lab.title1">와장창</span><br />
-        <span class="accent" data-i18n="lab.title2">스튜디오</span>
-      </h2>
-      <p class="lab__quote display reveal" data-i18n="lab.quote">"재미있게, 의미 있게 만들고 싶다"</p>
-      <p class="lab__body reveal" data-i18n="lab.body">
-        RICECookey의 서브 스튜디오. 다양한 공모전과 챌린지에 참여하고, AI 에이전트와 함께 새로운 과제를 빠르게 실험하는 공간이에요.
-      </p>
-      <div class="lab__grid">
-        <article class="lab-card reveal">
-          <div class="lab-card__icon">🏆</div>
-          <h3 class="lab-card__title" data-i18n="lab.c1.title">공모전 도전단</h3>
-          <p class="lab-card__body" data-i18n="lab.c1.body">재미있어 보이는 공모전이면 일단 도전합니다. 과정에서 배우는 걸 더 좋아해요.</p>
+        <article class="game-feature reveal" aria-labelledby="g-lc-title">
+          <div class="game-feature__art">
+            <span class="game-feature__glow" aria-hidden="true"></span>
+            <img class="game-feature__icon" src="./assets/games/last-castle.png" width="256" height="256"
+                 alt="라스트캐슬: 디펜스 앱 아이콘 — 붉은 깃발이 걸리고 횃불이 타오르는 픽셀아트 성" data-i18n-alt="game.lc.alt" />
+          </div>
+          <div class="game-feature__body">
+            <p class="game-flag" data-i18n="games.featured">새로 나온 게임</p>
+            <h3 class="game-feature__title display" id="g-lc-title" data-i18n="game.lc.name">라스트캐슬: 디펜스</h3>
+            <p class="game-feature__desc" data-i18n="game.lc.desc">성을 지키고 강화 카드를 골라 나만의 빌드를 완성하는 로그라이크 디펜스.</p>
+            <p class="game-status">
+              <span class="game-status__dot" aria-hidden="true"></span>
+              <span data-i18n="game.lc.status">Google Play 출시 · App Store 심사 중</span>
+            </p>
+            <ul class="store-list">
+              <li>
+                <a class="store-link store-link--primary" href="https://play.google.com/store/apps/details?id=com.ricecookey.lastcastle"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-lc-title g-lc-gp">
+                  <span id="g-lc-gp" data-i18n="store.google">Google Play</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a class="store-link" href="https://m.onestore.co.kr/v2/ko-kr/app/0001006556"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-lc-title g-lc-one">
+                  <span id="g-lc-one" data-i18n="store.one">원스토어</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </article>
-        <article class="lab-card reveal">
-          <div class="lab-card__icon">🤖</div>
-          <h3 class="lab-card__title" data-i18n="lab.c2.title">AI 협업 크루</h3>
-          <p class="lab-card__body" data-i18n="lab.c2.body">여러 AI 에이전트를 함께 활용해 더 많은 과제를, 더 효율적으로 진행해요.</p>
-        </article>
+
+        <ul class="game-list">
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/wakbu-ball.png" width="192" height="192" loading="lazy" decoding="async"
+                 alt="왁뿌볼 빠자작! 앱 아이콘 — 금이 간 초록색 왁스 볼" data-i18n-alt="game.wb.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-wb-title" data-i18n="game.wb.name">왁뿌볼 빠자작!</h3>
+              <p class="game-row__desc" data-i18n="game.wb.desc">말랑한 왁스를 누르고 깨뜨리는 손맛 중심의 캐주얼 게임.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li>
+                <a class="store-link" href="https://play.google.com/store/apps/details?id=com.ricecookey.wakbuball"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-wb-title g-wb-gp">
+                  <span id="g-wb-gp" data-i18n="store.google">Google Play</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a class="store-link" href="https://apps.apple.com/kr/app/id6786132527"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-wb-title g-wb-as">
+                  <span id="g-wb-as" data-i18n="store.apple">App Store</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a class="store-link" href="https://m.onestore.co.kr/v2/ko-kr/app/0001007182"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-wb-title g-wb-one">
+                  <span id="g-wb-one" data-i18n="store.one">원스토어</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="game-row game-row--editions reveal">
+            <img class="game-row__icon" src="./assets/games/tingle-tingle.png" width="192" height="192" loading="lazy" decoding="async"
+                 alt="팅글 팅글 앱 아이콘 — 작은 금빛 왕관을 쓴 동그란 노란 얼굴 캐릭터" data-i18n-alt="game.tt.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-tt-title" data-i18n="game.tt.name">팅글 팅글</h3>
+              <p class="game-row__desc" data-i18n="game.tt.desc">같은 캐릭터를 합쳐 더 큰 팅글이를 만드는 가볍고 중독적인 합치기 게임.</p>
+            </div>
+            <div class="editions game-row__stores">
+              <div class="edition">
+                <p class="edition__label" id="g-tt-free" data-i18n="edition.free">무료 버전</p>
+                <ul class="store-list">
+                  <li>
+                    <a class="store-link" href="https://play.google.com/store/apps/details?id=com.RiceCookey.dongle"
+                       target="_blank" rel="noopener noreferrer" aria-labelledby="g-tt-title g-tt-free g-tt-free-gp">
+                      <span id="g-tt-free-gp" data-i18n="store.google">Google Play</span>
+                      <span class="store-link__out" aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="store-link" href="https://m.onestore.co.kr/v2/ko-kr/app/0000761967"
+                       target="_blank" rel="noopener noreferrer" aria-labelledby="g-tt-title g-tt-free g-tt-free-one">
+                      <span id="g-tt-free-one" data-i18n="store.one">원스토어</span>
+                      <span class="store-link__out" aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="edition">
+                <p class="edition__label" id="g-tt-paid" data-i18n="edition.adfree">광고 없는 버전</p>
+                <ul class="store-list">
+                  <li>
+                    <a class="store-link" href="https://play.google.com/store/apps/details?id=com.RiceCookey.donglepaid"
+                       target="_blank" rel="noopener noreferrer" aria-labelledby="g-tt-title g-tt-paid g-tt-paid-gp">
+                      <span id="g-tt-paid-gp" data-i18n="store.google">Google Play</span>
+                      <span class="store-link__out" aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="store-link" href="https://m.onestore.co.kr/v2/ko-kr/app/0000763243"
+                       target="_blank" rel="noopener noreferrer" aria-labelledby="g-tt-title g-tt-paid g-tt-paid-one">
+                      <span id="g-tt-paid-one" data-i18n="store.one">원스토어</span>
+                      <span class="store-link__out" aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/beep-2048.png" width="192" height="192" loading="lazy" decoding="async"
+                 alt="삐약 2048 앱 아이콘 — 별이 흩어진 하늘 앞의 병아리와 Beep! 2048 글자" data-i18n-alt="game.bp.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-bp-title" data-i18n="game.bp.name">삐약 2048</h3>
+              <p class="game-row__desc" data-i18n="game.bp.desc">병아리와 함께 즐기는 작고 경쾌한 2048 퍼즐.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li>
+                <a class="store-link" href="https://play.google.com/store/apps/details?id=com.ricecookey.ricecookey_2048"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-bp-title g-bp-gp">
+                  <span id="g-bp-gp" data-i18n="store.google">Google Play</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a class="store-link" href="https://m.onestore.co.kr/v2/ko-kr/app/0000761443"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-bp-title g-bp-one">
+                  <span id="g-bp-one" data-i18n="store.one">원스토어</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/bang-mandarin.png" width="192" height="192" loading="lazy" decoding="async"
+                 alt="꽈당, 귤 왕자 앱 아이콘 — 초록 꼭지가 달린 네모난 귤 얼굴" data-i18n-alt="game.bm.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-bm-title" data-i18n="game.bm.name">꽈당, 귤 왕자</h3>
+              <p class="game-row__desc" data-i18n="game.bm.desc">자꾸 넘어지는 귤 왕자를 지켜내는 유쾌한 피하기 게임.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li>
+                <a class="store-link" href="https://play.google.com/store/apps/details?id=com.dreamy.bangmandarin.google"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-bm-title g-bm-gp">
+                  <span id="g-bm-gp" data-i18n="store.google">Google Play</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a class="store-link" href="https://m.onestore.co.kr/v2/ko-kr/app/0001000460"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-bm-title g-bm-one">
+                  <span id="g-bm-one" data-i18n="store.one">원스토어</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/rabbit-2048.png" width="192" height="192" loading="lazy" decoding="async"
+                 alt="토끼 키우기 2048 앱 아이콘 — 2048이 적힌 구슬 위에 선 도트 그림 토끼" data-i18n-alt="game.rb.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-rb-title" data-i18n="game.rb.name">토끼 키우기 2048</h3>
+              <p class="game-row__desc" data-i18n="game.rb.desc">숫자를 합치며 토끼를 키우는 귀여운 2048 퍼즐.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li>
+                <a class="store-link" href="https://m.onestore.co.kr/v2/ko-kr/app/0001000448"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-rb-title g-rb-one">
+                  <span id="g-rb-one" data-i18n="store.one">원스토어</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/1010i.png" width="192" height="192" loading="lazy" decoding="async"
+                 alt="1010i 앱 아이콘 — 알록달록한 1010i GAME 로고 레터링" data-i18n-alt="game.ti.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-ti-title" data-i18n="game.ti.name">두뇌 퍼즐 게임 1010i</h3>
+              <p class="game-row__desc" data-i18n="game.ti.desc">10×10 보드에 블록을 채우며 기록에 도전하는 두뇌 퍼즐.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li>
+                <a class="store-link" href="https://m.onestore.co.kr/v2/ko-kr/app/0001000954"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-ti-title g-ti-one">
+                  <span id="g-ti-one" data-i18n="store.one">원스토어</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
-      <div class="lab__cta reveal">
-        <p class="lab__cta-main display">
+    </section>
+
+    <section class="section lab" id="services" aria-labelledby="lab-title">
+      <div class="lab__grain lab__grain--1" aria-hidden="true"></div>
+      <div class="lab__grain lab__grain--2" aria-hidden="true"></div>
+      <div class="container lab__inner">
+        <p class="eyebrow eyebrow--light reveal" data-i18n="lab.label">WHAT WE DO</p>
+        <h2 class="lab__title display reveal" id="lab-title">
+          <span data-i18n="lab.title1">와장창</span><br />
+          <span class="accent" data-i18n="lab.title2">스튜디오</span>
+        </h2>
+        <p class="lab__quote display reveal" data-i18n="lab.quote">"재미있게, 의미 있게 만들고 싶다"</p>
+        <p class="lab__body reveal" data-i18n="lab.body">
+          RICECookey의 서브 스튜디오. 다양한 공모전과 챌린지에 참여하고, AI 에이전트와 함께 새로운 과제를 빠르게 실험하는 공간이에요.
+        </p>
+        <div class="lab__grid">
+          <article class="lab-card reveal">
+            <div class="lab-card__icon" aria-hidden="true">🏆</div>
+            <h3 class="lab-card__title" data-i18n="lab.c1.title">공모전 도전단</h3>
+            <p class="lab-card__body" data-i18n="lab.c1.body">재미있어 보이는 공모전이면 일단 도전합니다. 과정에서 배우는 걸 더 좋아해요.</p>
+          </article>
+          <article class="lab-card reveal">
+            <div class="lab-card__icon" aria-hidden="true">🤖</div>
+            <h3 class="lab-card__title" data-i18n="lab.c2.title">AI 협업 크루</h3>
+            <p class="lab-card__body" data-i18n="lab.c2.body">여러 AI 에이전트를 함께 활용해 더 많은 과제를, 더 효율적으로 진행해요.</p>
+          </article>
+          <article class="lab-card reveal">
+            <div class="lab-card__icon" aria-hidden="true">🤝</div>
+            <h3 class="lab-card__title" data-i18n="lab.c3.title">프로젝트 협업</h3>
+            <p class="lab-card__body" data-i18n="lab.c3.body">게임과 앱을 함께 만들 팀도, 맡겨주시는 일도 환영이에요. 규모보다 결이 맞는지를 먼저 봅니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="about.label">WHO WE ARE</p>
+          <h2 class="section__title display" id="about-title" data-i18n="about.title">우리는 누구냐면요</h2>
+        </header>
+        <p class="about__lede reveal" data-i18n-html="about.body">
+          거창한 비전 같은 건 아직 없어요. 그냥 <span class="accent">만들고 싶은 걸 만드는</span> 작은 팀이에요. 게임도 만들고, 일상을 조금 편하게 해줄 앱도 만들고, 재밌어 보이면 일단 해봅니다.
+        </p>
+        <div class="about__grid">
+          <article class="about-card reveal">
+            <div class="about-card__icon" aria-hidden="true">🎮</div>
+            <h3 class="about-card__title" data-i18n="about.c1.title">만들고 싶은 걸 만듭니다</h3>
+            <p class="about-card__body" data-i18n="about.c1.body">게임과 생활형 앱. 장르도 분야도 가리지 않아요. 재밌어 보이는 게 곧 우리 로드맵.</p>
+          </article>
+          <article class="about-card reveal">
+            <div class="about-card__icon" aria-hidden="true">🚀</div>
+            <h3 class="about-card__title" data-i18n="about.c2.title">완벽보다 시도</h3>
+            <p class="about-card__body" data-i18n="about.c2.body">오래 고민하느니 일단 만들어봅니다. 잘 안 되면 빠르게 배우고, 되면 신나게 키워요.</p>
+          </article>
+          <article class="about-card reveal">
+            <div class="about-card__icon" aria-hidden="true">😆</div>
+            <h3 class="about-card__title" data-i18n="about.c3.title">재미가 제일 중요</h3>
+            <p class="about-card__body" data-i18n="about.c3.body">우리가 재밌어야 사용자도 재밌다고 믿어요. 일도 놀이처럼 하려고 합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team" id="members" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <p class="eyebrow" data-i18n="team.label">THE TEAM</p>
+          <h2 class="section__title display" id="team-title" data-i18n="team.title">밥 짓는 사람들</h2>
+        </header>
+        <div class="team__grid">
+          <article class="team-card reveal">
+            <div class="team-card__avatar team-card__avatar--t" aria-hidden="true">T</div>
+            <h3 class="team-card__name">TedPark</h3>
+            <p class="team-card__role" data-i18n="team.ted.role">대표</p>
+            <span class="team-card__tag" data-i18n="team.ted.tag">확신의 ENTJ</span>
+          </article>
+          <article class="team-card reveal">
+            <div class="team-card__avatar team-card__avatar--c" aria-hidden="true">C</div>
+            <h3 class="team-card__name">Chacha</h3>
+            <p class="team-card__role" data-i18n="team.chacha.role">기획</p>
+            <span class="team-card__tag" data-i18n="team.chacha.tag">어쩔 수 없는 INFP</span>
+          </article>
+          <article class="team-card reveal">
+            <div class="team-card__avatar team-card__avatar--r" aria-hidden="true">T</div>
+            <h3 class="team-card__name">Tory</h3>
+            <p class="team-card__role" data-i18n="team.tory.role">전략</p>
+            <span class="team-card__tag" data-i18n="team.tory.tag">최선을 다하는 ISFP</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section lab lab--contact" id="contact" aria-labelledby="contact-title">
+      <div class="lab__grain lab__grain--1" aria-hidden="true"></div>
+      <div class="lab__grain lab__grain--2" aria-hidden="true"></div>
+      <div class="container lab__inner">
+        <p class="eyebrow eyebrow--light reveal" data-i18n="contact.label">CONTACT</p>
+        <h2 class="contact__title display reveal" id="contact-title">
           <span data-i18n="lab.cta1">같이 밥 한 끼,</span><br />
           <span data-i18n="lab.cta2">아니 프로젝트 한 판?</span>
+        </h2>
+        <p class="contact__sub reveal" data-i18n="lab.cta3">재밌는 거 같이 만들 사람, 일 맡기고 싶은 분 모두 환영이에요.</p>
+        <p class="contact reveal">
+          <a class="contact__email" href="mailto:ricecookey.official@gmail.com" data-i18n="contact.email">ricecookey.official@gmail.com</a>
         </p>
-        <p class="lab__cta-sub" data-i18n="lab.cta3">재밌는 거 같이 만들 사람, 일 맡기고 싶은 분 모두 환영이에요.</p>
       </div>
-      <div class="contact reveal" id="contact">
-        <a class="contact__email" href="mailto:ricecookey.official@gmail.com" data-i18n="contact.email">ricecookey.official@gmail.com</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container footer__inner">
