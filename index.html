@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>RICECookey — 게임과 앱을 짓는 작은 스튜디오</title>
-  <meta name="description" content="라스트캐슬, 왁뿌볼, 팅글 팅글까지. RICECookey는 작지만 손이 자꾸 가는 게임과 생활형 앱을 만드는 팀입니다." />
+  <meta name="description" content="식집사, 부릅, 라스트캐슬, 왁뿌볼까지. RICECookey는 작지만 손이 자꾸 가는 게임과 생활형 앱을 만드는 팀입니다." />
   <meta property="og:title" content="RICECookey" />
   <meta property="og:type" content="website" />
 
@@ -30,7 +30,7 @@
         <span class="brand__text display">RICE<span class="accent">Cookey</span></span>
       </a>
       <div class="nav__links">
-        <a href="#games" data-i18n="nav.games">게임</a>
+        <a href="#games" data-i18n="nav.games">앱과 게임</a>
         <a href="#services" data-i18n="nav.services">서비스</a>
         <a href="#about" data-i18n="nav.about">소개</a>
         <a href="#members" data-i18n="nav.team">멤버</a>
@@ -66,7 +66,7 @@
               <span class="hero__note" data-i18n="hero.note">(밥도 짓고 앱도 짓고 🍚)</span>
             </p>
             <div class="hero__actions reveal">
-              <a href="#games" class="btn btn--primary" data-i18n="hero.cta1">게임 보러가기</a>
+              <a href="#games" class="btn btn--primary" data-i18n="hero.cta1">앱과 게임 보기</a>
               <a href="#services" class="btn btn--ghost" data-i18n="hero.cta2">서비스 알아보기 →</a>
             </div>
           </div>
@@ -94,9 +94,9 @@
     <section class="section games" id="games" aria-labelledby="games-title">
       <div class="container">
         <header class="section__head section__head--start reveal">
-          <p class="eyebrow" data-i18n="games.label">OUR GAMES</p>
-          <h2 class="section__title display" id="games-title" data-i18n="games.title">지금 플레이할 수 있는 게임</h2>
-          <p class="games__lede" data-i18n="games.lede">작지만 손이 자꾸 가는 게임을 만듭니다. 스토어 버튼을 누르면 바로 받아볼 수 있어요.</p>
+          <p class="eyebrow" data-i18n="games.label">APPS &amp; GAMES</p>
+          <h2 class="section__title display" id="games-title" data-i18n="games.title">지금 만날 수 있는 앱과 게임</h2>
+          <p class="games__lede" data-i18n="games.lede">생활을 돕는 앱과 손이 자꾸 가는 게임을 만듭니다. 스토어 버튼을 누르면 바로 받아볼 수 있어요.</p>
         </header>
 
         <article class="game-feature reveal" aria-labelledby="g-lc-title">
@@ -106,18 +106,25 @@
                  alt="라스트캐슬: 디펜스 앱 아이콘 — 붉은 깃발이 걸리고 횃불이 타오르는 픽셀아트 성" data-i18n-alt="game.lc.alt" />
           </div>
           <div class="game-feature__body">
-            <p class="game-flag" data-i18n="games.featured">새로 나온 게임</p>
+            <p class="game-flag" data-i18n="games.featured">추천 게임</p>
             <h3 class="game-feature__title display" id="g-lc-title" data-i18n="game.lc.name">라스트캐슬: 디펜스</h3>
             <p class="game-feature__desc" data-i18n="game.lc.desc">성을 지키고 강화 카드를 골라 나만의 빌드를 완성하는 로그라이크 디펜스.</p>
             <p class="game-status">
               <span class="game-status__dot" aria-hidden="true"></span>
-              <span data-i18n="game.lc.status">Google Play 출시 · App Store 심사 중</span>
+              <span data-i18n="game.lc.status">Google Play · App Store · 원스토어 출시</span>
             </p>
             <ul class="store-list">
               <li>
                 <a class="store-link store-link--primary" href="https://play.google.com/store/apps/details?id=com.ricecookey.lastcastle"
                    target="_blank" rel="noopener noreferrer" aria-labelledby="g-lc-title g-lc-gp">
                   <span id="g-lc-gp" data-i18n="store.google">Google Play</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a class="store-link" href="https://apps.apple.com/kr/app/id6786145722"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-lc-title g-lc-as">
+                  <span id="g-lc-as" data-i18n="store.apple">App Store</span>
                   <span class="store-link__out" aria-hidden="true">↗</span>
                 </a>
               </li>
@@ -133,6 +140,44 @@
         </article>
 
         <ul class="game-list">
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/plants-keeper.jpg" width="192" height="192" loading="lazy" decoding="async"
+                 alt="식집사 앱 아이콘 — 두 장의 초록 잎이 난 주황색 화분 캐릭터" data-i18n-alt="game.pk.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-pk-title" data-i18n="game.pk.name">식집사</h3>
+              <p class="game-row__desc" data-i18n="game.pk.desc">사진으로 식물 종류와 상태를 살펴보고 돌봄 기록을 남기는 AI 식물 관리 앱.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li><a class="store-link" href="https://apps.apple.com/kr/app/plants-keeper/id6793824278" target="_blank" rel="noopener noreferrer" aria-labelledby="g-pk-title g-pk-as"><span id="g-pk-as" data-i18n="store.apple">App Store</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/brrrp.jpg" width="192" height="192" loading="lazy" decoding="async"
+                 alt="부릅 앱 아이콘 — 혀를 내밀고 두 손을 뺨에 댄 흰 유령" data-i18n-alt="game.br.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-br-title" data-i18n="game.br.name">부릅</h3>
+              <p class="game-row__desc" data-i18n="game.br.desc">잠의 유령이 보여주는 표정을 따라 지어야 꺼지는 표정 인식 알람.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li><a class="store-link" href="https://play.google.com/store/apps/details?id=com.ricecookey.brrrp" target="_blank" rel="noopener noreferrer" aria-labelledby="g-br-title g-br-gp"><span id="g-br-gp" data-i18n="store.google">Google Play</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+              <li><a class="store-link" href="https://apps.apple.com/kr/app/id6793560139" target="_blank" rel="noopener noreferrer" aria-labelledby="g-br-title g-br-as"><span id="g-br-as" data-i18n="store.apple">App Store</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/today-safe-weather.jpg" width="192" height="192" loading="lazy" decoding="async"
+                 alt="오늘안심날씨 앱 아이콘 — 주황색 배경의 흰 방패 안에 해와 바람 무늬" data-i18n-alt="game.sw.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-sw-title" data-i18n="game.sw.name">오늘안심날씨</h3>
+              <p class="game-row__desc" data-i18n="game.sw.desc">폭염과 미세먼지 단계를 한눈에 보여주고 상황이 나빠질 때 알려주는 생활 날씨 앱.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li><a class="store-link" href="https://play.google.com/store/apps/details?id=com.ricecookey.todaysafeweather" target="_blank" rel="noopener noreferrer" aria-labelledby="g-sw-title g-sw-gp"><span id="g-sw-gp" data-i18n="store.google">Google Play</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+              <li><a class="store-link" href="https://apps.apple.com/kr/app/id6793529210" target="_blank" rel="noopener noreferrer" aria-labelledby="g-sw-title g-sw-as"><span id="g-sw-as" data-i18n="store.apple">App Store</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </li>
+
           <li class="game-row reveal">
             <img class="game-row__icon" src="./assets/games/wakbu-ball.png" width="192" height="192" loading="lazy" decoding="async"
                  alt="왁뿌볼 빠자작! 앱 아이콘 — 금이 간 초록색 왁스 볼" data-i18n-alt="game.wb.alt" />
@@ -290,6 +335,13 @@
               <p class="game-row__desc" data-i18n="game.ti.desc">10×10 보드에 블록을 채우며 기록에 도전하는 두뇌 퍼즐.</p>
             </div>
             <ul class="store-list game-row__stores">
+              <li>
+                <a class="store-link" href="https://play.google.com/store/apps/details?id=com.ricecookey.puzzle1010i"
+                   target="_blank" rel="noopener noreferrer" aria-labelledby="g-ti-title g-ti-gp">
+                  <span id="g-ti-gp" data-i18n="store.google">Google Play</span>
+                  <span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
               <li>
                 <a class="store-link" href="https://apps.apple.com/us/app/brain-puzzle-game-1010i/id6795572711"
                    target="_blank" rel="noopener noreferrer" aria-labelledby="g-ti-title g-ti-as">
