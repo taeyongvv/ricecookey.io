@@ -630,36 +630,6 @@ img, svg { display: block; max-width: 100%; }
   word-break: keep-all;
 }
 
-/* dashed = not a link; the store buttons are the only solid targets */
-.game-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.15rem;
-  padding: 0.45rem 0.9rem;
-  background: var(--cream);
-  border: 2px dashed var(--ink-faint);
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--ink-mid);
-}
-
-.game-status__dot {
-  width: 8px;
-  height: 8px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: var(--yellow);
-  border: 1px solid var(--ink);
-  animation: statuspulse 2.4s ease-in-out infinite;
-}
-
-@keyframes statuspulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
-}
-
 .game-feature .store-list { margin-top: 1.3rem; }
 
 /* catalog rows */
@@ -1282,8 +1252,7 @@ img, svg { display: block; max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
-  .bowl, .bowl__steam span, .lab__title, .lab__grain, .marquee__track, .hero__grain,
-  .game-status__dot { animation: none; }
+  .bowl, .bowl__steam span, .lab__title, .lab__grain, .marquee__track, .hero__grain { animation: none; }
   .btn:hover, .about-card:hover, .team-card:hover,
   .game-row:hover, .store-link:hover, .store-link:active { transform: none; }
 }
