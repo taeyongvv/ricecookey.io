@@ -11,6 +11,8 @@ indie games and lifestyle apps. Static site, no build step, ready for GitHub Pag
 | `styles.css` | Styling — toasted "rice cookie" palette; games = coral, apps = green. |
 | `script.js` | Scroll reveals + AJAX contact form. |
 | `analytics.js` | Privacy-minimal pageview tracking for the Ricecookey dashboard. |
+| `rakunovel/privacy/` | Rakunovel privacy policy. |
+| `rakunovel/terms/` | Rakunovel terms of service. |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
 
 ## Run locally
@@ -25,7 +27,7 @@ python3 -m http.server 8000
 ## Deploy to GitHub Pages
 
 1. Push these files to the `main` branch.
-2. Repo **Settings → Pages → Build and deployment**: Source = *Deploy from a branch*, Branch = `main`, folder = `/ (root)`.
+2. The `Deploy static site to Pages` GitHub Actions workflow uploads the repository root and deploys it.
 3. Your site goes live at `https://taeyongvv.github.io/ricecookey.io/`.
 
 ### Custom domain (ricecookey.io)
