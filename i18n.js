@@ -93,7 +93,10 @@ window.RC_I18N = {
     "lab.cta3": "재밌는 거 같이 만들 사람, 일 맡기고 싶은 분 모두 환영이에요.",
     "contact.label": "CONTACT",
     "contact.email": "ricecookey.official@gmail.com",
-    "footer.copy": "© {year} RICECookey. 오늘도 무언가를 짓는 중. 🍚"
+    "footer.copy": "© {year} RICECookey. 오늘도 무언가를 짓는 중. 🍚",
+    "footer.legalAria": "법적 고지",
+    "footer.rakunovelPrivacy": "라쿠노벨 개인정보처리방침",
+    "footer.rakunovelTerms": "라쿠노벨 이용약관"
   },
   en: {
     "meta.title": "RICECookey — A small studio building games and apps",
@@ -188,6 +191,9 @@ window.RC_I18N = {
     "lab.cta3": "Anyone who wants to build something fun together is welcome.",
     "contact.label": "CONTACT",
     "contact.email": "ricecookey.official@gmail.com",
-    "footer.copy": "© {year} RICECookey. Still cooking something today. 🍚"
+    "footer.copy": "© {year} RICECookey. Still cooking something today. 🍚",
+    "footer.legalAria": "Legal",
+    "footer.rakunovelPrivacy": "Rakunovel Privacy Policy",
+    "footer.rakunovelTerms": "Rakunovel Terms"
   }
 };
