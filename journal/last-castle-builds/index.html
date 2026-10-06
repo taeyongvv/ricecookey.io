@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>성을 지키는 선택의 설계 — RICECookey 개발 기록</title>
+  <meta name="description" content="라스트캐슬: 디펜스의 성, 업그레이드 카드, 플레이어 빌드를 연결하는 선택 설계 원칙을 기록합니다." />
+  <link rel="canonical" href="https://www.ricecookey.com/journal/last-castle-builds/" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2103625263346419" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../../rakunovel/legal.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">본문으로 건너뛰기</a>
+  <header class="legal-header"><div class="legal-header__inner"><a class="brand" href="../../">RICE<span>Cookey</span></a><a class="back" href="../../#journal">개발 기록으로 돌아가기</a></div></header>
+  <main class="legal-main" id="content">
+    <p class="eyebrow">RICECOOKEY · DEVELOPMENT JOURNAL</p>
+    <h1>성을 지키는 선택의 설계</h1>
+    <p class="lede" lang="en">Designing choices that defend the castle</p>
+    <div class="meta"><span>2026년 10월 6일</span><a href="#korean">한국어</a><a href="#english" lang="en">English</a></div>
+    <article>
+      <section id="korean" lang="ko">
+      <p><strong>한 번의 정답을 외우게 하기보다, 매번 다른 방어 계획을 세우게 하는 로그라이크 디펜스를 어떻게 생각했는지 정리했습니다. 성을 지키는 목표, 업그레이드 카드, 플레이어가 직접 만드는 빌드 사이의 관계를 살펴봅니다.</strong></p>
+      <h2>1. 성은 목표이자 판단의 기준이다</h2>
+      <p>《라스트캐슬: 디펜스》는 성을 지키면서 업그레이드 카드를 선택해 빌드를 만들어 가는 로그라이크 디펜스 게임입니다. 이 짧은 설명 안에는 플레이 중 반복되는 세 가지 행동이 들어 있습니다. 위험을 보고, 지금 필요한 강화를 고르고, 그 선택의 결과를 다음 상황에서 확인하는 일입니다.</p>
+      <p>RICECookey는 성을 단순한 배경보다 판단의 기준으로 봅니다. 적을 많이 쓰러뜨리는 것만 생각하면 공격력이 높은 선택이 언제나 좋아 보일 수 있습니다. 그러나 지켜야 할 대상이 분명하면 질문이 달라집니다. 당장의 위기를 넘길 것인지, 이후의 성장을 준비할 것인지, 이미 고른 카드와 이어지는 방향을 택할 것인지 비교하게 됩니다. 성의 안전이 모든 선택을 같은 맥락 안에 묶어 주는 셈입니다.</p>
+      <p>이 관점은 다른 방어 게임을 구상할 때도 쓸 수 있습니다. 먼저 플레이어가 무엇을 지키는지 한 문장으로 정하고, 화면에 나타나는 정보가 그 대상을 지키는 판단에 도움이 되는지 확인합니다. 숫자가 많아도 결정을 돕지 않으면 장식에 가깝습니다. 반대로 현재 위험과 선택의 결과가 읽히면 규칙을 길게 설명하지 않아도 플레이어는 자신의 결정을 되짚을 수 있습니다.</p>
+      <h2>2. 카드 선택에는 지금과 나중이 함께 있어야 한다</h2>
+      <p>업그레이드 카드는 보상을 전달하는 수단이면서 다음 플레이를 계획하게 하는 질문입니다. 모든 카드가 즉시 강한 효과만 준다면 선택은 쉬워지지만, 고민할 이유도 줄어듭니다. 모든 카드가 먼 미래의 가능성만 약속한다면 현재의 방어와 연결되지 않습니다. 그래서 RICECookey의 설계 접근은 각 선택을 "지금 필요한가"와 "내가 만들고 있는 빌드에 맞는가"라는 두 축으로 살펴보는 것입니다.</p>
+      <p>예를 들어, 어떤 선택은 눈앞의 위험에 대응하고 다른 선택은 이미 고른 강화의 방향을 더 분명하게 만든다고 가정할 수 있습니다. 여기서 중요한 것은 특정 카드의 우열을 미리 정하는 일이 아닙니다. 상황에 따라 평가가 달라질 여지를 남기는 일입니다. 체력이 충분할 때와 성이 위태로울 때 같은 카드가 다르게 보인다면, 플레이어는 카드 목록이 아니라 현재 판의 상태를 읽게 됩니다.</p>
+      <p>카드를 설계하거나 검토할 때는 세 가지 질문이 유용합니다. 이 선택이 해결하는 문제는 무엇인가? 효과를 고른 뒤 무엇이 달라졌는지 플레이어가 알아볼 수 있는가? 다른 선택을 포기한 대가가 느껴지는가? 이 질문에 답하기 어려운 카드는 수치가 아무리 커도 빌드의 성격을 만들기 어렵습니다.</p>
+      <h2>3. 좋은 빌드는 플레이어가 설명할 수 있다</h2>
+      <p>플레이어가 정의하는 빌드는 많은 효과를 쌓았다는 뜻만은 아닙니다. "이번에는 이런 방식으로 성을 지켰다"라고 자신의 전략을 설명할 수 있어야 합니다. 설명 가능한 빌드는 선택 사이에 관계가 있고, 그 관계가 플레이 장면에서 드러납니다. 반대로 카드가 서로 영향을 주지 않거나 결과를 알아보기 어렵다면, 선택의 수가 많아도 한 판의 정체성은 흐려집니다.</p>
+      <p>RICECookey는 빌드를 정답표가 아니라 플레이어가 세우는 가설로 다룹니다. 카드를 고를 때 "이 방향이면 다음 위기를 버틸 수 있겠다"라고 예상하고, 실제 방어에서 그 예상이 맞는지 확인하는 흐름입니다. 예상이 빗나가도 이유를 짐작할 수 있다면 실패는 다음 선택을 위한 정보가 됩니다. 아무 이유도 읽히지 않는 실패는 학습보다 답답함을 남깁니다.</p>
+      <p>이 원칙을 콘텐츠 작성에도 적용할 수 있습니다. 카드 설명은 효과를 멋있게 포장하기보다 판단에 필요한 차이를 말해야 합니다. 비슷한 선택들은 이름만 다르게 만들지 말고, 어느 상황에서 고려할 만한지 구분되어야 합니다. 플레이어가 자신의 빌드에 짧은 별명을 붙일 수 있을 정도로 방향이 선명하다면, 선택이 기억으로 남을 가능성도 커집니다.</p>
+      <h2>4. 무작위성은 결정을 대신하지 않고 재료를 바꾼다</h2>
+      <p>로그라이크 형식에서 무작위성은 반복 플레이의 조건을 바꾸는 데 쓰일 수 있습니다. 하지만 결과가 무작위라는 이유만으로 선택까지 무의미해져서는 안 됩니다. RICECookey가 중요하게 보는 구분은 "무엇이 제시되는가"와 "제시된 것 중 무엇을 고르는가" 사이에 있습니다. 앞의 변화는 판마다 다른 문제를 만들고, 뒤의 결정은 플레이어의 몫으로 남아야 합니다.</p>
+      <p>선택지가 늘 원하는 대로 나오지 않을 때도 플레이어는 현재 가진 것 안에서 계획을 수정할 수 있어야 합니다. 처음 생각한 방향을 계속 밀지, 다른 방향으로 전환할지, 당장의 안전을 위해 잠시 우회할지를 고르는 과정 자체가 로그라이크 빌드의 재미가 됩니다. 이때 전환은 공짜일 필요가 없지만, 너무 늦기 전에 가능성을 알아볼 단서는 필요합니다.</p>
+      <p>실무적으로는 한 판을 검토할 때 결과만 보지 않고 결정의 순간을 기록하는 방법이 도움이 됩니다. 어떤 정보가 보였고, 어떤 선택지를 비교했으며, 왜 하나를 골랐는지를 적습니다. 패배했더라도 당시 판단이 합리적이었다면 난도가 아니라 이후 상황이나 정보 전달을 다시 볼 수 있습니다. 반대로 거의 생각하지 않고 같은 항목만 골랐다면 선택 구조를 점검할 이유가 생깁니다.</p>
+      <h2>5. 반복 플레이는 새로움보다 해석의 차이에서 나온다</h2>
+      <p>매 판 완전히 새로운 규칙을 보여 주는 것만이 반복성을 만드는 방법은 아닙니다. 같은 선택도 앞서 고른 카드, 현재의 위험, 남은 계획에 따라 의미가 달라질 수 있습니다. RICECookey는 이 해석의 변화를 중요하게 봅니다. 익숙한 카드를 다시 만났을 때 "또 같은 카드"가 아니라 "이번 빌드에서는 다르게 쓸 수 있겠다"고 느끼게 하는 것이 목표입니다.</p>
+      <p>이를 위해서는 선택 전후의 인과가 읽혀야 합니다. 강화가 실제 방어 판단에 어떤 차이를 만들었는지 확인할 수 있어야 다음 판에서 다른 조합을 시험할 근거가 생깁니다. 정보가 너무 감춰져 있으면 플레이어는 경험을 비교하기 어렵고, 정보가 결론까지 대신 말하면 스스로 발견할 여지가 줄어듭니다. 필요한 사실은 분명히 보여 주되, 조합의 해석은 플레이어에게 남기는 균형이 필요합니다.</p>
+      <p>개발 저널을 쓰는 이유도 여기에 있습니다. 기능 목록을 나열하는 대신, 게임을 이루는 선택이 왜 필요한지 공개하면 독자는 자신의 플레이를 다른 각도에서 볼 수 있습니다. 또한 개발자는 "이 요소가 플레이어의 어떤 판단을 돕는가"라는 질문으로 아이디어를 다시 검토할 수 있습니다. 설명할 수 없는 복잡성은 늘리기 쉽지만 관리하기 어렵습니다.</p>
+      <h2>결론: 한 판의 이야기는 선택으로 남는다</h2>
+      <p>《라스트캐슬: 디펜스》에서 성을 지키는 목표는 플레이어의 판단에 방향을 주고, 업그레이드 카드는 그 판단을 반복해서 요구하며, 빌드는 선택들이 이어진 결과가 됩니다. RICECookey의 접근은 카드를 많이 보여 주는 데서 끝나지 않습니다. 플레이어가 상황을 읽고, 계획을 세우고, 필요하면 계획을 바꾼 뒤 "내가 이렇게 지켰다"고 말할 수 있는 한 판을 만드는 데 초점을 둡니다.</p>
+      <p>《라스트캐슬: 디펜스》는 Google Play, App Store, ONE Store에서 이용할 수 있습니다.</p>
+      </section><section id="english" lang="en"><h2>English</h2>
+      <h2>Designing choices that defend the castle: a Last Castle development journal</h2>
+      <p><strong>Rather than asking players to memorize one correct answer, we want each run to invite a different defense plan. This journal explains how we think about the relationship between a castle that must be protected, upgrade-card choices, and a roguelike build defined by the player.</strong></p>
+      <h2>1. The castle is both the objective and the test for each decision</h2>
+      <p>Last Castle is a roguelike defense game in which players protect a castle and choose upgrade cards to shape a build. That short description contains three actions that repeat during play: read the danger, choose the upgrade that seems useful now, and see what that choice means in the next situation.</p>
+      <p>At RICECookey, we treat the castle as more than a backdrop. It gives every decision a common reference point. If defeating more enemies were the only concern, the option with the largest offensive benefit could always look best. A clear object to protect changes the comparison. A player can weigh surviving the immediate danger against preparing for later, or decide whether to reinforce the direction established by earlier cards. The castle gives those choices a shared context.</p>
+      <p>The same lens can help when planning other defense games. First, describe what the player protects in one sentence. Then check whether the information on screen helps the player make decisions about that objective. A large set of numbers is mostly decoration if it does not support a decision. If the current danger and the result of a choice are readable, however, players can review their own judgment without needing a long explanation of the rules.</p>
+      <h2>2. A card choice should address both now and later</h2>
+      <p>An upgrade card delivers a reward, but it also asks the player to plan the next part of the run. If every card offers only immediate power, the choice becomes easier and there is less reason to think about it. If every card promises only a distant possibility, it loses contact with the defense happening now. Our design approach is to examine each option along two axes: "Do I need this now?" and "Does this fit the build I am making?"</p>
+      <p>Imagine that one option answers the danger in front of the castle, while another makes the direction of earlier upgrades more distinct. The point is not to declare one card better in advance. The point is to leave room for its value to change with the situation. If the same card looks different when the castle is safe and when it is under pressure, the player must read the state of the run rather than simply read a card list.</p>
+      <p>Three questions are useful when reviewing a card. What problem does this choice solve? After choosing it, can the player recognize what changed? Does giving up the other options feel consequential? A card that cannot answer those questions will struggle to give a build its character, even if its numbers are large.</p>
+      <h2>3. A good build is one the player can explain</h2>
+      <p>A player-defined build means more than accumulating many effects. The player should be able to say, "This is how I defended the castle in this run." An explainable build has relationships between its choices, and those relationships appear during play. If cards do not affect how other choices are judged, or if their results are hard to recognize, even a large selection can produce runs with little identity.</p>
+      <p>We approach a build as a hypothesis made by the player, not as an answer sheet. A card suggests, "If I continue in this direction, I may be able to survive the next danger." The following defense puts that prediction to the test. When the prediction is wrong but the reason is legible, failure becomes information for the next decision. Failure whose cause cannot be read tends to leave frustration rather than something useful to learn.</p>
+      <p>This principle also applies to content writing. A card description should communicate the difference needed for judgment instead of dressing an effect in grand language. Similar choices should differ in the situations where a player might consider them, not just in name. If players can give their build a short nickname because its direction is clear, their choices are also more likely to remain memorable.</p>
+      <h2>4. Randomness changes the materials; it should not make the decision</h2>
+      <p>In a roguelike structure, randomness can change the conditions of repeated play. A random outcome, however, should not make the player's choice irrelevant. We draw an important distinction between what the run presents and what the player selects from it. The first can create a different problem each time. The second should remain the player's decision.</p>
+      <p>Even when the desired options do not appear, players should be able to revise a plan with what they have. They might continue pushing the original direction, turn toward another one, or take a temporary detour for immediate safety. Deciding among those responses is part of building a run. Changing direction does not need to be free, but players need enough clues to recognize the possibility before it is too late to matter.</p>
+      <p>A practical way to review a run is to record its decision points rather than looking only at the result. Note what information was visible, which options were compared, and why one was selected. If the run ends in defeat but the decision made sense with the information available, it may be more useful to inspect what happened afterward or how the information was presented than to focus only on difficulty. If the same option was chosen repeatedly with almost no thought, the choice structure deserves another look.</p>
+      <h2>5. Replay value can come from a change in interpretation</h2>
+      <p>Repeated play does not require a completely new rule in every run. A familiar choice can mean something different because of previously selected cards, the danger facing the castle, or the remaining plan. This change in interpretation matters in our approach. When a familiar card appears again, the goal is for the player to think, "I could use this differently in this build," rather than simply, "This card again."</p>
+      <p>The cause and effect around a choice must be readable for that to happen. Players need to see how an upgrade changed a defense decision before they have a reason to try another combination in a later run. When too much information is hidden, comparing experiences becomes difficult. When the game supplies the conclusion as well as the facts, there is little left for the player to discover. The facts needed for a decision should be clear, while the interpretation of a combination can remain with the player.</p>
+      <p>That is also why a development journal is useful. A feature list says what exists. Explaining why a choice belongs in the game can help readers look at their own play from another angle. It also gives us a direct question for reviewing an idea: "Which player decision does this help?" Complexity that cannot answer that question is easy to add and hard to manage.</p>
+      <h2>Conclusion: the story of a run remains in its choices</h2>
+      <p>In Last Castle, the objective of defending the castle gives direction to the player's judgment. Upgrade cards ask for that judgment repeatedly, and the build is the accumulated result of those choices. RICECookey's approach does not end with presenting many cards. We focus on a run in which the player can read the situation, form a plan, revise it when necessary, and finally say, "This is how I defended the castle."</p>
+      <p>Last Castle is available on Google Play, the App Store, and ONE Store.</p>
+      </section>
+    </article>
+  </main>
+  <footer class="legal-footer"><div class="legal-footer__inner"><p>© 2026 RICECookey</p><nav aria-label="법적 고지"><a href="../../privacy/">웹사이트 개인정보처리방침</a></nav></div></footer>
+</body>
+</html>

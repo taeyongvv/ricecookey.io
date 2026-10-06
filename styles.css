@@ -537,6 +537,17 @@ img, svg { display: block; max-width: 100%; }
   box-shadow: 0 2px 0 var(--ink);
 }
 
+.store-link--disabled {
+  cursor: default;
+  opacity: 0.62;
+}
+
+.store-link--disabled:hover {
+  background: #fff;
+  transform: none;
+  box-shadow: 0 4px 0 var(--ink);
+}
+
 .store-link:active {
   transform: translateY(4px);
   box-shadow: 0 0 0 var(--ink);
