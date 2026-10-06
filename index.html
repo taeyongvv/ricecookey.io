@@ -33,6 +33,7 @@
       </a>
       <div class="nav__links">
         <a href="#games" data-i18n="nav.games">앱과 게임</a>
+        <a href="#journal" data-i18n="nav.journal">개발 기록</a>
         <a href="#services" data-i18n="nav.services">서비스</a>
         <a href="#about" data-i18n="nav.about">소개</a>
         <a href="#members" data-i18n="nav.team">멤버</a>
@@ -97,8 +98,8 @@
       <div class="container">
         <header class="section__head section__head--start reveal">
           <p class="eyebrow" data-i18n="games.label">APPS &amp; GAMES</p>
-          <h2 class="section__title display" id="games-title" data-i18n="games.title">지금 만날 수 있는 앱과 게임</h2>
-          <p class="games__lede" data-i18n="games.lede">생활을 돕는 앱과 손이 자꾸 가는 게임을 만듭니다. 스토어 버튼을 누르면 바로 받아볼 수 있어요.</p>
+          <h2 class="section__title display" id="games-title" data-i18n="games.title">만들고 있는 앱과 게임</h2>
+          <p class="games__lede" data-i18n="games.lede">생활을 돕는 앱과 손이 자꾸 가는 게임을 만듭니다. 출시 전 프로젝트는 준비중으로 표시합니다.</p>
         </header>
 
         <article class="game-feature reveal" aria-labelledby="g-lc-title">
@@ -138,6 +139,76 @@
         </article>
 
         <ul class="game-list">
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/today-dungeon.webp" width="192" height="192" loading="lazy" decoding="async"
+                 alt="오늘도 던전출근 앱 아이콘" data-i18n-alt="game.td.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-td-title" data-i18n="game.td.name">오늘도 던전출근</h3>
+              <p class="game-row__desc" data-i18n="game.td.desc">마력·신뢰·골드를 관리하며 12주를 버티고 다양한 결말을 모으는 판타지 직장 생존 시뮬레이션.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li>
+                <a class="store-link" href="https://ricecookeytodayis.vercel.app" target="_blank" rel="noopener noreferrer" aria-labelledby="g-td-title g-td-web">
+                  <span id="g-td-web" data-i18n="store.webBeta">웹 베타</span><span class="store-link__out" aria-hidden="true">↗</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/commander.webp" width="192" height="192" loading="lazy" decoding="async" alt="지휘관 앱 아이콘" data-i18n-alt="game.co.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-co-title" data-i18n="game.co.name">지휘관</h3>
+              <p class="game-row__desc" data-i18n="game.co.desc">병사를 배치해 왕을 지키는 중세 판타지 전략 게임.</p>
+            </div>
+            <ul class="store-list game-row__stores"><li><span class="store-link store-link--disabled" data-i18n="store.preparing">준비중</span></li></ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/last-guardians.webp" width="192" height="192" loading="lazy" decoding="async" alt="최후의 수호자들 앱 아이콘" data-i18n-alt="game.lg.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-lg-title" data-i18n="game.lg.name">최후의 수호자들</h3>
+              <p class="game-row__desc" data-i18n="game.lg.desc">이동과 자동 공격, 장비 선택으로 몰려오는 적의 파도를 버티는 세로형 생존 로그라이크.</p>
+            </div>
+            <ul class="store-list game-row__stores"><li><span class="store-link store-link--disabled" data-i18n="store.preparing">준비중</span></li></ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/kangho.webp" width="192" height="192" loading="lazy" decoding="async" alt="무한의 가능성 강호 앱 아이콘" data-i18n-alt="game.kh.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-kh-title" data-i18n="game.kh.name">무한의 가능성 「강호」</h3>
+              <p class="game-row__desc" data-i18n="game.kh.desc">세력과 세계의 변화를 따라 선택과 전투를 이어가는 오픈월드 무협 전술 RPG.</p>
+            </div>
+            <ul class="store-list game-row__stores"><li><span class="store-link store-link--disabled" data-i18n="store.preparing">준비중</span></li></ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/rakunovel.webp" width="192" height="192" loading="lazy" decoding="async" alt="라쿠노벨 앱 아이콘" data-i18n-alt="game.rn.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-rn-title" data-i18n="game.rn.name">라쿠노벨</h3>
+              <p class="game-row__desc" data-i18n="game.rn.desc">삽화와 함께 연재 작품을 읽고 독서 진행 상황을 이어가는 웹소설 플랫폼.</p>
+            </div>
+            <ul class="store-list game-row__stores"><li><span class="store-link store-link--disabled" data-i18n="store.preparing">준비중</span></li></ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/cubllo.webp" width="192" height="192" loading="lazy" decoding="async" alt="큐블로 앱 아이콘" data-i18n-alt="game.cu.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-cu-title" data-i18n="game.cu.name">CUBLLO (큐블로)</h3>
+              <p class="game-row__desc" data-i18n="game.cu.desc">큐브 매칭과 오델로식 축 전환 이동을 결합한 캐주얼 퍼즐 게임.</p>
+            </div>
+            <ul class="store-list game-row__stores"><li><span class="store-link store-link--disabled" data-i18n="store.preparing">준비중</span></li></ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/monthly-loafer.webp" width="192" height="192" loading="lazy" decoding="async" alt="월급루팡 방치형게임 앱 아이콘" data-i18n-alt="game.ml.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-ml-title" data-i18n="game.ml.name">월급루팡: 방치형게임</h3>
+              <p class="game-row__desc" data-i18n="game.ml.desc">탭으로 골드와 의심도를 쌓고 적절한 순간 수익을 확정하는 푸시유어럭 방치형 클리커.</p>
+            </div>
+            <ul class="store-list game-row__stores"><li><span class="store-link store-link--disabled" data-i18n="store.preparing">준비중</span></li></ul>
+          </li>
+
           <li class="game-row reveal">
             <img class="game-row__icon" src="./assets/games/ductmong.png" width="192" height="192" loading="lazy" decoding="async"
                  alt="닥트몽 앱 아이콘 — 짙은 회색 배경의 흰색 닥트 모양 D" data-i18n-alt="game.dm.alt" />
@@ -391,6 +462,36 @@
       </div>
     </section>
 
+    <section class="section about" id="journal" aria-labelledby="journal-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="journal.label">DEVELOPMENT JOURNAL</p>
+          <h2 class="section__title display" id="journal-title" data-i18n="journal.title">만들면서 배운 것을 기록합니다</h2>
+        </header>
+        <p class="about__lede reveal" data-i18n="journal.lede">출시작의 기능 목록보다, 어떤 문제를 보고 무엇을 기준으로 선택했는지 공유합니다.</p>
+        <div class="about__grid">
+          <article class="about-card reveal">
+            <div class="about-card__icon" aria-hidden="true">🏰</div>
+            <h3 class="about-card__title" data-i18n="journal.lc.title">성을 지키는 선택의 설계</h3>
+            <p class="about-card__body" data-i18n="journal.lc.body">라스트캐슬의 목표, 업그레이드 카드, 플레이어 빌드를 하나의 판단 구조로 연결하는 방법.</p>
+            <p><a href="./journal/last-castle-builds/" data-i18n="journal.read" data-i18n-aria="journal.lc.linkAria" aria-label="성을 지키는 선택의 설계 기록 읽기">기록 읽기 →</a></p>
+          </article>
+          <article class="about-card reveal">
+            <div class="about-card__icon" aria-hidden="true">🟢</div>
+            <h3 class="about-card__title" data-i18n="journal.wb.title">손끝의 빠자작을 화면 안으로</h3>
+            <p class="about-card__body" data-i18n="journal.wb.body">누름, 변형, 파손의 차이를 읽히게 만드는 왁뿌볼의 촉각 상호작용 원칙.</p>
+            <p><a href="./journal/wakbu-ball-tactile-design/" data-i18n="journal.read" data-i18n-aria="journal.wb.linkAria" aria-label="손끝의 빠자작을 화면 안으로 기록 읽기">기록 읽기 →</a></p>
+          </article>
+          <article class="about-card reveal">
+            <div class="about-card__icon" aria-hidden="true">🗂️</div>
+            <h3 class="about-card__title" data-i18n="journal.catalog.title">하나의 게임, 여러 개의 판매처</h3>
+            <p class="about-card__body" data-i18n="journal.catalog.body">작품, 스토어, 무료판과 광고 제거판을 중복 없이 보여 주는 카탈로그 설계법.</p>
+            <p><a href="./journal/multistore-catalog/" data-i18n="journal.read" data-i18n-aria="journal.catalog.linkAria" aria-label="하나의 게임, 여러 개의 판매처 기록 읽기">기록 읽기 →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section lab" id="services" aria-labelledby="lab-title">
       <div class="lab__grain lab__grain--1" aria-hidden="true"></div>
       <div class="lab__grain lab__grain--2" aria-hidden="true"></div>
@@ -507,14 +608,14 @@
       </a>
       <p class="footer__copy" data-i18n-footer>© <span id="year">2026</span> RICECookey. 오늘도 무언가를 짓는 중. 🍚</p>
       <nav class="footer__legal" aria-label="법적 고지" data-i18n-aria="footer.legalAria">
+        <a href="./privacy/" data-i18n="footer.websitePrivacy">웹사이트 개인정보처리방침</a>
         <a href="./rakunovel/privacy/" data-i18n="footer.rakunovelPrivacy">라쿠노벨 개인정보처리방침</a>
         <a href="./rakunovel/terms/" data-i18n="footer.rakunovelTerms">라쿠노벨 이용약관</a>
       </nav>
     </div>
   </footer>
 
-  <script src="./i18n.js?v=20260829"></script>
+  <script src="./i18n.js?v=20261006"></script>
   <script src="./script.js"></script>
-  <script src="./analytics.js?v=20260820"></script>
 </body>
 </html>

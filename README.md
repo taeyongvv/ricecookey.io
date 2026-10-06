@@ -10,7 +10,6 @@ indie games and lifestyle apps. Static site, no build step, ready for GitHub Pag
 | `index.html` | The whole page (hero, what we make, studio, contact). |
 | `styles.css` | Styling — toasted "rice cookie" palette; games = coral, apps = green. |
 | `script.js` | Scroll reveals + AJAX contact form. |
-| `analytics.js` | Privacy-minimal pageview tracking for the Ricecookey dashboard. |
 | `rakunovel/privacy/` | Rakunovel privacy policy. |
 | `rakunovel/terms/` | Rakunovel terms of service. |
 | `.nojekyll` | Tells GitHub Pages to serve files as-is. |
