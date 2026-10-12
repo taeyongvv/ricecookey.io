@@ -582,6 +582,11 @@ img, svg { display: block; max-width: 100%; }
   margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
 }
 
+.games-featured--solo { grid-template-columns: 1fr; }
+
+/* homepage: link through to the full catalog subpage */
+.games__more { text-align: center; }
+
 .game-feature {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);

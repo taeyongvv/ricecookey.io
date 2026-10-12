@@ -38,9 +38,11 @@
       el.setAttribute("alt", t(el.getAttribute("data-i18n-alt")));
     });
 
-    document.title = t("meta.title");
+    // subpages name their own title/description keys via <body data-meta="...">
+    var meta = document.body.getAttribute("data-meta") || "meta";
+    document.title = t(meta + ".title");
     var metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute("content", t("meta.description"));
+    if (metaDesc) metaDesc.setAttribute("content", t(meta + ".description"));
 
     var footerCopy = document.querySelector("[data-i18n-footer]");
     if (footerCopy) {
