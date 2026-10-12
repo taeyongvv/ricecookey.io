@@ -814,6 +814,80 @@ img, svg { display: block; max-width: 100%; }
   scroll-snap-align: start;
 }
 
+/* full catalog subpage — flat full-width strips and rows instead of cards */
+.games--catalog .games-featured { grid-template-columns: 1fr; }
+
+.games--catalog .game-feature {
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-width: 2px;
+  border-radius: 14px;
+  box-shadow: 0 5px 0 var(--shadow-card);
+}
+
+.games--catalog .game-feature__art { padding: 0; }
+
+.games--catalog .game-feature__glow { display: none; }
+
+.games--catalog .game-feature__icon {
+  width: clamp(112px, 14vw, 160px);
+  box-shadow: 0 6px 0 var(--orange-deep);
+}
+
+.games--catalog .game-feature .store-list { margin-top: 1rem; }
+
+.games--catalog .game-feature--secondary {
+  align-items: center;
+  background: transparent;
+  border-color: var(--shadow-team);
+  box-shadow: none;
+}
+
+.games--catalog .game-feature--secondary .game-feature__icon {
+  width: 88px;
+  box-shadow: 0 4px 0 var(--shadow-team);
+}
+
+.games--catalog .game-list {
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 2px solid var(--ink);
+}
+
+.games--catalog .game-row {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto;
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  padding: 1.1rem clamp(0.25rem, 1.5vw, 1rem);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--shadow-team);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.games--catalog .game-row:hover {
+  transform: none;
+  box-shadow: none;
+  background: #fff;
+}
+
+.games--catalog .game-row__icon { width: 72px; }
+
+.games--catalog .game-row__desc { max-width: 40rem; }
+
+.games--catalog .game-row__stores {
+  grid-column: auto;
+  align-self: center;
+  justify-content: flex-end;
+}
+
+.games--catalog .editions { justify-items: end; }
+
+.games--catalog .edition { justify-content: flex-end; }
+
 /* ---------- about ---------- */
 .about__lede {
   text-align: center;
@@ -1206,6 +1280,18 @@ img, svg { display: block; max-width: 100%; }
 
   .game-feature__icon { width: min(46%, 168px); }
 
+  /* catalog subpage: icon + text on top, store controls below */
+  .games--catalog .game-row { grid-template-columns: auto minmax(0, 1fr); }
+
+  .games--catalog .game-row__stores {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+
+  .games--catalog .editions { justify-items: start; }
+
+  .games--catalog .edition { justify-content: flex-start; }
+
   .hero__grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -1266,6 +1352,8 @@ img, svg { display: block; max-width: 100%; }
 
   /* partial next card hints that the track scrolls */
   .upcoming > li { flex-basis: 82%; }
+
+  .games--catalog .game-feature { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
