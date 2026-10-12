@@ -1,4 +1,4 @@
-/* RiceCookey — i18n, scroll reveal */
+/* RiceCookey — i18n, scroll reveal, upcoming slider */
 (function () {
   "use strict";
 
@@ -85,7 +85,34 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
+  // Native scroll-snap track; buttons are a progressive enhancement and stay
+  // hidden without JS. aria-disabled (not disabled) keeps keyboard focus at the ends.
+  function initSlider() {
+    var track = document.getElementById("upcoming-track");
+    var nav = document.querySelector(".slider-nav");
+    if (!track || !nav) return;
+    var prev = nav.querySelector('[data-dir="-1"]');
+    var next = nav.querySelector('[data-dir="1"]');
+
+    function update() {
+      prev.setAttribute("aria-disabled", track.scrollLeft <= 1 ? "true" : "false");
+      next.setAttribute("aria-disabled", track.scrollLeft >= track.scrollWidth - track.clientWidth - 1 ? "true" : "false");
+    }
+
+    nav.addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-dir]");
+      if (!btn || btn.getAttribute("aria-disabled") === "true") return;
+      track.scrollBy({ left: Number(btn.getAttribute("data-dir")) * track.clientWidth, behavior: "auto" });
+      update();
+    });
+    track.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    nav.hidden = false;
+    update();
+  }
+
   applyLang(detectLang());
   initLangSwitch();
   initReveal();
+  initSlider();
 })();

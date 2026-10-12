@@ -574,7 +574,14 @@ img, svg { display: block; max-width: 100%; }
   opacity: 0.65;
 }
 
-/* featured game */
+/* featured games — large primary + smaller secondary */
+.games-featured {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
 .game-feature {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
@@ -585,7 +592,6 @@ img, svg { display: block; max-width: 100%; }
   border: 3px solid var(--ink);
   border-radius: 30px;
   box-shadow: 0 12px 0 var(--shadow-card);
-  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
 }
 
 .game-feature__art {
@@ -643,19 +649,85 @@ img, svg { display: block; max-width: 100%; }
 
 .game-feature .store-list { margin-top: 1.3rem; }
 
-/* catalog rows */
+.game-feature--secondary {
+  grid-template-columns: 1fr;
+  align-content: start;
+  gap: 1rem;
+}
+
+.game-feature--secondary .game-feature__art {
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.game-feature--secondary .game-feature__icon {
+  width: 112px;
+  box-shadow: 0 6px 0 var(--shadow-team);
+}
+
+.game-feature--secondary .game-feature__title { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+.game-feature--secondary .game-feature__desc { font-size: 1rem; }
+
+/* catalog sub-sections: available now / coming next */
+.catalog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.catalog-head__title {
+  font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+  line-height: 1.15;
+}
+
+.slider-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.slider-nav[hidden] { display: none; }
+
+.slider-nav__btn {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  box-shadow: 0 3px 0 var(--ink);
+  font: 800 1.1rem var(--body);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.slider-nav__btn:hover { background: var(--cream); }
+
+.slider-nav__btn[aria-disabled="true"] {
+  opacity: 0.4;
+  cursor: default;
+  background: #fff;
+}
+
+/* catalog cards — icon + text, store links pinned to the bottom */
 .game-list {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(0.9rem, 2vw, 1.25rem);
   list-style: none;
   padding: 0;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
 }
 
 .game-row {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: clamp(1rem, 3vw, 1.75rem);
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  gap: 1rem;
   padding: clamp(1rem, 2.5vw, 1.4rem);
   background: #fff;
   border: 2px solid var(--ink);
@@ -670,7 +742,7 @@ img, svg { display: block; max-width: 100%; }
 }
 
 .game-row__icon {
-  width: clamp(64px, 12vw, 88px);
+  width: 64px;
   height: auto;
   border-radius: 24%;
   border: 2px solid var(--ink);
@@ -692,20 +764,21 @@ img, svg { display: block; max-width: 100%; }
   word-break: keep-all;
 }
 
-.game-row__stores { justify-content: flex-end; }
+.game-row__stores {
+  grid-column: 1 / -1;
+  align-self: end;
+}
 
 /* one product, two editions — never two cards */
 .editions {
   display: grid;
   gap: 0.6rem;
-  justify-items: end;
 }
 
 .edition {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
   gap: 0.6rem;
 }
 
@@ -718,6 +791,22 @@ img, svg { display: block; max-width: 100%; }
   font-weight: 800;
   color: var(--ink-mid);
   white-space: nowrap;
+}
+
+/* coming next — the only element allowed to overflow horizontally */
+.upcoming {
+  display: flex;
+  gap: clamp(0.9rem, 2vw, 1.25rem);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  list-style: none;
+  padding: 6px 0 14px; /* room for card shadow + hover lift */
+}
+
+.upcoming > li {
+  flex: 0 0 31%;
+  scroll-snap-align: start;
 }
 
 /* ---------- about ---------- */
@@ -1040,6 +1129,14 @@ img, svg { display: block; max-width: 100%; }
 }
 
 /* ---------- responsive ---------- */
+@media (max-width: 960px) {
+  .games-featured { grid-template-columns: 1fr; }
+
+  .game-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .upcoming > li { flex-basis: 45%; }
+}
+
 @media (max-width: 860px) {
   /* Nav wraps to a second row of scrollable chips — every destination stays
      reachable without a menu button. */
@@ -1104,20 +1201,6 @@ img, svg { display: block; max-width: 100%; }
 
   .game-feature__icon { width: min(46%, 168px); }
 
-  .game-row {
-    grid-template-columns: auto minmax(0, 1fr);
-    row-gap: 0.9rem;
-  }
-
-  .game-row__stores {
-    grid-column: 1 / -1;
-    justify-content: flex-start;
-  }
-
-  .editions { justify-items: start; }
-
-  .edition { justify-content: flex-start; }
-
   .hero__grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -1171,6 +1254,13 @@ img, svg { display: block; max-width: 100%; }
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+@media (max-width: 640px) {
+  .game-list { grid-template-columns: 1fr; }
+
+  /* partial next card hints that the track scrolls */
+  .upcoming > li { flex-basis: 82%; }
 }
 
 @media (max-width: 520px) {
