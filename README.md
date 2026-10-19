@@ -33,6 +33,40 @@ python3 -m http.server 8000
 If you own the domain, add a file named `CNAME` containing one line — `ricecookey.io` —
 then point the domain's DNS at GitHub Pages and set the custom domain in Settings → Pages.
 
+## X campaign links
+
+| App | Android | iOS |
+| --- | --- | --- |
+| 식집사 | https://www.ricecookey.com/go/plants/x/aos/ | https://www.ricecookey.com/go/plants/x/ios/ |
+| 겸사겸사 | https://www.ricecookey.com/go/gyeomsa/x/aos/ | https://www.ricecookey.com/go/gyeomsa/x/ios/ |
+
+The original `/go/{app}/{aos,ios}/` links remain unchanged. The `x` path
+separates X-link visits in Vercel Web Analytics without paid UTM breakdowns.
+These are link visits, not downloads; shared links, previews, blockers, and QA
+traffic can affect counts. The existing 350 ms redirect is best-effort, not a
+receipt guarantee. The three-second meta refresh and manual link still work.
+
+Android passes the percent-encoded Install Referrer payload
+`utm_source=x&utm_medium=social&utm_campaign=x`. This alone does not implement
+first-open attribution: the app must retrieve and record the Install Referrer.
+No app binary, SDK, consent flow, or paid service was changed.
+
+iOS currently tracks **X-link visits only** and redirects to the original store
+URL without campaign parameters. App Store Connect browser authentication is
+required to obtain a verified developer provider token; never substitute a
+Team ID, vendor number, app ID, or a made-up token. Once obtained from an
+existing/generated campaign link, add `pt=<verified token>&ct=x&mt=8` to all
+three destinations (meta refresh, anchor, JavaScript) in each X iOS page and
+update the checker. Do not describe iOS campaign downloads as enabled before
+that step. Apple's campaign reporting also has minimum sample thresholds.
+
+Checks (stdlib only):
+
+```sh
+python3 scripts/check_tracking_links.py
+python3 scripts/check_tracking_links.py https://www.ricecookey.com
+```
+
 ## Contact form
 
 The form uses [FormSubmit](https://formsubmit.co) — no backend, no signup.
