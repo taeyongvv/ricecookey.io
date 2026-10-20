@@ -1,0 +1,612 @@
+{
+  "checked": "2026-10-20",
+  "scope": "Every product entry in the index.html #games catalog (id = data-i18n key game.<id>). States: existing = guide shipped before this change; eligible = guide added in this change; excluded = no guide, with the failed checks.",
+  "catalog_count": 20,
+  "developer_checks": {
+    "apple_artist_lookup": "https://itunes.apple.com/lookup?id=6786132529&entity=software&country=kr — 13 apps, none matching the excluded coming-soon titles",
+    "google_play_developer": "https://play.google.com/store/apps/dev?id=5047864483867249414&hl=ko&gl=KR — 11 packages, none matching the excluded coming-soon titles",
+    "not_in_catalog": "Store apps by the same seller that the catalog does not list (out of scope): 별을 입는 아뜰리에, 겸사겸사, P의여행:국도편, 귤리의 파티쉐:2048, 외계 침공, 나 홀로 문단속, 착착"
+  },
+  "products": [
+    {
+      "id": "lc",
+      "name": "라스트캐슬: 디펜스 / Last Castle",
+      "state": "existing",
+      "guide": "games/last-castle/"
+    },
+    {
+      "id": "wb",
+      "name": "왁뿌볼 빠자작! / Wakbu Ball",
+      "state": "existing",
+      "guide": "games/wakbu-ball/"
+    },
+    {
+      "id": "tt",
+      "name": "팅글 팅글 / Tingle Tingle",
+      "state": "existing",
+      "guide": "games/tingle-tingle/"
+    },
+    {
+      "id": "dm",
+      "name": "닥트몽 / Ductmong",
+      "state": "eligible",
+      "guide": "apps/ductmong/",
+      "stores": {
+        "app_store": "id6816418338 (1.1.0, 2026-10-14)",
+        "google_play": "com.ricecookey.ductmate (updated 2026-10-14)"
+      }
+    },
+    {
+      "id": "pk",
+      "name": "식집사 / Plants Keeper",
+      "state": "eligible",
+      "guide": "apps/plants-keeper/",
+      "stores": {
+        "app_store": "id6793824278 (1.1.0, 2026-09-04)",
+        "google_play": "com.ricecookey.plantskeeper (updated 2026-08-27)"
+      }
+    },
+    {
+      "id": "br",
+      "name": "부릅 / Brrrp",
+      "state": "eligible",
+      "guide": "apps/brrrp/",
+      "stores": {
+        "app_store": "id6793560139 (1.6, 2026-09-15)",
+        "google_play": "com.ricecookey.brrrp (updated 2026-09-15)"
+      }
+    },
+    {
+      "id": "sw",
+      "name": "오늘안심날씨 / Today Safe Weather",
+      "state": "eligible",
+      "guide": "apps/today-safe-weather/",
+      "stores": {
+        "app_store": "id6793529210 (1.0.2, 2026-07-29)",
+        "google_play": "com.ricecookey.todaysafeweather (updated 2026-07-22)"
+      }
+    },
+    {
+      "id": "fm",
+      "name": "집중하세요,아가씨 / Focus, My Lady",
+      "state": "eligible",
+      "guide": "apps/focus-my-lady/",
+      "stores": {
+        "app_store": "id6819981098 (1.0.3, 2026-10-19)",
+        "google_play": "com.ricecookey.focusmylady (updated 2026-10-18)"
+      }
+    },
+    {
+      "id": "pp",
+      "name": "뽑뽑 / PopPop",
+      "state": "eligible",
+      "guide": "games/poppop/",
+      "stores": {
+        "google_play": "com.ricecookey.poppop (updated 2026-10-16)"
+      }
+    },
+    {
+      "id": "ti",
+      "name": "두뇌 퍼즐 게임 1010i / 1010i",
+      "state": "eligible",
+      "guide": "games/puzzle-1010i/",
+      "stores": {
+        "app_store": "id6795572711 (3.1.0, 2026-07-30)",
+        "google_play": "com.ricecookey.puzzle1010i (updated 2026-07-30)",
+        "one_store": "0001000954"
+      }
+    },
+    {
+      "id": "bm",
+      "name": "꽈당, 귤 왕자 / Bang Mandarin",
+      "state": "eligible",
+      "guide": "games/bang-mandarin/",
+      "stores": {
+        "google_play": "com.dreamy.bangmandarin.google (updated 2026-07-28)",
+        "one_store": "0001000460"
+      }
+    },
+    {
+      "id": "bp",
+      "name": "삐약 2048 / Beep!2048",
+      "state": "eligible",
+      "guide": "games/beep-2048/",
+      "stores": {
+        "google_play": "com.ricecookey.ricecookey_2048 (updated 2026-07-28)",
+        "one_store": "0000761443"
+      }
+    },
+    {
+      "id": "td",
+      "name": "오늘도 던전출근 (web beta)",
+      "state": "eligible",
+      "guide": "games/today-dungeon/",
+      "beta": true,
+      "stores": {
+        "web_beta": "https://ricecookeytodayis.vercel.app/ (title screen shows '엔딩 68종 · BETA')"
+      }
+    },
+    {
+      "id": "rb",
+      "name": "토끼 키우기 2048 / Rabbit 2048",
+      "state": "excluded",
+      "stores": {
+        "one_store": "0001000448 (listed, 490원)"
+      },
+      "failed_checks": [
+        "ONE Store page has a one-line description only ('2048 퍼즐과 함께 토끼를 끝까지 성장 시켜 보세요!'); embedded metadata gives version 0.3 and last update 2025-04-22, but no controls or revision linkage. Rabbit_2048_2 has no tags and only July 2026 commits, so its HEAD is not evidence of this shipped build",
+        "No Google Play or App Store listing (absent from both developer lists)",
+        "Screenshots show a 4x4 board, game-over and BGM/SFX option panel only — not enough for getting-started steps or tips without guessing"
+      ],
+      "reason": "evidence-limited"
+    },
+    {
+      "id": "co",
+      "name": "지휘관 / Commander",
+      "state": "excluded",
+      "failed_checks": [
+        "catalog shows 준비중 with no link",
+        "absent from Apple artist lookup and Google Play developer page"
+      ],
+      "reason": "not publicly released"
+    },
+    {
+      "id": "lg",
+      "name": "최후의 수호자들 / Last Guardians",
+      "state": "excluded",
+      "failed_checks": [
+        "catalog shows 준비중 with no link",
+        "absent from Apple artist lookup and Google Play developer page"
+      ],
+      "reason": "not publicly released"
+    },
+    {
+      "id": "kh",
+      "name": "무한의 가능성 「강호」 / KangHo",
+      "state": "excluded",
+      "failed_checks": [
+        "catalog shows 준비중 with no link",
+        "absent from Apple artist lookup and Google Play developer page"
+      ],
+      "reason": "not publicly released"
+    },
+    {
+      "id": "rn",
+      "name": "라쿠노벨 / Rakunovel",
+      "state": "excluded",
+      "failed_checks": [
+        "catalog shows 준비중 with no link",
+        "absent from Apple artist lookup and Google Play developer page",
+        "site only hosts its privacy policy and terms"
+      ],
+      "reason": "not publicly released"
+    },
+    {
+      "id": "cu",
+      "name": "CUBLLO (큐블로)",
+      "state": "excluded",
+      "failed_checks": [
+        "catalog shows 준비중 with no link",
+        "absent from Apple artist lookup and Google Play developer page"
+      ],
+      "reason": "not publicly released"
+    },
+    {
+      "id": "ml",
+      "name": "월급루팡: 방치형게임 / Monthly Loafer",
+      "state": "excluded",
+      "failed_checks": [
+        "catalog shows 준비중 with no link",
+        "absent from Apple artist lookup and Google Play developer page"
+      ],
+      "reason": "not publicly released"
+    }
+  ],
+  "screenshots_note": "Store screenshots are official promotional images from the store listings (marketing captions included), fetched at 540 px width and saved as JPEG with macOS sips. today-dungeon images are our own captures of the public web beta, not marketing images. source_sha256 is the fetched file before conversion.",
+  "screenshots": [
+    {
+      "file": "assets/games/ductmong/home.jpg",
+      "width": 540,
+      "height": 1173,
+      "sha256": "5fcf0b21b51249e192540d299f354772f73035567db108c6c6700292e547213e",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6816418338 country=kr screenshotUrls[0]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/50/1e/2c/501e2cf6-c2c9-efab-69c9-3c4a62666032/ios-6.9-01-home.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/50/1e/2c/501e2cf6-c2c9-efab-69c9-3c4a62666032/ios-6.9-01-home.png/540x0w.jpg",
+      "source_sha256": "ec937224195e27d4df19e382981c0f7b9f948f14f1fe9ffcc6da8b222bb2a6f6"
+    },
+    {
+      "file": "assets/games/ductmong/hood-airflow.jpg",
+      "width": 540,
+      "height": 1173,
+      "sha256": "0aa2a6e10543d461a1ba9684cb602549eeed3a91d11254726a35f528467b32c0",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6816418338 country=kr screenshotUrls[1]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/71/37/95/7137956e-2f83-1eab-63b7-61b7e5dd6d2e/ios-6.9-02-hood.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/71/37/95/7137956e-2f83-1eab-63b7-61b7e5dd6d2e/ios-6.9-02-hood.png/540x0w.jpg",
+      "source_sha256": "a68c929bc75eeeca4b1b1b70c8dd1bdd6fd28040967da8dbccd18b0796bcbb06"
+    },
+    {
+      "file": "assets/games/ductmong/fan-recommendation.jpg",
+      "width": 540,
+      "height": 1173,
+      "sha256": "f8ddb60dec09d10064ca3d0ec4ee1766d19879cb8e571b3b77f2f9b0f82ecf2c",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6816418338 country=kr screenshotUrls[2]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fb/0e/b7/fb0eb7d8-49a8-cbd7-b105-4dd4fa6a1dc3/ios-6.9-03-fan.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fb/0e/b7/fb0eb7d8-49a8-cbd7-b105-4dd4fa6a1dc3/ios-6.9-03-fan.png/540x0w.jpg",
+      "source_sha256": "b666b566dcb179e83edf4d47ce8edbb0b8efbf0f06c3cbd2e1156f57737149cc"
+    },
+    {
+      "file": "assets/games/ductmong/line-split.jpg",
+      "width": 540,
+      "height": 1173,
+      "sha256": "bc8120f0b115db0c241470857794f5e333b88ed3ee6a245ed8d1097536e6d63f",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6816418338 country=kr screenshotUrls[3]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/92/38/20/923820e8-5ccc-0061-0323-1af43624811b/ios-6.9-04-charcoal.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/92/38/20/923820e8-5ccc-0061-0323-1af43624811b/ios-6.9-04-charcoal.png/540x0w.jpg",
+      "source_sha256": "9b269f91022c3b3a2d4a96549cdb2e734273340ad2bd41c670fdd24df786254c"
+    },
+    {
+      "file": "assets/games/plants-keeper/home-diagnosis.jpg",
+      "width": 540,
+      "height": 1168,
+      "sha256": "9673c712a47ce713d4178c354c05895a13483c5b8ab263aa6eb1367918be502b",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6793824278 country=kr screenshotUrls[1]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6d/97/f8/6d97f812-4c24-91d5-3026-b29ecea76f4d/card-1.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6d/97/f8/6d97f812-4c24-91d5-3026-b29ecea76f4d/card-1.png/540x0w.jpg",
+      "source_sha256": "21f104cfd6a492e5d33d1acbca6ba799753741de45ddb0fdb5babc4b2608e6d5"
+    },
+    {
+      "file": "assets/games/plants-keeper/diagnosis-result.jpg",
+      "width": 540,
+      "height": 1168,
+      "sha256": "4534f8fca573d8f27505b8e3c7919f6b431494e962ca8b4aa3f5e80f04c7cf30",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6793824278 country=kr screenshotUrls[2]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/45/ef/de/45efde92-db38-0e40-4a21-560660b9f43a/card-2.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/45/ef/de/45efde92-db38-0e40-4a21-560660b9f43a/card-2.png/540x0w.jpg",
+      "source_sha256": "581dd8ff213962d14c86c9922d4757d87a0920acca5f0e882e91fb88474d5089"
+    },
+    {
+      "file": "assets/games/plants-keeper/my-plants.jpg",
+      "width": 540,
+      "height": 1168,
+      "sha256": "bb171a13d1e05aae8cc23379ebb87d8295fbe863b2b3e696419317426a4e8ecf",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6793824278 country=kr screenshotUrls[4]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4c/61/44/4c6144e4-e208-9a96-3b69-50f4bd484d46/card-3.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4c/61/44/4c6144e4-e208-9a96-3b69-50f4bd484d46/card-3.png/540x0w.jpg",
+      "source_sha256": "0457c02898807104fb256cf20ccd0d6a85fd2c27a8c934fe3d57e0dedcd3a299"
+    },
+    {
+      "file": "assets/games/plants-keeper/care-timeline.jpg",
+      "width": 540,
+      "height": 1168,
+      "sha256": "f21ec099c146c5065c8bfa5e20e29817dec54f723f12abb6d9de45f9bc6bfbb2",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6793824278 country=kr screenshotUrls[3]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e0/56/3a/e0563ab9-6d46-10bf-ca2d-f9d9f85becda/card-5.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e0/56/3a/e0563ab9-6d46-10bf-ca2d-f9d9f85becda/card-5.png/540x0w.jpg",
+      "source_sha256": "bf79f7b3ebc19c612eae9609e1d46759b7ddce422822cd2fdc2d50889784e01d"
+    },
+    {
+      "file": "assets/games/brrrp/face-mission.jpg",
+      "width": 540,
+      "height": 1170,
+      "sha256": "396fb068aae7d75e1c96d51570b612f89782625e849d16b1d960354382c70d1f",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6793560139 country=kr screenshotUrls[1]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f5/ee/67/f5ee67ec-5034-5046-0981-a159695e4fce/appstore_1_mission.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f5/ee/67/f5ee67ec-5034-5046-0981-a159695e4fce/appstore_1_mission.png/540x0w.jpg",
+      "source_sha256": "574ac9dab9eb442bfdab3549ad57ec9330469677191f5a7b2b30e5f7b35ed484"
+    },
+    {
+      "file": "assets/games/brrrp/challenges.jpg",
+      "width": 540,
+      "height": 1170,
+      "sha256": "f242cc89eaaffbefaab8952b56c469cc08660896bff9cbb2d1d30fd3dd5ec0e2",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6793560139 country=kr screenshotUrls[3]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/34/31/d8/3431d8bf-db4e-8196-1a3e-2dd0ecc62e90/appstore_3_challenge.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/34/31/d8/3431d8bf-db4e-8196-1a3e-2dd0ecc62e90/appstore_3_challenge.png/540x0w.jpg",
+      "source_sha256": "f2829372495837fbfc26380df1eeb680ebd57158e3c08156188b91db3f79c924"
+    },
+    {
+      "file": "assets/games/brrrp/alarm-list.jpg",
+      "width": 540,
+      "height": 1170,
+      "sha256": "09e7d8a2dca06cbb892ffbb9c637f5817918e585a383ad6aa130c20d4d8e7a12",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6793560139 country=kr screenshotUrls[5]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/95/0e/59/950e5917-7800-21bb-862b-cfd6accfe0e7/appstore_2_alarm.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/95/0e/59/950e5917-7800-21bb-862b-cfd6accfe0e7/appstore_2_alarm.png/540x0w.jpg",
+      "source_sha256": "4386963837eff0a8c1045d9d2f938034df5cbbf0f1a757024a549a648973b9a5"
+    },
+    {
+      "file": "assets/games/brrrp/dashboard.jpg",
+      "width": 540,
+      "height": 1170,
+      "sha256": "f49d028f56e70ed4ae639d1240d07c6b71b5952948caba3b43745b3029104e3e",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6793560139 country=kr screenshotUrls[4]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c1/46/ee/c146ee4c-f095-0e79-435f-967d472b5fe9/appstore_4_dashboard.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c1/46/ee/c146ee4c-f095-0e79-435f-967d472b5fe9/appstore_4_dashboard.png/540x0w.jpg",
+      "source_sha256": "045c36426a25d0c194285a0d4d80118f262965be3e137055beb6cd6696071bba"
+    },
+    {
+      "file": "assets/games/today-safe-weather/main-screen.jpg",
+      "width": 540,
+      "height": 1200,
+      "sha256": "cec2fa38a788a3cc984127d760843102283598c561da8f803379354bc911bbe9",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.ricecookey.todaysafeweather&hl=ko&gl=KR data-screenshot-index=6",
+      "original_url": "https://play-lh.googleusercontent.com/wC9nzlmDDrPZlA7vXGEvsvsJuziVFHwWa3itICtUo449P0KJAxAG-AM7-06FAPcTz5_FX7zpDl3s4zuI-h2lww",
+      "fetched_url": "https://play-lh.googleusercontent.com/wC9nzlmDDrPZlA7vXGEvsvsJuziVFHwWa3itICtUo449P0KJAxAG-AM7-06FAPcTz5_FX7zpDl3s4zuI-h2lww=w540",
+      "source_sha256": "89366a98281fcc94bf396f3881ac9d1d4afedd2ac297ded6ddafaf4bf63c2e26"
+    },
+    {
+      "file": "assets/games/today-safe-weather/action-guide.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "c8ff1abbd498e4b6a3a44bd74191d2ea3a0b14bb3bd5827d867c71011b50ebbc",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.ricecookey.todaysafeweather&hl=ko&gl=KR data-screenshot-index=1",
+      "original_url": "https://play-lh.googleusercontent.com/qr8l3Lj9WM8To1mVL94JVl82B6-KtvJBavRntPoMSwdicgGas3r9XgP2S1JmxRA1mgW69F_G-_jj1C7LjZupyQ",
+      "fetched_url": "https://play-lh.googleusercontent.com/qr8l3Lj9WM8To1mVL94JVl82B6-KtvJBavRntPoMSwdicgGas3r9XgP2S1JmxRA1mgW69F_G-_jj1C7LjZupyQ=w540",
+      "source_sha256": "bbba070cafb1ec40bdd7d2d41307fedf4ac44cbd51d77c2c6f32b805b63cc7c7"
+    },
+    {
+      "file": "assets/games/today-safe-weather/location-permission.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "02f74d4e896e9dc77c825581500dff0befdec0ebeca377c3022ebce8c8b7eef4",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.ricecookey.todaysafeweather&hl=ko&gl=KR data-screenshot-index=3",
+      "original_url": "https://play-lh.googleusercontent.com/VoSUEKl-wkSiNMS2e4-sCSUUd2dcxPJEinxH6UzYt3afbBKczr0731fZ68M53iQ6kEfSOW05Yh7PZUQ8SVbBv9w",
+      "fetched_url": "https://play-lh.googleusercontent.com/VoSUEKl-wkSiNMS2e4-sCSUUd2dcxPJEinxH6UzYt3afbBKczr0731fZ68M53iQ6kEfSOW05Yh7PZUQ8SVbBv9w=w540",
+      "source_sha256": "053edf3369dc88169143b965723ccc50af90a9efe4daabb2ccfffbd86d2bf9bc"
+    },
+    {
+      "file": "assets/games/today-safe-weather/location-manage.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "d0c15c99bc9fd0f871c0e407fcdba354cb8eb5ad36f286c4ca3f90fef702c6ed",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.ricecookey.todaysafeweather&hl=ko&gl=KR data-screenshot-index=2",
+      "original_url": "https://play-lh.googleusercontent.com/MN8FV9S_jalzAFhrjFN2nCTZuriwbtYv8WR42FYLyxvPIJJ8HXp6n1xadfVLG31WtDtAq_89wKqaL-8NGbJ-dgs",
+      "fetched_url": "https://play-lh.googleusercontent.com/MN8FV9S_jalzAFhrjFN2nCTZuriwbtYv8WR42FYLyxvPIJJ8HXp6n1xadfVLG31WtDtAq_89wKqaL-8NGbJ-dgs=w540",
+      "source_sha256": "5f031b95852c42d008fb6b10ca75553423b3673733979347f9af14c610173adb"
+    },
+    {
+      "file": "assets/games/focus-my-lady/teacher-watching.jpg",
+      "width": 540,
+      "height": 1170,
+      "sha256": "bee2ddab225b86f13f64368e9e495c6909a236277e13c2eb9e908f1f16c8f85b",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6819981098 country=kr screenshotUrls[1]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/63/07/f0/6307f061-416e-c985-da76-0fab6cf5c9c4/ko_1.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/63/07/f0/6307f061-416e-c985-da76-0fab6cf5c9c4/ko_1.png/540x0w.jpg",
+      "source_sha256": "f32444a72d4064accd2ae2279f6aab51dc065396ef72438d5b37f022ba5db9b4"
+    },
+    {
+      "file": "assets/games/focus-my-lady/scolding.jpg",
+      "width": 540,
+      "height": 1170,
+      "sha256": "f36ca0224aa074e2765e3f0f892bd95cc9196ec4ddda46fcc9fb1827aced776a",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6819981098 country=kr screenshotUrls[2]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/cf/40/51/cf405169-2e64-3658-50bf-b33d44d3d14e/ko_2.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/cf/40/51/cf405169-2e64-3658-50bf-b33d44d3d14e/ko_2.png/540x0w.jpg",
+      "source_sha256": "58463cee0caaf92681f6cf697fc2c36bf22bde99184c4df00f0d255e15438932"
+    },
+    {
+      "file": "assets/games/focus-my-lady/choose-teacher.jpg",
+      "width": 540,
+      "height": 1170,
+      "sha256": "7a57536af613b90eb725e9d21199c5736d75aeb832ed8b2b4cd12feeed03e6f1",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6819981098 country=kr screenshotUrls[3]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/05/64/5b/05645b73-0eed-d3c5-2270-c8e2933ac651/ko_3.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/05/64/5b/05645b73-0eed-d3c5-2270-c8e2933ac651/ko_3.png/540x0w.jpg",
+      "source_sha256": "22439726eec28a72a69d08c0f43ff5b35876922924361b83500a81c3e0b63052"
+    },
+    {
+      "file": "assets/games/focus-my-lady/report-card.jpg",
+      "width": 540,
+      "height": 1170,
+      "sha256": "91b4906727372c8a40c2116b301a0ce2e59d86e39515e3565bb60f138d6e0ab3",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6819981098 country=kr screenshotUrls[4]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6d/4e/19/6d4e19ff-96f0-6d6e-6e95-9ec3838436f6/ko_4.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6d/4e/19/6d4e19ff-96f0-6d6e-6e95-9ec3838436f6/ko_4.png/540x0w.jpg",
+      "source_sha256": "739f134315f546a72da53205cc01f35dc4402f8613e040f8bafa99e2baf8565e"
+    },
+    {
+      "file": "assets/games/poppop/same-color.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "3ca984154fee5001a5aeed59aa9809ab4ca9a198ac2aca55752cf55ea77d98ce",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.ricecookey.poppop&hl=ko&gl=KR data-screenshot-index=0",
+      "original_url": "https://play-lh.googleusercontent.com/Q2KKCjBboZSYChNhgKquyEBnhKCO6bFi6uzljMmjDCiMwGKelhNe16SdHt6EiLmkaYr09ravGCf0A2-BqLtWMg",
+      "fetched_url": "https://play-lh.googleusercontent.com/Q2KKCjBboZSYChNhgKquyEBnhKCO6bFi6uzljMmjDCiMwGKelhNe16SdHt6EiLmkaYr09ravGCf0A2-BqLtWMg=w540",
+      "source_sha256": "2e5feb0f875020857c3dcaa83ff227ae623d27e2a3a4fc335788f088165510e2"
+    },
+    {
+      "file": "assets/games/poppop/golden-card.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "20fdefb23d60a92b3d7e712ec91e2ed803b30719f8fd0fbfa168a482593d737c",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.ricecookey.poppop&hl=ko&gl=KR data-screenshot-index=1",
+      "original_url": "https://play-lh.googleusercontent.com/EMzVan-scDoFX6RivCIUcMdQmjuim14ynQzTquVnXJWaJGEynoOsYleHgSWav_rksTwiMFpRsxotc3HE7TpDaQ",
+      "fetched_url": "https://play-lh.googleusercontent.com/EMzVan-scDoFX6RivCIUcMdQmjuim14ynQzTquVnXJWaJGEynoOsYleHgSWav_rksTwiMFpRsxotc3HE7TpDaQ=w540",
+      "source_sha256": "95e2ca0470ffbc614074d58e6254478aa590a6f93ddb4003379e30817b13babc"
+    },
+    {
+      "file": "assets/games/poppop/missions.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "19b10dc01ba6a06dfe2b423aef72dd366db07e84e077b0f10ae13887969156c1",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.ricecookey.poppop&hl=ko&gl=KR data-screenshot-index=4",
+      "original_url": "https://play-lh.googleusercontent.com/Gi1aeXp7V_iiKGzMESvGAqyKycMJLIwKrTWNdYqLK1QREJtQ9fumw-C1nwjM1zeeD0VX9ZhUTMInDYxgzF6v6Q",
+      "fetched_url": "https://play-lh.googleusercontent.com/Gi1aeXp7V_iiKGzMESvGAqyKycMJLIwKrTWNdYqLK1QREJtQ9fumw-C1nwjM1zeeD0VX9ZhUTMInDYxgzF6v6Q=w540",
+      "source_sha256": "f898d8eaf1e10c3fd2a3a8bf7d664ec44c527c39b275446426fe9c812742c0c4"
+    },
+    {
+      "file": "assets/games/poppop/skins.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "28ff91462ca9f8595d0303b4095c4bb710747c1f8bf1b440669af594f59acb6b",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.ricecookey.poppop&hl=ko&gl=KR data-screenshot-index=5",
+      "original_url": "https://play-lh.googleusercontent.com/nFupP1JWSElCyp5tAFQBshzeB6qZtDWVZnTMU0iU3Cf1wmA061K1LgurfShreAz4NixX99BzkYLdfev-bIDv4j4",
+      "fetched_url": "https://play-lh.googleusercontent.com/nFupP1JWSElCyp5tAFQBshzeB6qZtDWVZnTMU0iU3Cf1wmA061K1LgurfShreAz4NixX99BzkYLdfev-bIDv4j4=w540",
+      "source_sha256": "27e284259bafb18ad6c467c0465ee80c4c974e35ea65834af471eb83527d1a08"
+    },
+    {
+      "file": "assets/games/beep-2048/start-board.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "18a9087b0a1ef760a5a10f313f15762d3ca335389f0ea696c4759ffe592dcd5d",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.ricecookey.ricecookey_2048&hl=ko&gl=KR data-screenshot-index=1",
+      "original_url": "https://play-lh.googleusercontent.com/1OlhLZFCtchlToawz3vyUsjfoCgcWxtkVi_btPcmtgJv1akFNE4DWWfx5aETWcQsNaeSgjapxA1TpM3DWgI4",
+      "fetched_url": "https://play-lh.googleusercontent.com/1OlhLZFCtchlToawz3vyUsjfoCgcWxtkVi_btPcmtgJv1akFNE4DWWfx5aETWcQsNaeSgjapxA1TpM3DWgI4=w540",
+      "source_sha256": "5160ae81ee9061c8ffd970644890c809f2952a8036f0d523fc5493bc90bc5ea7"
+    },
+    {
+      "file": "assets/games/beep-2048/chick-tiles.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "0bee8b1b0ee6efedc9d6b4cc2fe3ad324529b1392214199710b0a5240aa9b1f3",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.ricecookey.ricecookey_2048&hl=ko&gl=KR data-screenshot-index=2",
+      "original_url": "https://play-lh.googleusercontent.com/zl3Ujq_t9elNdwBEisJ-76xqPl5t28-e0C-TnhTwqPW1B3fuEmnnt7uBnAbFQZU3RjHB07w-3aOaPFNM2CKY",
+      "fetched_url": "https://play-lh.googleusercontent.com/zl3Ujq_t9elNdwBEisJ-76xqPl5t28-e0C-TnhTwqPW1B3fuEmnnt7uBnAbFQZU3RjHB07w-3aOaPFNM2CKY=w540",
+      "source_sha256": "134d706ada9312660e700f5acce2ce71ba0633f1d583c356aa2ce634ff7040a9"
+    },
+    {
+      "file": "assets/games/beep-2048/game-over.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "652b381b33863582becd0eeae3110e8fff192fda58fffd28244963db97b933a0",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.ricecookey.ricecookey_2048&hl=ko&gl=KR data-screenshot-index=3",
+      "original_url": "https://play-lh.googleusercontent.com/HHa6SJizbs3XFEeLFDNZA7sP3QOjrZDCvwAbRA5lVDNDbEKebgfMG2v693qo1-PlpYU5MP5hQ3NBrr2VBv_jBk4",
+      "fetched_url": "https://play-lh.googleusercontent.com/HHa6SJizbs3XFEeLFDNZA7sP3QOjrZDCvwAbRA5lVDNDbEKebgfMG2v693qo1-PlpYU5MP5hQ3NBrr2VBv_jBk4=w540",
+      "source_sha256": "ad6e327acac4862ed1d2f8c44d9f7e2a9c63f66508a6003a032d252389dba1ce"
+    },
+    {
+      "file": "assets/games/beep-2048/leaderboard.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "1373ecb01738f038625dbb942ced96149db7472bf38244c458d9d4921ac58673",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.ricecookey.ricecookey_2048&hl=ko&gl=KR data-screenshot-index=5",
+      "original_url": "https://play-lh.googleusercontent.com/dSu1dVpoAVsQds36ef7rEsFQnCdf8NqT9T9f2zG0TaQeVjMZSaV6Z-FnRJ-NohZ7klm7y30aJHxbhxv9PK5OCXQ",
+      "fetched_url": "https://play-lh.googleusercontent.com/dSu1dVpoAVsQds36ef7rEsFQnCdf8NqT9T9f2zG0TaQeVjMZSaV6Z-FnRJ-NohZ7klm7y30aJHxbhxv9PK5OCXQ=w540",
+      "source_sha256": "8c9cea9d599287e78bbe38b060ff32ee23f0aab31bb68b8016c505a2c9c63685"
+    },
+    {
+      "file": "assets/games/bang-mandarin/dodge-rain.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "cc4d300df6e682cdf2aa4a5c5d1aadd5ed2a065c559ba0944a037da1b38218c0",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.dreamy.bangmandarin.google&hl=ko&gl=KR data-screenshot-index=3",
+      "original_url": "https://play-lh.googleusercontent.com/AF27FOqLgccPKcVc3psPHb9NLvF3zK2p6lsxPMP853PrBlLeYw0XfkhQqWPmf5O9xUwL1mXN7BYltdn5v1qXmg",
+      "fetched_url": "https://play-lh.googleusercontent.com/AF27FOqLgccPKcVc3psPHb9NLvF3zK2p6lsxPMP853PrBlLeYw0XfkhQqWPmf5O9xUwL1mXN7BYltdn5v1qXmg=w540",
+      "source_sha256": "83ce0aed0e98ce0b813d36642e71e481e428c26fa8782835488232cdcf39753d"
+    },
+    {
+      "file": "assets/games/bang-mandarin/menu.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "5a4b912244c7cbb3bb6964390b3ee4ad1bf191d686b8035d71417edf57c0a366",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.dreamy.bangmandarin.google&hl=ko&gl=KR data-screenshot-index=4",
+      "original_url": "https://play-lh.googleusercontent.com/VADd7lXQk8JOdcHetrJF_S5Mpaci1fujnzrF_8VX8jwqxu8LA3HmBgluqDJTTuacnKligM4bq8lNJrvMXNEetRU",
+      "fetched_url": "https://play-lh.googleusercontent.com/VADd7lXQk8JOdcHetrJF_S5Mpaci1fujnzrF_8VX8jwqxu8LA3HmBgluqDJTTuacnKligM4bq8lNJrvMXNEetRU=w540",
+      "source_sha256": "07b99b554c270af82f486b5446e6032626d23873015b3a3b9cc515f3d9e4e035"
+    },
+    {
+      "file": "assets/games/bang-mandarin/ranking.jpg",
+      "width": 540,
+      "height": 960,
+      "sha256": "b8c7ac1cb80f23a43ef130ca36d14d3ce53e2dd730f1a1388c0d43620ae11407",
+      "store": "Google Play KR",
+      "source_index": "details?id=com.dreamy.bangmandarin.google&hl=ko&gl=KR data-screenshot-index=5",
+      "original_url": "https://play-lh.googleusercontent.com/epAJXf47Tz76X3OcSl5y4Nmm9XNolc6VyrRKHUPwNa7smCkmD2FGJE_IG2ydYTLyol8zbzPMK6YCF5c3jw-xCw",
+      "fetched_url": "https://play-lh.googleusercontent.com/epAJXf47Tz76X3OcSl5y4Nmm9XNolc6VyrRKHUPwNa7smCkmD2FGJE_IG2ydYTLyol8zbzPMK6YCF5c3jw-xCw=w540",
+      "source_sha256": "8b167859b06245ff09840008188d8057e597283926397011acf91a74466cac3b"
+    },
+    {
+      "file": "assets/games/puzzle-1010i/title.jpg",
+      "width": 540,
+      "height": 1168,
+      "sha256": "703140e5ed25f3e857c7ad343b637f5c5afb855d18a28f0b1da2836ffd1188e9",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6795572711 country=kr screenshotUrls[0]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3d/84/cb/3d84cb2b-99e2-0878-5410-f1536e7febed/iphone_02_main_1284x2778.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3d/84/cb/3d84cb2b-99e2-0878-5410-f1536e7febed/iphone_02_main_1284x2778.png/540x0w.jpg",
+      "source_sha256": "f3c75994b1445cb6762ed56a9f0e2ce54d3e93adfbf4f0415edf67b1da137fc8"
+    },
+    {
+      "file": "assets/games/puzzle-1010i/board.jpg",
+      "width": 540,
+      "height": 1168,
+      "sha256": "a39a85f3b53d43cd5583671810ae64966c85d8955c6a2d541067d2d4d8b2e421",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6795572711 country=kr screenshotUrls[1]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/04/21/f5/0421f519-ec06-332b-0d41-629392b181e5/iphone_01_gameplay_1284x2778.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/04/21/f5/0421f519-ec06-332b-0d41-629392b181e5/iphone_01_gameplay_1284x2778.png/540x0w.jpg",
+      "source_sha256": "74ee7eb8a67f0c4e149422feeb3fa9a8785120639f6688fb9f2adfa6b9e942f0"
+    },
+    {
+      "file": "assets/games/puzzle-1010i/pause.jpg",
+      "width": 540,
+      "height": 1168,
+      "sha256": "5f4b735c9caf4a0463ad5fb82c102176e43337dd0c773c468373638a41de1e98",
+      "store": "App Store KR iPhone",
+      "source_index": "lookup id=6795572711 country=kr screenshotUrls[2]",
+      "original_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d6/6f/89/d66f8965-6eef-abcc-ce1e-78c0b1f160ec/iphone_03_pause_1284x2778.png/320x480bb.jpg",
+      "fetched_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d6/6f/89/d66f8965-6eef-abcc-ce1e-78c0b1f160ec/iphone_03_pause_1284x2778.png/540x0w.jpg",
+      "source_sha256": "7527e1c71f208f3b211fee57e41e783e11eb4d5f6a8a73514d86652a339664b8"
+    },
+    {
+      "file": "assets/games/today-dungeon/title.jpg",
+      "width": 540,
+      "height": 1168,
+      "sha256": "045dd8210f6f2370f97666a74b3540d5133f9d5103f3fe228203258765b947e3",
+      "store": "Public web beta (own capture, Chromium 390x844 DPR3, 2026-10-20)",
+      "source_index": "title.png",
+      "original_url": "https://ricecookeytodayis.vercel.app/",
+      "fetched_url": "https://ricecookeytodayis.vercel.app/"
+    },
+    {
+      "file": "assets/games/today-dungeon/week-event.jpg",
+      "width": 540,
+      "height": 1168,
+      "sha256": "e83af8e519ca648ca5a220762ef7b17c86a8d75a3ad1986e7356c799565f42fc",
+      "store": "Public web beta (own capture, Chromium 390x844 DPR3, 2026-10-20)",
+      "source_index": "week1-event.png",
+      "original_url": "https://ricecookeytodayis.vercel.app/",
+      "fetched_url": "https://ricecookeytodayis.vercel.app/"
+    },
+    {
+      "file": "assets/games/today-dungeon/ending-dex.jpg",
+      "width": 540,
+      "height": 1168,
+      "sha256": "f0e15675bbbf341533688bcc2afee9a9cdd329de2acbc7138153317d5891526e",
+      "store": "Public web beta (own capture, Chromium 390x844 DPR3, 2026-10-20)",
+      "source_index": "ending-dex.png",
+      "original_url": "https://ricecookeytodayis.vercel.app/",
+      "fetched_url": "https://ricecookeytodayis.vercel.app/"
+    }
+  ]
+}
