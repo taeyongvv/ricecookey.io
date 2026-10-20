@@ -694,6 +694,14 @@ img, svg { display: block; max-width: 100%; }
 
 .game-row__stores { justify-content: flex-end; }
 
+.game-guide a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 800;
+  color: var(--orange-a11y);
+}
+
 /* one product, two editions — never two cards */
 .editions {
   display: grid;

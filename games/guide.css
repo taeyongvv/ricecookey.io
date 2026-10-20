@@ -1,0 +1,15 @@
+/* Product guide additions on top of rakunovel/legal.css */
+.meta a, .back, .legal-footer a, .store-btn { min-height: 44px; display: inline-flex; align-items: center; }
+.legal-main { overflow-wrap: anywhere; word-break: keep-all; }
+.editions { display: grid; gap: .9rem; margin-top: 1rem; }
+.edition-card { padding: 1rem 1.1rem; border: 1px solid var(--border); border-radius: 14px; background: var(--card); box-shadow: 0 4px 0 var(--shadow); }
+.edition-card h3 { margin-top: 0; }
+.store-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .75rem; padding: 0; list-style: none; }
+.store-row li + li { margin-top: 0; }
+.store-btn { padding: .45rem 1rem; border: 2px solid var(--ink); border-radius: 999px; background: #fff; color: var(--ink); font-weight: 800; text-decoration: none; }
+.store-btn:hover { background: #fff3e4; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 1rem; margin-top: 1rem; }
+.gallery figure { margin: 0; }
+.gallery img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 14px; background: var(--card); }
+.gallery figcaption { margin-top: .5rem; color: var(--ink-soft); font-size: .9rem; line-height: 1.6; }
+.small { color: var(--ink-soft); font-size: .9rem; }
