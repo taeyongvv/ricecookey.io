@@ -207,6 +207,18 @@ lacks(tt, 'tingle-tingle', '무료 버전은 광고가 있고', '게임 규칙�
 has(tt, 'tingle-tingle', 'Google Play 무료 버전에는 광고가 포함되어 있고, App Store 판의 광고 여부는 확인하지 못했습니다',
     'The Google Play free edition contains ads; whether the App Store build shows ads was not confirmed',
     '기능이 같은지는 이 페이지에서 확인하지 못했습니다', 'this page did not confirm that their features match')
+# Homepage Tingle Tingle: the 404 paid Play listing is gone; free GP/App Store/ONE Store and paid ONE Store remain.
+lacks(index_text, 'index.html', 'com.RiceCookey.donglepaid', 'g-tt-paid-gp')
+tt_paid = re.search(r'id="g-tt-paid".*?</ul>', index_text, re.S).group(0)
+has(tt_paid, 'index.html tingle paid edition', 'https://m.onestore.co.kr/v2/ko-kr/app/0000763243', 'g-tt-paid-one')
+has(index_text, 'index.html tingle free edition', 'details?id=com.RiceCookey.dongle"',
+    'https://apps.apple.com/kr/app/id6796646984', 'https://m.onestore.co.kr/v2/ko-kr/app/0000761967')
+# Multistore journal: no edition-equivalence claim; KO/EN feature-parity caveat.
+ms = (root / 'journal/multistore-catalog/index.html').read_text(encoding='utf-8')
+has(ms, 'multistore journal', '두 에디션의 기능이 같은지는 확인하지 못했으므로',
+    'Feature parity between the two editions has not been confirmed')
+lacks(ms, 'multistore journal', '차이는 작품의 핵심 정체성이 아니라 이용 조건에 있다',
+      'The distinction concerns the terms of use', '모두 제공한다는 사실', 'makes both the free and ad-free options visible')
 
 for product in GUIDED:
     guide = product['guide']
