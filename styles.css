@@ -694,6 +694,21 @@ img, svg { display: block; max-width: 100%; }
 
 .game-row__stores { justify-content: flex-end; }
 
+/* homepage reading entry: articles, not install CTAs */
+.read-entry { padding-block: 1.25rem; }
+.read-entry__inner { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1.5rem; }
+.read-entry__title { font-size: 1.05rem; font-weight: 800; color: var(--ink); }
+.read-entry__list { display: flex; flex-wrap: wrap; gap: 0 1.5rem; padding: 0; list-style: none; }
+.read-entry__list a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  color: var(--orange-a11y);
+  text-underline-offset: 0.18em;
+}
+.read-entry__list a:hover { color: var(--orange-hover); }
+
 .game-guide a {
   min-height: 44px;
   display: inline-flex;

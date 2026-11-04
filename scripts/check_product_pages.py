@@ -15,6 +15,13 @@ SECTIONS = {  # games/ guides describe a play loop and controls; apps/ guides de
     'games': ('loop', 'controls', 'start', 'tips', 'gallery', 'faq', 'stores', 'help', 'refs'),
     'apps': ('what', 'features', 'start', 'tips', 'gallery', 'faq', 'stores', 'help', 'refs'),
 }
+# Last Castle is an editorial decision guide (2026-11-05 approved copy): no controls/FAQ sections,
+# two decision sections and a loss-review section instead. Every other guide keeps SECTIONS.
+SECTIONS_BY_SLUG = {
+    'last-castle': ('loop', 'tips', 'reroll', 'review', 'start', 'gallery', 'stores', 'help', 'refs'),
+}
+# The homepage reading entry intentionally adds a second link to these guides (catalog + reading entry).
+HOME_GUIDE_LINKS = {'games/last-castle/': 2}
 HELP = 'mailto:ricecookey.help@gmail.com'
 
 
@@ -144,6 +151,62 @@ for lang, block in (('ko', ko_block), ('en', en_block)):
     keys = set(re.findall(r'^\s*"([^"]+)":', block, re.M))
     for key in re.findall(r'data-i18n(?:-aria|-alt|-html)?="([^"]+)"', index_text):
         assert key in keys, f'i18n.js {lang}: missing key {key}'
+ko_keys, en_keys = (set(re.findall(r'^\s*"([^"]+)":', b, re.M)) for b in (ko_block, en_block))
+assert ko_keys == en_keys, f'i18n.js KO/EN key sets differ: {ko_keys ^ en_keys}'
+
+
+def has(text, where, *phrases):
+    for s in phrases:
+        assert s in text, f'{where}: missing approved text {s!r}'
+
+
+def lacks(text, where, *phrases):
+    for s in phrases:
+        assert s not in text, f'{where}: superseded or overbroad text {s!r}'
+
+
+# Approved 2026-11-05 content: limitations, discovery entry and corrections must not regress.
+lc = (root / 'games/last-castle/index.html').read_text(encoding='utf-8')
+has(lc, 'last-castle', '이 글은 실제 클리어 공략이 아닙니다', 'This is not a tested clear strategy',
+    '촬영 빌드는 미확인', 'capture build unconfirmed', '소환 궁수 공격력 +35%', 'Summoned archer attack +35%',
+    '리롤 후: 1251', '1251 remaining afterward', '앱에 이 기록 양식이 있다는 뜻은 아닙니다',
+    'not a form provided by the game', '<table>', '다시 확인했다는 뜻이 아닙니다',
+    'does not mean later store changes were re-checked', '실제 플레이 검증이 아닙니다', 'not a verified run')
+lacks(lc, 'last-castle', 'HP 50%', '50% HP', '20웨이브', 'A stage has 20 waves', '런당 1회', 'once per run',
+      '적 HP +100%', 'enemy HP +100%', '엔드리스 모드는 스테이지 1', 'Endless Mode unlocks', '영웅에게 적용되지 않습니다',
+      'do not apply to heroes', 'Healing Spring', 'Archer Drill', '성 HP부터 보세요', 'Check castle HP first',
+      '버전 1.7.3 기준, 홍보 문구 포함', '확인일 2026년 10월 20일', 'https://www.ricecookey.com/assets')
+jr = (root / 'journal/last-castle-builds/index.html').read_text(encoding='utf-8')
+has(jr, 'journal', '제작자의 과거 의도를 대신 말하는 회고가 아닙니다', "not a retrospective claiming to know the creator's past intentions",
+    '아래 1.7.3 변경 공지와 같은 빌드의 화면이라고 단정하지 않습니다', 'The capture build of this promotional image is unconfirmed',
+    '이번 글은 그 실험을 했다고 주장하지 않습니다', 'This article does not claim that experiment has happened',
+    '공지는 변경 항목을 알려 주며, 효과 측정을 대신하지 않습니다', 'it is not an effect measurement',
+    'href="../../games/last-castle/"', 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2103625263346419',
+    '다시 확인했다는 뜻이 아닙니다')
+lacks(jr, 'journal', 'RICECookey는', 'At RICECookey', 'Our design approach', 'We approach a build', '성을 지키는 선택의 설계',
+      'Designing choices that defend the castle', 'https://www.ricecookey.com/assets', 'href="/')
+journal_path = root / 'journal/last-castle-builds/index.html'
+journal = load(journal_path)
+assert not {i for i in journal.ids if journal.ids.count(i) > 1}, 'journal duplicate ids'
+check_links(journal_path, journal)
+# Homepage reading entry: exact audit KO/EN text, after the brand hero, before the catalog, not an install control.
+entry = re.search(r'<aside class="read-entry".*?</aside>', index_text, re.S)
+assert entry, 'index.html: reading entry'
+assert index_text.index('class="hero-wrap"') < entry.start() < index_text.index('id="games"'), 'reading entry position'
+e = entry.group(0)
+has(e, 'reading entry', '게임에서 막혔나요?', '라스트캐슬 — 카드 효과를 읽고 패배를 복기하기',
+    '제작 분석 — 선택 화면이 알려 주는 것과 남기는 것', 'href="./games/last-castle/"', 'href="./journal/last-castle-builds/"')
+lacks(e, 'reading entry', 'store-link', 'btn', 'https://')
+has(en_block, 'i18n en', '"read.title": "Stuck in a game?"', '"read.guide": "Last Castle — read card effects and review a loss"',
+    '"read.journal": "Production analysis — what a choice screen tells you and leaves open"')
+lacks(index_text + i18n, 'homepage journal teaser', '성을 지키는 선택의 설계', 'Designing choices that defend the castle')
+assert re.search(r'i18n\.js\?v=2026110[5-9]', index_text), 'i18n.js cache bump'
+tt = (root / 'games/tingle-tingle/index.html').read_text(encoding='utf-8')
+lacks(tt, 'tingle-tingle', '무료 버전은 광고가 있고', '게임 규칙은 같고', '무료 버전(광고 포함)', 'The free edition has ads',
+      'The rules are the same', 'Free edition (contains ads)')
+has(tt, 'tingle-tingle', 'Google Play 무료 버전에는 광고가 포함되어 있고, App Store 판의 광고 여부는 확인하지 못했습니다',
+    'The Google Play free edition contains ads; whether the App Store build shows ads was not confirmed',
+    '기능이 같은지는 이 페이지에서 확인하지 못했습니다', 'this page did not confirm that their features match')
 
 for product in GUIDED:
     guide = product['guide']
@@ -160,7 +223,7 @@ for product in GUIDED:
     assert not dupes, f'{path}: duplicate ids {dupes}'
     for lang, prefix in (('korean', 'ko'), ('english', 'en')):
         assert lang in page.ids, f'{path}: missing #{lang}'
-        for s in SECTIONS[kind]:
+        for s in SECTIONS_BY_SLUG.get(slug, SECTIONS[kind]):
             assert f'{prefix}-{s}' in page.ids, f'{path}: missing #{prefix}-{s}'
         assert page.count.get((lang, 'help'), 0) >= 2, f'{path}: help email in {lang}'
         assert page.count.get((lang, 'figure'), 0) >= 2, f'{path}: gallery in {lang}'
@@ -198,7 +261,7 @@ for product in GUIDED:
         assert 'details?id=com.RiceCookey.donglepaid' not in text, 'unverified Google Play paid link'
     check_links(path, page)
     hrefs = [h for h, _ in index.links]
-    assert hrefs.count(f'./{guide}') == 1, f'catalog link for {guide}'
+    assert hrefs.count(f'./{guide}') == HOME_GUIDE_LINKS.get(guide, 1), f'catalog link for {guide}'
     assert f'<loc>{SITE}{guide}</loc>' in sitemap, f'sitemap entry for {guide}'
     print('PASS', path.relative_to(root))
 
