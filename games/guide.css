@@ -13,3 +13,4 @@
 .gallery img { display: block; width: 100%; height: auto; border: 1px solid var(--border); border-radius: 14px; background: var(--card); }
 .gallery figcaption { margin-top: .5rem; color: var(--ink-soft); font-size: .9rem; line-height: 1.6; }
 .small { color: var(--ink-soft); font-size: .9rem; }
+.table-wrap table { min-width: 0; } /* three short columns fit at 390px; legal.css 680px min would hide the last column */

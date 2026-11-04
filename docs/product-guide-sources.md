@@ -15,7 +15,7 @@ Re-check stores before changing versions, editions or prices. Validate with `pyt
 | Wakbu Ball | Google Play | https://play.google.com/store/apps/details?id=com.ricecookey.wakbuball | updated 2026-08-18, no ads label, "광고 없는 버전", Workshop creation (shape/shell/core/finale/feel) |
 | Wakbu Ball | ONE Store | https://m.onestore.co.kr/v2/ko-kr/app/0001007182 | listing exists (title only) |
 | Tingle Tingle (free) | Google Play | https://play.google.com/store/apps/details?id=com.RiceCookey.dongle | updated 2026-07-28, "Contains ads"; v2.2: global ranking, revive, retry interstitial removed, Play Games sign-in |
-| Tingle Tingle (free) | App Store | https://apps.apple.com/kr/app/id6796646984 | 1.0, 2026-08-19, free, iOS 15.0+, 4+; tap/swipe to drop, merge, overflow ends, leaderboard. Ad display not confirmed |
+| Tingle Tingle (free) | App Store | https://apps.apple.com/kr/app/id6796646984 | 1.0, 2026-08-19, free, iOS 15.0+, 4+; tap/swipe to drop, merge, overflow ends, leaderboard. Ad display not confirmed (2026-11-05: the guide's ad statements are now limited to the Google Play free edition; edition feature parity is not claimed) |
 | Tingle Tingle (free) | ONE Store | https://m.onestore.co.kr/v2/ko-kr/app/0000761967 | title "팅글 팅글 - 합치기 게임" |
 | Tingle Tingle (ad-free) | ONE Store | https://m.onestore.co.kr/v2/ko-kr/app/0000763243 | title "팅글 팅글 : 수박게임 (광고제거)" |
 | Tingle Tingle (ad-free) | Google Play | https://play.google.com/store/apps/details?id=com.RiceCookey.donglepaid | **404 with hl=ko&gl=KR and hl=en&gl=US** — not linked from the guide; the home catalog link is unchanged pending owner review |
@@ -23,10 +23,25 @@ Re-check stores before changing versions, editions or prices. Validate with `pyt
 ## Claims from game source (read-only, may differ per store build)
 
 - Last Castle (`translations/main.csv`): Tutorial, Castle Upgrade, Codex menus; gold/free/ad reroll and "After reroll" preview; pause menu items and run loss on exit; ad revive at 50% HP once per run; 20-wave clear; Endless unlocks after Stage 1 and gives no diamonds; Hard modifiers; Nightmare after all Hard clears plus one challenge; hero tactics note; card/stage English names.
+  - **Withdrawn 2026-11-05.** No released source SHA was ever recorded for these claims, so they are not release facts. The guide and journal no longer publish them; see "Last Castle editorial pilot" below.
 - Wakbu Ball (`autoloads/Loc.gd`, `docs/specs/03-input-score-audio.md`): hold-still squish vs drag roll with inertia; settings (sound, volume, vibration intensity, Endless Mode, language); free odds-based color collection; tap Dex color; Planet unlock at 80 colors; ranking nickname max 12; Workshop material-first and Test It; Plaza rules agreement and temporary closure message; silent-mode help text.
 - Tingle Tingle (`Assets/1.Scripts/GameMgr.cs`, `Dongle.cs`, `BombCtrl.cs`), read at Google Play v2.2 release commit `2acb86a49e65726975299a71f8f56fa880439508` (2026-07-28); local source HEAD is `d14c5e872a4bf571b1555f29be4c456da18fbe1e` (2026-08-20, unreleased): touch-drag-release drop; gray after 2 s over the line, game over after 5 s (unchanged since 2023 code `4bd0bf1`); pause-menu exit skips revive; revive once per game clears only Tingles above the danger line (`clearHeight = line.y` at `2acb86a`), cleared pieces score nothing; bombs (v2.2 `FREE_VERSION`, matches in-game "1 Game = 2 Ads" and App Store screenshot x1→x0): free starts 1 + up to 2 ad bombs per game; best score stored on device and submitted to the leaderboard.
   - Omitted, unreleased: `d14c5e8` changes revive to clear the upper half; it postdates both public builds (Google Play v2.2 2026-07-28, App Store 1.0 2026-08-19).
   - Omitted, unverified: paid-edition starting bomb count (`#else` branch first added in `2acb86a`; no paid build shown released with it).
+
+## Last Castle editorial pilot (2026-11-05)
+
+`games/last-castle/` (decision guide) and `journal/last-castle-builds/` (production analysis) were replaced with the approved KO/EN reader copy from the content pilot (`dobby/evidence/ricecookey-content-pilot/`: audit.md, pilot-guide-ko-en.md, pilot-journal-ko-en.md, evidence-ledger.json, reviewer-record.md). The authors are Dobby AI with an independent Hermione review; no human author is credited.
+
+| ID | Source | Supports | Does not prove |
+| --- | --- | --- | --- |
+| S1 | App Store KR https://apps.apple.com/kr/app/id6786145722 | auto castle attack, 1 of 3 cards; listing 1.7.3; two 1.7.3 notes (Nightmare Stage 5 freeze fix, recruitment-ticket exchange expanded by default) | runtime behavior, the exact binary |
+| S2 | Google Play https://play.google.com/store/apps/details?id=com.ricecookey.lastcastle&hl=ko | the same core flow and 1.7.3 notes; "Contains ads", in-app purchases | the exact binary, ONE Store parity |
+| S3 | assets/games/last-castle/upgrade-cards.jpg (hash below), pixels inspected | HP 750/750, wave 14/20, frost −30% movement, recovery +50 HP each wave, summoned archer attack +35%, 1281 gold, reroll 30, 1251 after reroll, ad-symbol reroll | the chosen card, the outcome, the full build, whether summoned archers are present, ad reward delivery, the capture build |
+
+- 2026-11-05 is the date these public pages were read. It does not mean the stores were verified again after that.
+- Not published until a release↔source mapping exists: revive, unlock, 20-wave and Hard values, whether hero upgrades apply, win rates, optimal builds, and creator intent.
+- Gallery captions describe only what each promotional image shows, and state that the images are not a verified run.
 
 ## Screenshots
 
