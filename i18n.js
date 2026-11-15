@@ -1,7 +1,7 @@
 /* RiceCookey — translations (from reference design) */
 window.RC_I18N = {
   ko: {
-    "meta.title": "RICECookey — 게임과 앱을 짓는 작은 스튜디오",
+    "meta.title": "RICECookey",
     "meta.description": "집중하세요,아가씨, 식집사, 부릅, 라스트캐슬, 왁뿌볼까지. RICECookey는 작지만 손이 자꾸 가는 게임과 생활형 앱을 만드는 팀입니다.",
     "skip": "본문으로 건너뛰기",
     "nav.aria": "주요 메뉴",
@@ -181,7 +181,7 @@ window.RC_I18N = {
     "footer.rakunovelTerms": "라쿠노벨 이용약관"
   },
   en: {
-    "meta.title": "RICECookey — A small studio building games and apps",
+    "meta.title": "RICECookey",
     "meta.description": "집중하세요,아가씨, Plants Keeper, Brrrp, Last Castle, Wakbu Ball and more. RICECookey is a small team making games and everyday apps that are hard to put down.",
     "skip": "Skip to content",
     "nav.aria": "Primary",

@@ -128,6 +128,6 @@ for href in PRESERVED:
     assert f'href="{href}"' in index, f'preserved link missing: {href}'
 for rel in PRESERVED_FILES:
     assert (root / rel).is_file(), rel
-assert 'i18n.js?v=20261115-catalog1' in index and 'styles.css?v=20261115-catalog1' in index, 'cache keys'
+assert 'i18n.js?v=20261115-title1' in index and 'styles.css?v=20261115-catalog1' in index, 'cache keys'
 print(f'PASS: {len(cards)} catalog cards, {sum(map(len, CATALOG.values()))} exact store links, '
       f'{len(NEW_ART)} new 256px WebP icons, no status/version copy, KO/EN parity, preserved links')
