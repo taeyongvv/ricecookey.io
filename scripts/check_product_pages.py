@@ -200,7 +200,7 @@ lacks(e, 'reading entry', 'store-link', 'btn', 'https://')
 has(en_block, 'i18n en', '"read.title": "Stuck in a game?"', '"read.guide": "Last Castle — read card effects and review a loss"',
     '"read.journal": "Production analysis — what a choice screen tells you and leaves open"')
 lacks(index_text + i18n, 'homepage journal teaser', '성을 지키는 선택의 설계', 'Designing choices that defend the castle')
-assert re.search(r'i18n\.js\?v=2026110[5-9]', index_text), 'i18n.js cache bump'
+assert re.search(r'i18n\.js\?v=20261115-catalog1', index_text), 'i18n.js cache bump'
 tt = (root / 'games/tingle-tingle/index.html').read_text(encoding='utf-8')
 lacks(tt, 'tingle-tingle', '무료 버전은 광고가 있고', '게임 규칙은 같고', '무료 버전(광고 포함)', 'The free edition has ads',
       'The rules are the same', 'Free edition (contains ads)')

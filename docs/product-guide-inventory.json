@@ -1,11 +1,12 @@
 {
   "checked": "2026-10-20",
   "scope": "Every product entry in the index.html #games catalog (id = data-i18n key game.<id>). States: existing = guide shipped before this change; eligible = guide added in this change; excluded = no guide, with the failed checks.",
-  "catalog_count": 20,
+  "catalog_count": 26,
+  "catalog_refresh_2026-11-15": "Added six products (gs, at, gr, cc, hl, ai). Sources: Apple artist lookup (KR/US), Google Play developer page and per-package pages.",
   "developer_checks": {
-    "apple_artist_lookup": "https://itunes.apple.com/lookup?id=6786132529&entity=software&country=kr — 13 apps, none matching the excluded coming-soon titles",
-    "google_play_developer": "https://play.google.com/store/apps/dev?id=5047864483867249414&hl=ko&gl=KR — 11 packages, none matching the excluded coming-soon titles",
-    "not_in_catalog": "Store apps by the same seller that the catalog does not list (out of scope): 별을 입는 아뜰리에, 겸사겸사, P의여행:국도편, 귤리의 파티쉐:2048, 외계 침공, 나 홀로 문단속, 착착"
+    "apple_artist_lookup": "https://itunes.apple.com/lookup?id=6786132529&entity=software&country=kr — 15 apps as of 2026-11-15, none matching the excluded entries",
+    "google_play_developer": "https://play.google.com/store/apps/dev?id=5047864483867249414&hl=ko&gl=KR — 10 packages as of 2026-11-15, none matching the excluded entries",
+    "not_in_catalog": "Historical, as of the 2026-10-20 check: Store apps by the same seller that the catalog does not list (out of scope): 별을 입는 아뜰리에, 겸사겸사, P의여행:국도편, 귤리의 파티쉐:2048, 외계 침공, 나 홀로 문단속, 착착"
   },
   "products": [
     {
@@ -145,7 +146,7 @@
       "name": "지휘관 / Commander",
       "state": "excluded",
       "failed_checks": [
-        "catalog shows 준비중 with no link",
+        "no public store listing (re-checked 2026-11-15)",
         "absent from Apple artist lookup and Google Play developer page"
       ],
       "reason": "not publicly released"
@@ -155,7 +156,7 @@
       "name": "최후의 수호자들 / Last Guardians",
       "state": "excluded",
       "failed_checks": [
-        "catalog shows 준비중 with no link",
+        "no public store listing (re-checked 2026-11-15)",
         "absent from Apple artist lookup and Google Play developer page"
       ],
       "reason": "not publicly released"
@@ -165,7 +166,7 @@
       "name": "무한의 가능성 「강호」 / KangHo",
       "state": "excluded",
       "failed_checks": [
-        "catalog shows 준비중 with no link",
+        "no public store listing (re-checked 2026-11-15)",
         "absent from Apple artist lookup and Google Play developer page"
       ],
       "reason": "not publicly released"
@@ -175,7 +176,7 @@
       "name": "라쿠노벨 / Rakunovel",
       "state": "excluded",
       "failed_checks": [
-        "catalog shows 준비중 with no link",
+        "no public store listing (re-checked 2026-11-15)",
         "absent from Apple artist lookup and Google Play developer page",
         "site only hosts its privacy policy and terms"
       ],
@@ -186,7 +187,7 @@
       "name": "CUBLLO (큐블로)",
       "state": "excluded",
       "failed_checks": [
-        "catalog shows 준비중 with no link",
+        "no public store listing (re-checked 2026-11-15)",
         "absent from Apple artist lookup and Google Play developer page"
       ],
       "reason": "not publicly released"
@@ -196,11 +197,17 @@
       "name": "월급루팡: 방치형게임 / Monthly Loafer",
       "state": "excluded",
       "failed_checks": [
-        "catalog shows 준비중 with no link",
+        "no public store listing (re-checked 2026-11-15)",
         "absent from Apple artist lookup and Google Play developer page"
       ],
       "reason": "not publicly released"
-    }
+    },
+    {"id": "gs", "name": "겸사겸사: 링크 저장, 다시 꺼내보기 / Two Birds: Save for Later", "state": "excluded", "failed_checks": ["no guide written yet"], "reason": "catalog entry only (added 2026-11-15)"},
+    {"id": "at", "name": "별을 입는 아뜰리에: 드레스업 / Atelier of Starlight: Dress Up", "state": "excluded", "failed_checks": ["no guide written yet"], "reason": "catalog entry only (added 2026-11-15)"},
+    {"id": "gr", "name": "귤리의 파티쉐:2048", "state": "excluded", "failed_checks": ["no guide written yet"], "reason": "catalog entry only (added 2026-11-15)"},
+    {"id": "cc", "name": "착착: 자석블록퍼즐 / Snap Clump", "state": "excluded", "failed_checks": ["no guide written yet"], "reason": "catalog entry only (added 2026-11-15)"},
+    {"id": "hl", "name": "나 홀로 문단속 / Home, All Locked!", "state": "excluded", "failed_checks": ["no guide written yet"], "reason": "catalog entry only (added 2026-11-15)"},
+    {"id": "ai", "name": "외계 침공 / Alien Invasion", "state": "excluded", "failed_checks": ["no guide written yet"], "reason": "catalog entry only (added 2026-11-15)"}
   ],
   "screenshots_note": "Store screenshots are official promotional images from the store listings (marketing captions included), fetched at 540 px width and saved as JPEG with macOS sips. today-dungeon images are our own captures of the public web beta, not marketing images. source_sha256 is the fetched file before conversion.",
   "screenshots": [

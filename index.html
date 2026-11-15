@@ -13,7 +13,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23FFF6EC'/><path d='M50 78C28 78 22 52 22 42Q22 18 50 18Q78 18 78 42C78 52 72 78 50 78Z' fill='%23FF6A1A' stroke='%232B1E12' stroke-width='5'/></svg>" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css?v=20261115-catalog1" />
   <script>
     (function () {
       var s = localStorage.getItem("ricecookey-lang");
@@ -109,7 +109,7 @@
         <header class="section__head section__head--start reveal">
           <p class="eyebrow" data-i18n="games.label">APPS &amp; GAMES</p>
           <h2 class="section__title display" id="games-title" data-i18n="games.title">만들고 있는 앱과 게임</h2>
-          <p class="games__lede" data-i18n="games.lede">생활을 돕는 앱과 손이 자꾸 가는 게임을 만듭니다. 출시 전 프로젝트는 준비중으로 표시합니다.</p>
+          <p class="games__lede" data-i18n="games.lede">생활을 돕는 앱과 손이 자꾸 가는 게임을 만듭니다.</p>
         </header>
 
         <article class="game-feature reveal" aria-labelledby="g-lc-title">
@@ -151,74 +151,96 @@
 
         <ul class="game-list">
           <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/gyeomsa.webp" width="256" height="256" loading="lazy" decoding="async"
+                 alt="겸사겸사: 링크 저장, 다시 꺼내보기 앱 아이콘 — 점무늬 배경 위에 겹쳐 있는 주황색과 하늘색 동그란 새" data-i18n-alt="game.gs.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-gs-title" data-i18n="game.gs.name">겸사겸사: 링크 저장, 다시 꺼내보기</h3>
+              <p class="game-row__desc" data-i18n="game.gs.desc">공유 버튼으로 담아 둔 링크와 스크린샷을 하나씩 다시 꺼내 보여 주고 정하게 해 주는 북마크 앱.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li><a class="store-link" href="https://play.google.com/store/apps/details?id=com.ricecookey.gyeomsa" target="_blank" rel="noopener noreferrer" aria-labelledby="g-gs-title g-gs-gp"><span id="g-gs-gp" data-i18n="store.google">Google Play</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+              <li><a class="store-link" href="https://apps.apple.com/kr/app/id6805783865" target="_blank" rel="noopener noreferrer" aria-labelledby="g-gs-title g-gs-as"><span id="g-gs-as" data-i18n="store.apple">App Store</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/atelier-of-starlight.webp" width="256" height="256" loading="lazy" decoding="async"
+                 alt="별을 입는 아뜰리에: 드레스업 앱 아이콘 — 보랏빛 마녀 모자를 쓴 소녀의 옆얼굴과 반짝이는 별" data-i18n-alt="game.at.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-at-title" data-i18n="game.at.name">별을 입는 아뜰리에: 드레스업</h3>
+              <p class="game-row__desc" data-i18n="game.at.desc">종이에 그린 옷이 별가루 마법으로 마을 손님이 입는 옷이 되는 드레스업 게임.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li><a class="store-link" href="https://apps.apple.com/kr/app/id6813819414" target="_blank" rel="noopener noreferrer" aria-labelledby="g-at-title g-at-as"><span id="g-at-as" data-i18n="store.apple">App Store</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/berritz2048.webp" width="256" height="256" loading="lazy" decoding="async"
+                 alt="귤리의 파티쉐:2048 앱 아이콘 — 요리사 모자를 쓰고 반죽을 젓는 노란 캐릭터와 도넛, 2048 글자" data-i18n-alt="game.gr.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-gr-title" data-i18n="game.gr.name">귤리의 파티쉐:2048</h3>
+              <p class="game-row__desc" data-i18n="game.gr.desc">같은 숫자 블록을 합치며 작은 귤젤리 귤리를 마스터 파티쉐로 키우는 2048 퍼즐.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li><a class="store-link" href="https://play.google.com/store/apps/details?id=com.ricecookey.berritz2048" target="_blank" rel="noopener noreferrer" aria-labelledby="g-gr-title g-gr-gp"><span id="g-gr-gp" data-i18n="store.google">Google Play</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+              <li><a class="store-link" href="https://apps.apple.com/kr/app/id6811958719" target="_blank" rel="noopener noreferrer" aria-labelledby="g-gr-title g-gr-as"><span id="g-gr-as" data-i18n="store.apple">App Store</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/chakchak.webp" width="256" height="256" loading="lazy" decoding="async"
+                 alt="착착: 자석블록퍼즐 앱 아이콘 — 웃는 남색 블록을 빨강·노랑·초록·파랑 블록이 둘러싼 모습" data-i18n-alt="game.cc.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-cc-title" data-i18n="game.cc.name">착착: 자석블록퍼즐</h3>
+              <p class="game-row__desc" data-i18n="game.cc.desc">자석 덩어리를 끌고 다니며 같은 색 블록을 붙이고 연쇄로 터뜨리는 블록 퍼즐.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li><a class="store-link" href="https://play.google.com/store/apps/details?id=com.wajangchang.chakchak" target="_blank" rel="noopener noreferrer" aria-labelledby="g-cc-title g-cc-gp"><span id="g-cc-gp" data-i18n="store.google">Google Play</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+              <li><a class="store-link" href="https://apps.apple.com/kr/app/id6821259190" target="_blank" rel="noopener noreferrer" aria-labelledby="g-cc-title g-cc-as"><span id="g-cc-as" data-i18n="store.apple">App Store</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/home-all-locked.webp" width="256" height="256" loading="lazy" decoding="async"
+                 alt="나 홀로 문단속 앱 아이콘 — REC 표시가 뜬 픽셀아트 창문 너머 두 개의 검은 그림자" data-i18n-alt="game.hl.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-hl-title" data-i18n="game.hl.name">나 홀로 문단속</h3>
+              <p class="game-row__desc" data-i18n="game.hl.desc">문과 창문을 잠가 찾아오는 빌런을 막고 새벽 5시까지 버티는 게임.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li><a class="store-link" href="https://play.google.com/store/apps/details?id=com.ricecookey.homealllocked" target="_blank" rel="noopener noreferrer" aria-labelledby="g-hl-title g-hl-gp"><span id="g-hl-gp" data-i18n="store.google">Google Play</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+              <li><a class="store-link" href="https://apps.apple.com/kr/app/id6819195900" target="_blank" rel="noopener noreferrer" aria-labelledby="g-hl-title g-hl-as"><span id="g-hl-as" data-i18n="store.apple">App Store</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/alien-invasion.webp" width="256" height="256" loading="lazy" decoding="async"
+                 alt="외계 침공 앱 아이콘 — 외계 함선 아래 나비 날개를 단 초록빛 개 실루엣" data-i18n-alt="game.ai.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-ai-title" data-i18n="game.ai.name">외계 침공</h3>
+              <p class="game-row__desc" data-i18n="game.ai.desc">네 가지 생명 경로 중 하나를 골라 전진하고 진화하며 최종 보스에 도전하는 RPG.</p>
+            </div>
+            <ul class="store-list game-row__stores">
+              <li><a class="store-link" href="https://play.google.com/store/apps/details?id=com.alieninvasion.rpg" target="_blank" rel="noopener noreferrer" aria-labelledby="g-ai-title g-ai-gp"><span id="g-ai-gp" data-i18n="store.google">Google Play</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </li>
+
+          <li class="game-row reveal">
             <img class="game-row__icon" src="./assets/games/today-dungeon.webp" width="192" height="192" loading="lazy" decoding="async"
                  alt="오늘도 던전출근 앱 아이콘" data-i18n-alt="game.td.alt" />
             <div class="game-row__body">
               <h3 class="game-row__title" id="g-td-title" data-i18n="game.td.name">오늘도 던전출근</h3>
               <p class="game-row__desc" data-i18n="game.td.desc">마력·신뢰·골드를 관리하며 12주를 버티고 다양한 결말을 모으는 판타지 직장 생존 시뮬레이션.</p>
-              <p class="game-guide"><a href="./games/today-dungeon/" data-i18n="game.betaGuide" data-i18n-aria="game.td.guideAria" aria-label="오늘도 던전출근 웹 베타 가이드 보기">웹 베타 가이드 보기 →</a></p>
+              <p class="game-guide"><a href="./games/today-dungeon/" data-i18n="game.guide" data-i18n-aria="game.td.guideAria" aria-label="오늘도 던전출근 게임 가이드 보기">게임 가이드 보기 →</a></p>
             </div>
             <ul class="store-list game-row__stores">
               <li>
                 <a class="store-link" href="https://ricecookeytodayis.vercel.app" target="_blank" rel="noopener noreferrer" aria-labelledby="g-td-title g-td-web">
-                  <span id="g-td-web" data-i18n="store.webBeta">웹 베타</span><span class="store-link__out" aria-hidden="true">↗</span>
+                  <span id="g-td-web" data-i18n="store.web">웹에서 플레이</span><span class="store-link__out" aria-hidden="true">↗</span>
                 </a>
               </li>
             </ul>
-          </li>
-
-          <li class="game-row reveal">
-            <img class="game-row__icon" src="./assets/games/commander.webp" width="192" height="192" loading="lazy" decoding="async" alt="지휘관 앱 아이콘" data-i18n-alt="game.co.alt" />
-            <div class="game-row__body">
-              <h3 class="game-row__title" id="g-co-title" data-i18n="game.co.name">지휘관</h3>
-              <p class="game-row__desc" data-i18n="game.co.desc">병사를 배치해 왕을 지키는 중세 판타지 전략 게임.</p>
-            </div>
-            <ul class="store-list game-row__stores"><li><span class="store-link store-link--disabled" data-i18n="store.preparing">준비중</span></li></ul>
-          </li>
-
-          <li class="game-row reveal">
-            <img class="game-row__icon" src="./assets/games/last-guardians.webp" width="192" height="192" loading="lazy" decoding="async" alt="최후의 수호자들 앱 아이콘" data-i18n-alt="game.lg.alt" />
-            <div class="game-row__body">
-              <h3 class="game-row__title" id="g-lg-title" data-i18n="game.lg.name">최후의 수호자들</h3>
-              <p class="game-row__desc" data-i18n="game.lg.desc">이동과 자동 공격, 장비 선택으로 몰려오는 적의 파도를 버티는 세로형 생존 로그라이크.</p>
-            </div>
-            <ul class="store-list game-row__stores"><li><span class="store-link store-link--disabled" data-i18n="store.preparing">준비중</span></li></ul>
-          </li>
-
-          <li class="game-row reveal">
-            <img class="game-row__icon" src="./assets/games/kangho.webp" width="192" height="192" loading="lazy" decoding="async" alt="무한의 가능성 강호 앱 아이콘" data-i18n-alt="game.kh.alt" />
-            <div class="game-row__body">
-              <h3 class="game-row__title" id="g-kh-title" data-i18n="game.kh.name">무한의 가능성 「강호」</h3>
-              <p class="game-row__desc" data-i18n="game.kh.desc">세력과 세계의 변화를 따라 선택과 전투를 이어가는 오픈월드 무협 전술 RPG.</p>
-            </div>
-            <ul class="store-list game-row__stores"><li><span class="store-link store-link--disabled" data-i18n="store.preparing">준비중</span></li></ul>
-          </li>
-
-          <li class="game-row reveal">
-            <img class="game-row__icon" src="./assets/games/rakunovel.webp" width="192" height="192" loading="lazy" decoding="async" alt="라쿠노벨 앱 아이콘" data-i18n-alt="game.rn.alt" />
-            <div class="game-row__body">
-              <h3 class="game-row__title" id="g-rn-title" data-i18n="game.rn.name">라쿠노벨</h3>
-              <p class="game-row__desc" data-i18n="game.rn.desc">삽화와 함께 연재 작품을 읽고 독서 진행 상황을 이어가는 웹소설 플랫폼.</p>
-            </div>
-            <ul class="store-list game-row__stores"><li><span class="store-link store-link--disabled" data-i18n="store.preparing">준비중</span></li></ul>
-          </li>
-
-          <li class="game-row reveal">
-            <img class="game-row__icon" src="./assets/games/cubllo.webp" width="192" height="192" loading="lazy" decoding="async" alt="큐블로 앱 아이콘" data-i18n-alt="game.cu.alt" />
-            <div class="game-row__body">
-              <h3 class="game-row__title" id="g-cu-title" data-i18n="game.cu.name">CUBLLO (큐블로)</h3>
-              <p class="game-row__desc" data-i18n="game.cu.desc">큐브 매칭과 오델로식 축 전환 이동을 결합한 캐주얼 퍼즐 게임.</p>
-            </div>
-            <ul class="store-list game-row__stores"><li><span class="store-link store-link--disabled" data-i18n="store.preparing">준비중</span></li></ul>
-          </li>
-
-          <li class="game-row reveal">
-            <img class="game-row__icon" src="./assets/games/monthly-loafer.webp" width="192" height="192" loading="lazy" decoding="async" alt="월급루팡 방치형게임 앱 아이콘" data-i18n-alt="game.ml.alt" />
-            <div class="game-row__body">
-              <h3 class="game-row__title" id="g-ml-title" data-i18n="game.ml.name">월급루팡: 방치형게임</h3>
-              <p class="game-row__desc" data-i18n="game.ml.desc">탭으로 골드와 의심도를 쌓고 적절한 순간 수익을 확정하는 푸시유어럭 방치형 클리커.</p>
-            </div>
-            <ul class="store-list game-row__stores"><li><span class="store-link store-link--disabled" data-i18n="store.preparing">준비중</span></li></ul>
           </li>
 
           <li class="game-row reveal">
@@ -230,6 +252,7 @@
               <p class="game-guide"><a href="./apps/ductmong/" data-i18n="game.appGuide" data-i18n-aria="game.dm.guideAria" aria-label="닥트몽 앱 가이드 보기">앱 가이드 보기 →</a></p>
             </div>
             <ul class="store-list game-row__stores">
+              <li><a class="store-link" href="https://play.google.com/store/apps/details?id=com.ricecookey.ductmate" target="_blank" rel="noopener noreferrer" aria-labelledby="g-dm-title g-dm-gp"><span id="g-dm-gp" data-i18n="store.google">Google Play</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
               <li><a class="store-link" href="https://apps.apple.com/kr/app/id6816418338" target="_blank" rel="noopener noreferrer" aria-labelledby="g-dm-title g-dm-as"><span id="g-dm-as" data-i18n="store.apple">App Store</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
             </ul>
           </li>
@@ -256,6 +279,7 @@
               <p class="game-guide"><a href="./apps/focus-my-lady/" data-i18n="game.appGuide" data-i18n-aria="game.fm.guideAria" aria-label="집중하세요,아가씨 앱 가이드 보기">앱 가이드 보기 →</a></p>
             </div>
             <ul class="store-list game-row__stores">
+              <li><a class="store-link" href="https://play.google.com/store/apps/details?id=com.ricecookey.focusmylady" target="_blank" rel="noopener noreferrer" aria-labelledby="g-fm-title g-fm-gp"><span id="g-fm-gp" data-i18n="store.google">Google Play</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
               <li><a class="store-link" href="https://apps.apple.com/kr/app/id6819981098" target="_blank" rel="noopener noreferrer" aria-labelledby="g-fm-title g-fm-as"><span id="g-fm-as" data-i18n="store.apple">App Store</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
             </ul>
           </li>
@@ -269,6 +293,7 @@
               <p class="game-guide"><a href="./apps/plants-keeper/" data-i18n="game.appGuide" data-i18n-aria="game.pk.guideAria" aria-label="식집사 앱 가이드 보기">앱 가이드 보기 →</a></p>
             </div>
             <ul class="store-list game-row__stores">
+              <li><a class="store-link" href="https://play.google.com/store/apps/details?id=com.ricecookey.plantskeeper" target="_blank" rel="noopener noreferrer" aria-labelledby="g-pk-title g-pk-gp"><span id="g-pk-gp" data-i18n="store.google">Google Play</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
               <li><a class="store-link" href="https://apps.apple.com/kr/app/plants-keeper/id6793824278" target="_blank" rel="noopener noreferrer" aria-labelledby="g-pk-title g-pk-as"><span id="g-pk-as" data-i18n="store.apple">App Store</span><span class="store-link__out" aria-hidden="true">↗</span></a></li>
             </ul>
           </li>
@@ -486,6 +511,54 @@
               </li>
             </ul>
           </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/commander.webp" width="192" height="192" loading="lazy" decoding="async" alt="지휘관 앱 아이콘" data-i18n-alt="game.co.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-co-title" data-i18n="game.co.name">지휘관</h3>
+              <p class="game-row__desc" data-i18n="game.co.desc">병사를 배치해 왕을 지키는 중세 판타지 전략 게임.</p>
+            </div>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/last-guardians.webp" width="192" height="192" loading="lazy" decoding="async" alt="최후의 수호자들 앱 아이콘" data-i18n-alt="game.lg.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-lg-title" data-i18n="game.lg.name">최후의 수호자들</h3>
+              <p class="game-row__desc" data-i18n="game.lg.desc">이동과 자동 공격, 장비 선택으로 몰려오는 적의 파도를 버티는 세로형 생존 로그라이크.</p>
+            </div>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/kangho.webp" width="192" height="192" loading="lazy" decoding="async" alt="무한의 가능성 강호 앱 아이콘" data-i18n-alt="game.kh.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-kh-title" data-i18n="game.kh.name">무한의 가능성 「강호」</h3>
+              <p class="game-row__desc" data-i18n="game.kh.desc">세력과 세계의 변화를 따라 선택과 전투를 이어가는 오픈월드 무협 전술 RPG.</p>
+            </div>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/rakunovel.webp" width="192" height="192" loading="lazy" decoding="async" alt="라쿠노벨 앱 아이콘" data-i18n-alt="game.rn.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-rn-title" data-i18n="game.rn.name">라쿠노벨</h3>
+              <p class="game-row__desc" data-i18n="game.rn.desc">삽화와 함께 연재 작품을 읽고 독서 진행 상황을 이어가는 웹소설 플랫폼.</p>
+            </div>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/cubllo.webp" width="192" height="192" loading="lazy" decoding="async" alt="큐블로 앱 아이콘" data-i18n-alt="game.cu.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-cu-title" data-i18n="game.cu.name">CUBLLO (큐블로)</h3>
+              <p class="game-row__desc" data-i18n="game.cu.desc">큐브 매칭과 오델로식 축 전환 이동을 결합한 캐주얼 퍼즐 게임.</p>
+            </div>
+          </li>
+
+          <li class="game-row reveal">
+            <img class="game-row__icon" src="./assets/games/monthly-loafer.webp" width="192" height="192" loading="lazy" decoding="async" alt="월급루팡 방치형게임 앱 아이콘" data-i18n-alt="game.ml.alt" />
+            <div class="game-row__body">
+              <h3 class="game-row__title" id="g-ml-title" data-i18n="game.ml.name">월급루팡: 방치형게임</h3>
+              <p class="game-row__desc" data-i18n="game.ml.desc">탭으로 골드와 의심도를 쌓고 적절한 순간 수익을 확정하는 푸시유어럭 방치형 클리커.</p>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
@@ -643,7 +716,7 @@
     </div>
   </footer>
 
-  <script src="./i18n.js?v=20261105-content1"></script>
+  <script src="./i18n.js?v=20261115-catalog1"></script>
   <script src="./script.js"></script>
 </body>
 </html>
